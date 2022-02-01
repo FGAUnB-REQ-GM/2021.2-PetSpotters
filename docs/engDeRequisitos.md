@@ -10,6 +10,7 @@ Também, não é objetivo desta seção ser detalhista e, sim, objetiva e resumi
 Atividade | Método | Ferramenta 
 ----------|--------|-----------
 |...|...|...|
+
 ]
 
 ## 3.2 Análise de Requisitos
