@@ -18,6 +18,7 @@ Atividade | Método | Ferramenta
 Atividade | Método | Ferramenta 
 ----------|--------|-----------
 |...|...|...|
+
 ]
 
 ## 3.3 Documentação de Requisitos
@@ -26,6 +27,7 @@ Atividade | Método | Ferramenta
 Atividade | Método | Ferramenta 
 ----------|--------|-----------
 |...|...|...|
+
 ]
 
 ## 3.4 Verificação e Validação de Requisitos
@@ -34,6 +36,7 @@ Atividade | Método | Ferramenta
 Atividade | Método | Ferramenta 
 ----------|--------|-----------
 |...|...|...|
+
 ]
 
 ## 3.5 Gerenciamento de Requisitos 
@@ -42,4 +45,5 @@ Atividade | Método | Ferramenta
 Atividade | Método | Ferramenta 
 ----------|--------|-----------
 |...|...|...|
+
 ]
