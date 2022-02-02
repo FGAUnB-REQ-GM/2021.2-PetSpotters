@@ -1,28 +1,80 @@
 # Desenvolvimento de Software
-## Metodologia
+## 2.1 Questões levantadas para a decisão do Desenvolvimento de Software
 
-Em relação à metodologia, decidimos adotar o sistema ágil Scrum. Um aspecto determinante para tal escolha seria a necessidade, dentro dos métodos ágeis, de um desenvolvimento dos requisitos de forma incremental, no qual o software é entregue em incrementos curtos e rápidos, e as mudanças nos requisitos e no software são a norma.
+### 2.1.1 <b> Questões técnicas </b>
+<table>
+  <tr>
+    <td> <b> Sistema </b> </td> 
+    <td> Se trata de um sistema de relacionamento de pets, voltado para donos do pets. Portanto, não é um sistema muito robusto </td>
+  </tr>
+  <tr>
+    <td> <b> Tipo </b> </td> 
+    <td> Aplicativo de celular </td>
+  </tr>
+  <tr>
+    <td> <b> Vida útil </b> </td> 
+    <td> O produto possui vida útil indeterminada, enquanto houver público (donos de pets) e o problema em questão </td>
+  </tr>
+</table>
 
-Ian Sommerville, em seu livro “Engenharia de Software, destaca a fase central do Scrum, chamada ciclos de sprint, como a mais inovadora característica de tal abordagem. “Um sprint do Scrum é uma unidade de planejamento na qual o trabalho a ser feito é avaliado, os recursos para o desenvolvimento são selecionados e o software é implementado. “
+### 2.1.2 <b> Questões humanas </b>
+<table>
+  <tr>
+    <td> <b> Time </b> </td> 
+    <td> O time se trata de um conjunto de estudantes de Engenharia de Software, todos com experiência em desenvolvimento ágil </td>
+  </tr>
+  <tr>
+    <td> <b> Distribuição </b> </td> 
+    <td> O time está organizado em 5 integrantes. Vale destacar 1 desenvolvedora Front-end e 1 dev com experiência em desenvolvimento Mobile  </td>
+  </tr>
+  <tr>
+    <td> <b> Tecnologia </b> </td> 
+    <td> Experiência em React e React Native </td>
+  </tr>
+</table>
 
-Tendo em vista a proposta de gerenciamento do projeto por meio de um desenvolvimento incremental, contido nos métodos ágeis, a dinâmica das sprints, nas quais o produto final vai sendo gradualmente realizado, parece encaixar perfeitamente aos nossos objetivos.
+### 2.1.3 <b> Questões organizacionais </b>
+<table>
+  <tr>
+    <td> <b> Contrato </b> </td> 
+    <td> Pelo fato do projeto não englobar um contrato formal, não é necessário uma especificação ou projeto(design) bem detalhado </td>
+  </tr>
+  <tr>
+    <td> <b> Entrega </b> </td> 
+    <td> A entrega incremental é totalmente viável, por ser possível um feedback rápido em contato com o cliente (dono de pet) </td>
+  </tr>
+  <tr>
+    <td> <b> Clientes </b> </td> 
+    <td> Os clientes poderão estar em contato com o time de desenvolvimento para constantes melhorias no projeto </td>
+  </tr>
+  <tr>
+    <td> <b> Cultura </b> </td> 
+    <td> As diferenças culturais não irão interferir no desenvolvimento do projeto </td>
+  </tr>
+</table>
 
-Outro fator levantado por Sommerville e que possuiu certo peso em nossa decisão foi a descentralização do poder de decisões. Toda a equipe tem poder para tomar decisões, sendo o Scrum Master apenas um vetor de fluidez para o andamento do projeto: “A ideia por trás do Scrum é que toda a equipe deve ter poderes para tomar decisões, de modo que o termo ‘gerente de projeto’ tem sido deliberadamente evitado. Pelo contrário, o ‘Scrum Master’ é um facilitador, que organiza reuniões diárias, controla o backlog de trabalho, registra decisões, mede o progresso comparado ao backlog e se comunica com os clientes e a gerência externa à equipe.”
+## 2.2 Metodologia baseada no Scrum
 
-Com base no que foi anteriormente dito, pode-se concluir que, além de sua flexibilidade à mudança, o Scrum possibilita o fornecimento de um feedback contínuo, por meio das nossas Sprints Retrospectivas, o que irá acarretar numa melhoria contínua do produto. Ademais, o Scrum nos fornece a possibilidade de dividir o projetos em pequenas partes, por meio das Sprints, e permitindo entregas de Mínimos Produtos Viáveis ao longo do projeto.
+Dadas as questões levantadas, decidimos adotar um sistema ágil baseado no Scrum, e dessa forma, podemos gerenciar nosso projeto baseado em vários conceitos positivos para nós, como a entrega incremental, adaptabilidade a mudanças e flexibilidade de requisitos.
 
-O Scrum também define bem os papéis de cada um dentro do time, entre Scrum Master, Product Owner e Dev Team.
+Além disso, nos escoramos em conceitos de Ian Sommerville, em seu livro “Engenharia de Software". Em seu trabalho, destaca a fase central do Scrum, chamada ciclos de sprint, como a mais inovadora característica de tal abordagem. "Um sprint do Scrum é uma unidade de planejamento na qual o trabalho a ser feito é avaliado, os recursos para o desenvolvimento são selecionados e o software é implementado".
 
-Portanto, nosso modelo irá contar com os seguintes eventos e artefatos:
+Outro fator levantado por Sommerville e que possuiu certo peso em nossa decisão foi a descentralização do poder de decisões. Toda a equipe tem poder para tomar decisões, sendo o Scrum Master apenas um vetor de fluidez para o andamento do projeto: “A ideia por trás do Scrum é que toda a equipe deve ter poderes para tomar decisões, de modo que o termo ‘gerente de projeto’ tem sido deliberadamente evitado. Pelo contrário, o ‘Scrum Master’ é um facilitador, que organiza reuniões diárias, controla o backlog de trabalho, registra decisões, mede o progresso comparado ao backlog e se comunica com os clientes e a gerência externa à equipe”. 
+
+Além do SM, nossa abordagem de desenvolvimento de software contará com o Product Owner e o Dev Team, que serão papéis rotativos entre os integrantes do projeto. 
+
+Nosso modelo irá contar com os seguintes eventos e artefatos:
 
     • Sprints
 
-    • Sprint Planning/ Review
+    • Sprint Planning/Review
 
     • Sprint Retrospective
 
-    • Dailys de 15 minutos
+    • Reuniões Semanais
 
     • Product Backlog
 
     • Sprint Backlog
+
+Portanto, decidimos nos basear no Scrum, pelos diversos fatores que nos beneficiam em aspectos de flexibilidade, entrega, feedback contínuo, descentralização de poder e dinamismo.
