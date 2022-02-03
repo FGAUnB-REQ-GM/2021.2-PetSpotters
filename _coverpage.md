@@ -1,1 +1,7 @@
-<img  src='./assets/img/pet.jpeg'>
+<img class='logo' src='./assets/img/pet.png'>
+
+<style>
+.logo{
+    border-radius:500px
+}
+</style>
