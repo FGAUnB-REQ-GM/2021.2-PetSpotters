@@ -36,7 +36,11 @@ Atividade | Método | Ferramenta
 
 Atividade | Método | Ferramenta 
 ----------|--------|-----------
-|...|...|...|
+|Planejamento|Scrum|Google Meet, Google Docs|
+|Apresentação|A cada sprint será feita uma apresentação de cada autor e seu trabalho feito|Google Meet|
+|Reunião|Dailys com os participantes do grupo|Google Meet|
+|Correção|Cada entrega será feita uma avaliação e depois uma segunda entrega|Google Meet|
+|Acompanhamento|Dailys para verificar a corretabilidade do produto|Google Meet|
 
 ]
 
