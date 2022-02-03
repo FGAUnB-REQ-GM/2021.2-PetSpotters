@@ -35,9 +35,9 @@ Quanto à abordagem de Engenharia de Requisitos a ser utilizada, teremos a Abord
 | -------------- | ---------------------------------------------------------------------------- | ------------------------ |
 | Planejamento   | Scrum                                                                        | Google Meet, Google Docs |
 | Apresentação   | A cada sprint será feita uma apresentação de cada autor e seu trabalho feito | Google Meet              |
-| Reunião        | Dailys com os participantes do grupo                                         | Google Meet              |
+| Reunião        | Semanais com os participantes do grupo                                         | Google Meet              |
 | Correção       | Cada entrega será feita uma avaliação e depois uma segunda entrega           | Google Meet              |
-| Acompanhamento | Dailys para verificar a corretabilidade do produto                           | Google Meet              |
+| Acompanhamento | Semanais para verificar a corretabilidade do produto                           | Google Meet              |
 
 ## 3.5 Gerenciamento de Requisitos
 
