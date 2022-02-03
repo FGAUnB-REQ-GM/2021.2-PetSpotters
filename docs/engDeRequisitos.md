@@ -49,6 +49,6 @@ Atividade | Método | Ferramenta
 
 Atividade | Método | Ferramenta 
 ----------|--------|-----------
-|...|...|...|
+|Adaptação da equipe com as possíveis mudanças de requisitos|Revisão frequente dos requisitos|Documentação, Google Meet|
 
 ]
