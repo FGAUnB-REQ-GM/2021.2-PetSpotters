@@ -1,8 +1,5 @@
 # 3.  Abordagem de Engenharia de Requisitos
 
-[Nesta seção devem estar registradas as decisões da equipe quanto à abordagem de Engenharia de Requisitos a ser utilizada. Por exemplo: Abordagem Dirigida a Plano, Abordagem Ágil, etc.
-Cabe destacar aqui que, não é intenção desta seção ser definitiva ou prescritiva, mas, sim, orientadora. Neste sentido, a equipe deve, por exemplo, estabelecer um conjunto inicial de atividades, métodos e ferramentas de ER, e ir atualizando ao longo do desenvolvimento do produto.
-Também, não é objetivo desta seção ser detalhista e, sim, objetiva e resumida, de forma que a equipe possa utilizá-la como um guia.]
 
 Quanto à abordagem de Engenharia de Requisitos a ser utilizada, teremos a Abordagem Ágil como ferramenta norteadora a qual será de extrema importância no que diz respeito à realização das quatro principais atividades dentro dos processos de engenharia de requisitos: avaliação da utilidade do sistema para a empresa (estudo de viabilidade), descoberta de requisitos (elicitação e análise), conversão de tais requisitos em alguma forma-padrão (especificação), e verificação se os requisitos realmente definem o sistema que o cliente quer (validação).
 
@@ -31,7 +28,7 @@ Atividade | Método | Ferramenta
 ----------|--------|-----------
 |Especificação de Requisitos de Software (de Usuário e de Sistema)| Linguagem Natural, Notação Gráfica| Software para edição de textos e criação de formulários, modelos gráficos ou matemáticos|
 
-]
+
 
 ## 3.4 Verificação e Validação de Requisitos
 
