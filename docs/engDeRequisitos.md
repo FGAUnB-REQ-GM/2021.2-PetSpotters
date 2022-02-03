@@ -25,8 +25,6 @@ Quanto à abordagem de Engenharia de Requisitos a ser utilizada, teremos a Abord
 
 ## 3.3 Documentação de Requisitos
 
-[Diante da abordagem estabelecida, deve-se definir como cada uma das atividades será realizada, por meio de métodos e ferramentas. Pode-se, por exemplo, utilizar um quadro para expressar essas informações:
-
 | Atividade                                                         | Método                             | Ferramenta                                                                               |
 | ----------------------------------------------------------------- | ---------------------------------- | ---------------------------------------------------------------------------------------- |
 | Especificação de Requisitos de Software (de Usuário e de Sistema) | Linguagem Natural, Notação Gráfica | Software para edição de textos e criação de formulários, modelos gráficos ou matemáticos |
