@@ -1,6 +1,8 @@
 # Desenvolvimento de Software
 ## 2.1 Questões levantadas para a decisão do Desenvolvimento de Software
 
+<span style="color:red">Informem de onde vem esses fatores, citem o Sommerville. Conxtualizem os itens, a seguir</span>
+
 ### 2.1.1 <b> Questões técnicas </b>
 <table>
   <tr>
@@ -52,6 +54,8 @@
     <td> As diferenças culturais não irão interferir no desenvolvimento do projeto </td>
   </tr>
 </table>
+
+<span style="color:red">Conectem essas suas subseções. Como os fatores acima ajudam a fundamentar a escolha de metodologia que vcs apresentam, a seguir? Vi que falam do Sommerville, mais abaixo, mas tentem conectar as informações desde já.</span>
 
 ## 2.2 Metodologia baseada no Scrum
 
