@@ -1,7 +1,7 @@
 # Lições Aprendidas
 ## Unidade 1
 
-<span style="color:red">Pessoal, esse texto está bem genérico e um pouco confuso. Vcs começam falando que: "algumas características precisam ser alteradas". Que características?Depois disso, vcs falam de: conceito de processo de construção na engenharia de software; análise; construção de software; ferramenta. </span>
+<span style="color:red">Pessoal, esse texto está bem genérico e um pouco confuso. Vcs começam falando que: "algumas características precisam ser alteradas". Que características?Depois disso, vcs falam de: conceito de processo de construção na engenharia de software; análise; construção de software; ferramenta. Vocês precisam conectar essas ideias. Não está muito claro, para mim, o que vocês estão querendo dizer.</span>
 
 Para este presente trabalho, algumas características precisam ser alteradas, como se trata de um trabalho onde não se tem clientes reais foram feitas algumas modificações para poder aplicar conceitos da Unidade 1. 
 
