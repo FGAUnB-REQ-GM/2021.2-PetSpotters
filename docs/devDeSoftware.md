@@ -65,8 +65,9 @@ Segundo Ian Sommerville, para decidir o equilíbrio entre uma abordagem ou outra
     desenvolvimento do sistema? - As diferenças culturais não irão interferir no desenvolvimento do projeto </td>
   </tr>
 </table>
-
+<!---
 <span style="color:red">Conectem essas suas subseções. Como os fatores acima ajudam a fundamentar a escolha de metodologia que vcs apresentam, a seguir? Vi que falam do Sommerville, mais abaixo, mas tentem conectar as informações desde já.</span>
+-->
 
 ## 2.2 Metodologia baseada no Scrum
 
