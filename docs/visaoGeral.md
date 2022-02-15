@@ -32,7 +32,7 @@
 <table>
   <tr>
     <td> <b> Para </b> </td> 
-    <td> Os donos com pets que sofrem dos problemas advindos da falta de interação com outros animais ou pessoas.
+    <td> Os donos com pets que sofrem dos problemas advindos da falta de interação dos seus pets com outros animais ou pessoas.
   </tr>
   <tr>
     <td> <b> Cujo impacto é </b> </td> 
@@ -49,7 +49,7 @@
   </tr>
   <tr>
     <td> <b> Nosso produto </b> </td> 
-    <td> promete ser prático, no sentido de já mostrar logo ao cliente o que ele quer ver, e interativo, com telas dinâmicas e divertidas de serem utilizadas <span style="color:red">...NÃO. Esse texto precisa ser revisto. Qual o diferencial prático do produto de vcs em relação aos outros?</span></td>
+    <td> permite que os donos de pets possam cadastrar os seus pets no aplicativo, entre várias opções possam escolher outro pet e assim depois de darem match, possam marcar um encontro para que esses pets se conheçam, interajam e assim criem uma relação, melhorando a vida social dos dois e mais pets. </td>
   </tr>
 </table>
 
@@ -59,6 +59,5 @@
 
 <br>
 
-O objetivo principal do PetSpotters é melhorar a vida social de todos os pets e fazer com que eles interajam entre si, tanto para passarem um dia no parque brincando, quanto para reproduzirem e gerarem lindos filhotes. E além disso, a rede de relacionamento acaba se estendendo para os donos também pois como são eles que administram as contas, indiretamente acabam conhecendo outros donos.
+O objetivo principal do PetSpotters é que os donos de pets melhorem a vida social dos seus pets e fazer com que eles interajam com outros pets, tanto para passarem um dia no parque brincando, quanto para reproduzirem e gerarem lindos filhotes. E além disso, a rede de relacionamento acaba se estendendo para os donos também pois como são eles que administram as contas, indiretamente acabam conhecendo outros donos.
 
-<span style="color:red">Aqui, vcs colocam os donos de pet em segundo plano e os pets em primeito plano. É importante vcs pensarem em quem será, de fato, o usuário do produto e quem poderá, por exemplo, ser beneficiado (direto e/ou indireto) pelo produto</span>
