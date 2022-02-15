@@ -65,4 +65,6 @@ Qual a referência desse texto? Faltou *gerenciamento de requisitos*
 | ----------------------------------------------------------- | -------------------------------- | ------------------------- |
 | Adaptação da equipe com as possíveis mudanças de requisitos | Revisão frequente dos requisitos | Documentação, Google Meet |
 
+Durante o desenvolvimento do produto, as necessidades dos clientes podem mudar de acordo com o tempo, por isso é preciso manter a equipe sempre por dentro destas mudanças para não haver confusões na hora do desenvolvimento.
+
 <span style="color:red">O que é "Adaptação da equipe com as possíveis mudanças de requisitos", efetivamente?</span>
