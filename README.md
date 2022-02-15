@@ -2,7 +2,7 @@
 # Membros
 | [Arthur Talles](https://github.com/art1505) | [Antônio Neto](https://github.com/antoniotoineto) | [Herick Lima](https://github.com/hericklima22) | [Isadora Galvão](https://github.com/isadoragalvaoss) | [Levi Queiroz](https://github.com/LeviQ27) |
 | --- | --- | --- | --- | --- |
-![screen_shot](./assets/img/members/Arthur.jpeg) | ![screen_shot](./assets/img/members/Antonio.jpeg) | ![screen_shot](./assets/img/members/Herick.jpeg) | ![screen_shot](./assets/img/members/Isadora.jpeg) | ![screen_shot](./assets/img/members/Levi.jpeg) |
+![screen_shot](./assets/img/members/Arthur.jpeg) | ![screen_shot](./assets/img/members/Antonio.jpeg) | ![screen_shot](./assets/img/members/Herick.jpeg) | ![screen_shot](./assets/img/members/Isadora.jpeg) | ![screen_shot](./assets/img/members/levi.jpeg) |
 
 # Matrículas
 | Nome | Matrícula |
