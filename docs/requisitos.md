@@ -20,8 +20,8 @@
 
 ## Requisitos não funcionais 
 
-- [RNF01] O app deverá estar disponível 24 horas, 7 dias por semana 
-- [RNF02] O app deverá ser compatível com as plataformas Android e IOS 
+- [RNF01] O app deverá estar disponível 24 horas, 7 dias por semana, ou o mais próximo possível disso
+- [RNF02] O app deverá ser compatível com a plataforma Android 
 - [RNF03] O app deverá apresentar um tempo mínimo de resposta de 3s entre cada perfil avaliado 
 - [RNF04] O app deverá apresentar um tempo mínimo de resposta de 10s quando houver o match 
 - [RNF05] O app deverá proporcionar segurança ao guardar os dados do usuário
