@@ -9,3 +9,5 @@
 - **Unidade 2**
 
   - [Requisitos](docs/requisitos.md)
+  - [Canvas](docs/canvas.md)
+  - [Kanban](docs/kanban.md)
