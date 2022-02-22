@@ -2,7 +2,7 @@
 
 
 ## Requisitos funcionais
-- [RF01] O sistema deverá realizar cadastro do usuário
+- [RF01] O sistema deverá permitir o cadastro do usuário
 - [RF02] O sistema deverá solicitar login para o acesso
 - [RF03] O sistema deverá permitir a redefinição de senha
 - [RF04] O sistema deverá prover um perfil ao usuário
@@ -21,8 +21,8 @@
 
 - [RNF01] O app deverá estar disponível 24 horas, 7 dias por semana, ou o mais próximo possível disso
 - [RNF02] O app deverá ser compatível com a plataforma Android 
-- [RNF03] O app deverá apresentar um tempo mínimo de resposta de 3s entre cada perfil avaliado 
-- [RNF04] O app deverá apresentar um tempo mínimo de resposta de 10s quando houver o match 
+- [RNF03] O app deverá apresentar um tempo máximo de resposta de 3s entre cada perfil avaliado 
+- [RNF04] O app deverá apresentar um tempo máximo de resposta de 10s quando houver o match 
 - [RNF05] O app deverá proporcionar segurança ao guardar os dados do usuário
 - [RNF06] O app deverá proporcionar segurança ao realizar a integração com as redes sociais (Facebook, Instragram, Spotify)
 - [RNF07] O app deverá apresentar linguagem de fácil entendimento
