@@ -10,7 +10,7 @@
   - [Lições aprendidas](docs/licoesAprendidas.md)
   - [Apresentação](docs/apresentacao.md)
 
-- **Unidade 2**
+**Unidade 2**
 
   - [Requisitos](docs/requisitos.md)
   - [Canvas](docs/canvas.md)
