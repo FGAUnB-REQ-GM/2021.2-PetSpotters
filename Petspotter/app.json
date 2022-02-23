@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "Petspotter",
+    "slug": "Petspotter",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  },
+  "name": "Petspotter"
+}
