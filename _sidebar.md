@@ -12,6 +12,10 @@
 
 **Unidade 2**
 
-  - [Requisitos](docs/requisitos.md)
-  - [Canvas](docs/canvas.md)
-  - [Kanban](docs/kanban.md)
+  - [Visão Geral do produto](docs/visaoGeralProjeto/visaoGeralProduto.md)
+  - [Desenvolvimento de software](docs/visaoGeralProjeto/devDeSoftware.md)
+  - [Engenharia de requisitos](docs/visaoGeralProjeto/engDeRequisitos.md)
+  - [Visão Geral do projeto](docs/visaoGeralProjeto/visaoGeralProjeto.md)
+  - [Lições aprendidas](docs/visaoGeralProjeto/licoesAprendidasUnidade2.md)
+  - [Apresentação](docs/visaoGeralProjeto/apresentacao.md)
+
