@@ -12,7 +12,7 @@
 
 **Unidade 2**
 
-  - [Visão Geral do projeto](docs/visaoGeralProjeto/visaoGeral.md)
+  - [Visão Geral do produto](docs/visaoGeralProjeto/visaoGeral.md)
   - [Desenvolvimento de software](docs/visaoGeralProjeto/devDeSoftware.md)
   - [Engenharia de requisitos](docs/visaoGeralProjeto/engDeRequisitos.md)
   - [Visão Geral do projeto](docs/visaoGeralProjeto/visaoGeralProjeto.md)
