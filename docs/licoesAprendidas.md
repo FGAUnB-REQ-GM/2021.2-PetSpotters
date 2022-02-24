@@ -1,16 +1,12 @@
 # Lições Aprendidas
 ## Unidade 1
 
-Nesta Unidade foram apresentados os seguintes tópicos:
+<span style="color:red">Pessoal, esse texto está bem genérico e um pouco confuso. Vcs começam falando que: "algumas características precisam ser alteradas". Que características?Depois disso, vcs falam de: conceito de processo de construção na engenharia de software; análise; construção de software; ferramenta. Vocês precisam conectar essas ideias. Não está muito claro, para mim, o que vocês estão querendo dizer.</span>
 
-<ul>
-<li>Modelos de Ciclo de Vida de Desenvolvimento de Software,</li>
-<li>Fundamentos de ER, Atividades da ER,</li>
-<li>Ferramentas e Técnicas,</li>
-<li>Abordagens de ER,</li>
-<li>Aspectos humanos e sociais da Engenharia de Requisitos,</li>
-<li>Visão do Produto.</li> 
-</ul>
+Para este presente trabalho, algumas características precisam ser alteradas, como se trata de um trabalho onde não se tem clientes reais foram feitas algumas modificações para poder aplicar conceitos da Unidade 1. 
 
-Com o objetivo de que, completado essa Unidade, os alunos dessem propostas de projeto e organizassem essa proposta em referência aos tópicos apresentados.
-Neste trabalho foi proposto a problematização, que foi feito por meio de pesquisa à jornais, websites de jornais e revistas; Em seguida ocorreu uma reunião para decidir a solução do problema, colocando qual é o objetivo ao qual o grupo deseja alcançar; Decidido a problematização e a solução, ocorreu uma reunião para decidir qual seria a abordagem para construir o produto, de modo que foi realizado um estudo sobre os recursos tecnicos e humanos do grupo para escolher a abordagem que se adequaria melhor ao grupo; Escolhida a abordagem, iniciou-se os estudos sobre os requisitos que o produto deverá satisfazer, as técnicas de elicitação desses requisítos, as análises e negociações em relação à esses requisítos. Para seguir com a matéria em que será apresentado, na Unidade 2, os tipos de requisítos; As definições de backlog e as definições de MVP.
+Inicia-se pelo conceito de processo de construção na engenharia de software, onde foi aplicada os problemas e soluções do projeto, a análise do problema e dividir o problema em partes para facilitar o entendimento. 
+Na análise foi estudado um problema de mundo real e sobre as necessidades dos usuários, aquele ao qual o produto está sendo direcionado, e ao estudadas, foi feito algumas reuniões de decisão do que seria feito, sendo assim estabelecendo um acordo. 
+Dentro dos conceitos, está  a contrução de software, em que se emprega que para a construção de um software deve ser adotadas metodologias, processos, procedimentos e métodos e ferramentas, neste projeto passou-se pelas metodologias, onde foi estudado o problema e formas de como solucionaríamos esse problema, seguindo pelo inicio do processo onde formamos os problemas, as necessidades e algumas restrições, uma delas é sobre a plataforma, que foi planejado utilizar a plataforma Mobile. 
+A ferramenta escolhido foi baseada no Scrum, que é um Método Ágil, para a abordagem de requisitos. Sobre a Elicitação de Requisitos foram feitos o brainstorm, cenários e casos de uso.
+<span style="color:red">...não entendi isso: "...Scrum, que é um Método Ágil, para a abordagem de requisitos." O Scrum é um método ágil para a abordagem de requisitos?</span>
