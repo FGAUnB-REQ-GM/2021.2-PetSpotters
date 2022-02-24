@@ -58,12 +58,15 @@ Encontros da disciplina | Todos os envolvidos no projeto e o Prof. George | Quin
 | Falta de conhecimento sobre algumas tecnologias         | Perguntar aos membros que têm conhecimento e fazer pareamentos para auxiliar aos que sabem menos                                                                 |
 | Falta de organização                                    | Os membros devem sempre ficar atentos ao planejameneto e as entregas e sempre alertar uns aos outros do que deve ser melhorado para ficar mais organizado         |
 | Falta de tempo                                          | Os membros devem organizar as tarefas que são mais importantes para a entrega e dar prioridades à essas                                                          |
+| Defeito no computador de um ou mais integrantes | Redistribuição de responsabilidades enquanto o integrante estiver indisponível para para atuar no projeto |
 
 <br>
 
 ## 4.5 Critérios de replanejamento
 
-<br>
-Em referência ao gerenciamento de riscos, caso os membros que trabalham fiquem sem tempo para realizar as histórias, esses membros devem avisar com antecedência para que outro membro possa ajudar a fazer ou faça a história. Caso algum membro retire a matéria, esse membro deve avisar aos outros integrantes sobre a retirada para ter um reajuste da organização das sprints das histórias. Caso algum membro fique doente, o mesmo deve avisar aos outros membros para que algum dos membros que já tenham finalizados suas histórias possam ajudar a finalizar a história do membro enfermo. Caso algum membro tenham compromissos com outras matérias que prejudiquem o andamento da produção da história, o mesmo deve avisar aos outros integrantes sobre tais compromissos para que os outros membros possam ou ajudar a finalizar ou finalizarem a história. Caso algum dos membros não tenham conhecimentos em certas áreas do projeto, o mesmo deve procurar entre os membros sobre como realizar as tarefas necessárias daquela área e caso os outros membros tenha esse conhecimento, realizar pareamentos para finalizar a história. Caso tenha uma falta de organização de um ou mais membros, o outro membro responsável pela avaliação deve advertir o membro para ficar de olho no planejamento e nas entregas, e também os membros devem recomendar entre si maneiras de uma melhor organização para entregar em prazo as histórias propostas. Por fim, em caso de falta de tempo, os membros deve se reunir para realizarem uma organização em quais histórias são prioriades para serem entregues.
+A seguir é apresentado os critérios que levariam o projeto a ser replanejado:
+* **Mudança de requisitos da disciplina**: Alinhamento com professor e reanálise do MVP.
 
-<br>
+* **Funcionalidade se apresenta mais complexa do que o previsto**: Alinhamento com o time para decidir o impacto da funcionalidade na entrega e ,se necessário, adiar prazo de entrega dessa funcionalidade.
+
+* **Trancamento de um ou mais integrantes**: Verificar o tempo e disposição dos membros restantes e analisar o MVP, para sabermos se iremos continuar com as mesma entregas ou cortar algumas funcionalidades;
