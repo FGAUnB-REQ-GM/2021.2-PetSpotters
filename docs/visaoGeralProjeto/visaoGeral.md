@@ -99,6 +99,8 @@ O objetivo principal do PetSpotters é que os donos de pets melhorem a vida soci
 
 ## Requisitos com padrão SAFe
 
+<span style="color:red">Essa estrutura precisa ser revista. Existem vários relacionamentos 1..1 entre features e histórias. Por favor, corrijam</span>
+
 ![SAFE](../../assets/img/Safe.png)
 
 ## 1.5 Mínimo Produto Viável (MVP)
@@ -106,6 +108,12 @@ O objetivo principal do PetSpotters é que os donos de pets melhorem a vida soci
 # Canvas MVP
 
 O Canvas MVP da plataforma PetStoppers foi realizado e obtivemos a seguinte configuração incial:
+
+<span style="color:red">A jornada refere-se ao que a persona faz, atualmente, e não o que ela irá fazer com a utilização da solução. Nesse momento, não se tem nem os requisitos funcionais. Esses são extraídos, justamente, das jornadas</span>
+
+<span style="color:red">A nomemclatura e conteúdo de fundionalidades está diferente da seção 1.4.1. Requisitos Funcionais do documento de Visão.</span>
+
+<span style="color:red">cada resultado esperado deve ser passível de mensuração. Como mensurar, por exemplo, "Melhorar vida social dos pets"?</span>
 
 ![Canvas](../../assets/img/Canvas.png)
 
