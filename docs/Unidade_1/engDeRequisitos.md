@@ -2,34 +2,26 @@
 
 Quanto à abordagem de Engenharia de Requisitos a ser utilizada, teremos a Abordagem Ágil como ferramenta norteadora a qual será de extrema importância no que diz respeito à realização das quatro principais atividades dentro dos processos de engenharia de requisitos: avaliação da utilidade do sistema para a empresa (estudo de viabilidade), descoberta de requisitos (elicitação e análise), conversão de tais requisitos em alguma forma-padrão (especificação), e verificação se os requisitos realmente definem o sistema que o cliente quer (validação).
 
-<span style="color:red">Qual a referência desse texto? Faltou *gerenciamento de requisitos*. Qual a relação desse texto com a imagem do SAF, apresentada, a seguir?</span>
-
 <br >
 
 ![Ágil](../assets/agil/agil.png)
 <br >
 <br >
 <br >
-
+s
 ## 3.1 Elicitação de Requisitos
-
-<span style="color:red">Ajustem os nomes de todas as atividades, por exemplo: Descobrir, Definir, Planejar, Classificar, Organizar, etc.</span>
 
 | Atividade                                 | Método        | Ferramenta        |
 | ----------------------------------------- | ------------- | ----------------- |
 | Descoberta de requisitos                  | Brainstorming | Plataforma "Miro" |
 | Classificação e organização de requisitos | Cenários      | Plataforma "Miro" |
-| Priorização e negociação de requisitos    | Casos de Uso  | Plataforma "Miro" |
-
-<span style="color:red">Classificação e organização de requisitos e Priorização e negociação de requisitos não são ELICITAÇÃO</span>
+| Priorização e negociação de requisitos    | Casos de Uso  | Plataforma "Miro" |s
 
 ## 3.2 Análise de Requisitos
 
 | Atividade                                                      | Método                               | Ferramenta        |
 | -------------------------------------------------------------- | ------------------------------------ | ----------------- |
 | Definição do quão implementáveis são os requisistos elicitados | Casos de Uso, Cenários ou Storyboard | Plataforma "Miro" |
-
-<span style="color:red">Vocês vão utilizar casos de uso, junto com uma abordagem ágil?</span>
 
 ## 3.3 Documentação de Requisitos
 
@@ -53,5 +45,3 @@ Quanto à abordagem de Engenharia de Requisitos a ser utilizada, teremos a Abord
 | Atividade                                                   | Método                           | Ferramenta                |
 | ----------------------------------------------------------- | -------------------------------- | ------------------------- |
 | Adaptação da equipe com as possíveis mudanças de requisitos | Revisão frequente dos requisitos | Documentação, Google Meet |
-
-<span style="color:red">O que é "Adaptação da equipe com as possíveis mudanças de requisitos", efetivamente?</span>

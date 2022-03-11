@@ -3,7 +3,7 @@
 
 Segundo Ian Sommerville, para decidir o equilíbrio entre uma abordagem ou outra, é preciso pensar em uma série de fatores que se dividem em **3 naturezas diferentes**:
 
-![screen_shot](../assets/agil/QuestoesLevantadas.png)
+![screen_shot](../../assets/agil/QuestoesLevantadas.png)
 
 ### 2.1.1 <b> Questões técnicas </b>: Se relacionam com o sistema que está sendo desenvolvido
 <table>

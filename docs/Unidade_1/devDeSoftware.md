@@ -1,8 +1,6 @@
 # Desenvolvimento de Software
 ## 2.1 Questões levantadas para a decisão do Desenvolvimento de Software
 
-<span style="color:red">Informem de onde vem esses fatores, citem o Sommerville. Conxtualizem os itens, a seguir</span>
-
 ### 2.1.1 <b> Questões técnicas </b>
 <table>
   <tr>
@@ -54,8 +52,6 @@
   </tr>
 </table>
 
-<span style="color:red">Conectem essas suas subseções. Como os fatores acima ajudam a fundamentar a escolha de metodologia que vcs apresentam, a seguir? Vi que falam do Sommerville, mais abaixo, mas tentem conectar as informações desde já.</span>
-
 ## 2.2 Metodologia baseada no Scrum
 
 Dadas as questões levantadas, decidimos adotar um sistema ágil baseado no Scrum, e dessa forma, podemos gerenciar nosso projeto baseado em vários conceitos positivos para nós, como a entrega incremental, adaptabilidade a mudanças e flexibilidade de requisitos.
@@ -63,12 +59,12 @@ Além disso, nos escoramos em conceitos de Ian Sommerville, em seu livro “Enge
 Outro fator levantado por Sommerville e que possuiu certo peso em nossa decisão foi a descentralização do poder de decisões. Toda a equipe tem poder para tomar decisões, sendo o Scrum Master apenas um vetor de fluidez para o andamento do projeto: “A ideia por trás do Scrum é que toda a equipe deve ter poderes para tomar decisões, de modo que o termo ‘gerente de projeto’ tem sido deliberadamente evitado. Pelo contrário, o ‘Scrum Master’ é um facilitador, que organiza reuniões diárias, controla o backlog de trabalho, registra decisões, mede o progresso comparado ao backlog e se comunica com os clientes e a gerência externa à equipe”. 
 Além do SM, nossa abordagem de desenvolvimento de software contará com o Product Owner e o Dev Team, que serão papéis rotativos entre os integrantes do projeto. 
 Nosso modelo irá contar com os seguintes eventos e artefatos:
+
     • Sprints
     • Sprint Planning/Review
-    • Sprint Retrospective
+    • Sprint Retrospectivse
     • Reuniões Semanais
     • Product Backlog
-
     • Sprint Backlog
 
 Portanto, decidimos nos basear no Scrum, pelos diversos fatores que nos beneficiam em aspectos de flexibilidade, entrega, feedback contínuo, descentralização de poder e dinamismo.

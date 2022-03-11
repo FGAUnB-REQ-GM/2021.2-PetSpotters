@@ -97,15 +97,15 @@ O objetivo principal do PetSpotters é que os donos de pets melhorem a vida soci
 
 <br>
 
-## Requisitos com padrão SAFe
+## 1.5 Requisitos com padrão SAFe
 
 <span style="color:red">Essa estrutura precisa ser revista. Existem vários relacionamentos 1..1 entre features e histórias. Por favor, corrijam</span>
 
 ![SAFE](../../assets/img/Safe.png)
 
-## 1.5 Mínimo Produto Viável (MVP)
+## 1.6 Mínimo Produto Viável (MVP)
 
-# Canvas MVP
+## Canvas MVP
 
 O Canvas MVP da plataforma PetStoppers foi realizado e obtivemos a seguinte configuração incial:
 
