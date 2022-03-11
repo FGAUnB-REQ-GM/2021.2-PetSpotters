@@ -1,14 +1,9 @@
 # 3. Abordagem de Engenharia de Requisitos
 
 Quanto à abordagem de Engenharia de Requisitos a ser utilizada, teremos a Abordagem Ágil como ferramenta norteadora a qual será de extrema importância no que diz respeito à realização das quatro principais atividades dentro dos processos de engenharia de requisitos: avaliação da utilidade do sistema para a empresa (estudo de viabilidade), descoberta de requisitos (elicitação e análise), conversão de tais requisitos em alguma forma-padrão (especificação), e verificação se os requisitos realmente definem o sistema que o cliente quer (validação).
-
-<br >
-
-![Ágil](../assets/agil/agil.png)
-<br >
-<br >
-<br >
-s
+<br/><br/>
+![Ágil](../../assets/agil/agil.png)
+<br/><br/>
 ## 3.1 Elicitação de Requisitos
 
 | Atividade                                 | Método        | Ferramenta        |
@@ -28,9 +23,9 @@ s
 | Atividade                                                         | Método                             | Ferramenta                                                                               |
 | ----------------------------------------------------------------- | ---------------------------------- | ---------------------------------------------------------------------------------------- |
 | Especificação de Requisitos de Software (de Usuário e de Sistema) | Linguagem Natural, Notação Gráfica | Software para edição de textos e criação de formulários, modelos gráficos ou matemáticos |
-
+<!--
 <span style="color:red">Para documentar vão usar casos de uso, cenários e storyborads? É isso?</span>
-
+-->
 ## 3.4 Verificação e Validação de Requisitos
 
 | Atividade      | Método                                                                       | Ferramenta               |
