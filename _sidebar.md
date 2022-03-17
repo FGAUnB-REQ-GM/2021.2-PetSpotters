@@ -23,6 +23,8 @@
 
 **Unidade 3**
 
+- [SAFe](docs/Unidade_3/safe.md)
+- [Canvas MVP](docs/Unidade_3/canvas.md)
 - [PBB](docs/Unidade_3/pbb.md)
 - [Mapeamento de histórias](docs/Unidade_3/mapeamentodehistorias.md)
 - [BDD](docs/Unidade_3/bdd.md)
