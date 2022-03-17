@@ -19,3 +19,5 @@ O Product Backlog Building (PDD) é um método que facilita a elaboração e a c
   cliente
 
 ![PBB](./assets/img/PBB.png)
+
+<a href="https://miro.com/app/board/uXjVOKrgeb4=/">Link para o PBB Canvas </a>
