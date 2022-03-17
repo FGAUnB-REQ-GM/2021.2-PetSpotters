@@ -101,7 +101,7 @@ O objetivo principal do PetSpotters é que os donos de pets melhorem a vida soci
 <!--
 <span style="color:red">Essa estrutura precisa ser revista. Existem vários relacionamentos 1..1 entre features e histórias. Por favor, corrijam</span>
 -->
-![SAFE](../../assets/img/Safe.png)
+![SAFE](../../assets/img/SafeUnidade2.png)
 
 ## 1.6 Mínimo Produto Viável (MVP)
 
