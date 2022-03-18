@@ -23,8 +23,8 @@
 
 **Unidade 3**
 
-- [SAFe](docs/Unidade_3/safe.md)
-- [Canvas MVP](docs/Unidade_3/canvas.md)
+- [Visão do Produto](docs/Unidade_3/visaoGeralProduto.md)
 - [PBB](docs/Unidade_3/pbb.md)
 - [Mapeamento de histórias](docs/Unidade_3/mapeamentodehistorias.md)
 - [BDD](docs/Unidade_3/bdd.md)
+- [Apresentação](docs/Unidade_3/apresentacao.md)
