@@ -1,20 +1,12 @@
 import React from 'react';
-import { StyleSheet, View } from 'react-native';
-import { SelectPerfil } from './src/screens/SelectPerfil';
+import ScreenNavigation from './src/navigation/ScreenNavigation';
+import { NavigationContainer } from '@react-navigation/native';
+import { SafeAreaProvider } from "react-native-safe-area-context";
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <SelectPerfil />
-    </View>
+    <SafeAreaProvider>
+      <ScreenNavigation />
+    </SafeAreaProvider>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
