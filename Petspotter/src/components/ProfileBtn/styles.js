@@ -13,19 +13,20 @@ const styles = StyleSheet.create({
 
   insideView: {
     backgroundColor: "#FFD2CE",
-    width: "90%",
-    height: "90%",
+    width: "70%",
+    height: "70%",
     borderRadius: 8,
     display: "flex",
     flexDirection: "column",
-    alignItems: "center"
+    alignItems: "center",
+    justifyContent: "center",
   },
 
   textoExibido: {
     fontWeight: "bold",
     fontSize: 18,
-    color: "#B66C6C",
-    position: "absolute"
+    color: "#000",
+    position: 'relative'
   }
 })
 
