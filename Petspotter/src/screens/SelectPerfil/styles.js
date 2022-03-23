@@ -9,11 +9,11 @@ const styles = StyleSheet.create({
     color: "#B66C6C",
     fontWeight: "bold"
   },
-  userProfile: {
-    backgroundColor: "#FFD2CE"
-  },
-  petProfile: {
-    backgroundColor: "#FFD2CE"
+  img: {
+    resizeMode: "center",
+    position: "absolute",
+    borderRadius: 100,
+    borderColor: "#000",
   }
 })
 
