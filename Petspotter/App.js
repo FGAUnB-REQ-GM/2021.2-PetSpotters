@@ -1,12 +1,11 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { Image, StyleSheet, Text, View } from 'react-native';
-import './assets/img/eu.jpg'
+import { StyleSheet, View } from 'react-native';
 import { SelectPerfil } from './src/screens/SelectPerfil';
 
 export default function App() {
   return (
     <View style={styles.container}>
+      <SelectPerfil />
     </View>
   );
 }
