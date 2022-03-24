@@ -17,8 +17,11 @@ const styles = StyleSheet.create({
   inputBox: {
     height: 40,
     width: 250,
-    borderWidth: 1,
+    borderWidth: 2,
     padding: 10,
+    backgroundColor: "#FFD2CE",
+    borderRadius: 10,
+    borderColor: "#B66C6C"
   },
   inputBoxLabel: {
     marginBottom: 5,
