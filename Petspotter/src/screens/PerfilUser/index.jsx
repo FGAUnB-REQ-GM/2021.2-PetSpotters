@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { View, Text, TextInput } from "react-native";
+import { View, Text, TextInput, TouchableOpacity } from "react-native";
 import { ContainerView, ProfileLogo, SttsBar } from "../../components";
 import styles from "./styles"
 
@@ -37,6 +37,9 @@ export function PerfilUser() {
           />
         </View>
       </View>
+      <TouchableOpacity style={styles.saveBtn}>
+        <Text style={{color: "#B66C6C", fontWeight: "bold"}}>SALVAR</Text>
+      </TouchableOpacity>
     </ContainerView>
   );
 }

@@ -27,6 +27,17 @@ const styles = StyleSheet.create({
     marginBottom: 5,
     color: "#B66C6C",
     fontWeight: "bold"
+  },
+  saveBtn: {
+    borderWidth: 2,
+    backgroundColor: "#FFD2CE",
+    borderRadius: 10,
+    borderColor: "#B66C6C",
+    width: 100,
+    height: 36,
+    alignItems: "center",
+    justifyContent: "space-around",
+    marginTop: "30%"
   }
 })
 
