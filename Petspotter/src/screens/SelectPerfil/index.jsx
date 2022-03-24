@@ -1,15 +1,13 @@
 import React from "react";
 import { View, Image, Text, TouchableOpacity } from "react-native";
-import { SttsBar, ContainerView, ProfileBtn } from "../../components";
+import { SttsBar, ContainerView, ProfileBtn, ProfileLogo } from "../../components";
 import styles from "./styles";
 
 export function SelectPerfil() {
   return (
     <ContainerView>
       <SttsBar />
-      <View style={styles.logo}>
-        <Image source={require('../../../assets/img/petspooter_logo.png')} />
-      </View>
+      <ProfileLogo />
       <View style={{marginTop: "15%"}}>
         <Text style={styles.perfilText}>MEUS PERFIS</Text>
       </View>
