@@ -4,7 +4,9 @@ import { ContainerView, ProfileLogo, SttsBar } from "../../components";
 import styles from "./styles"
 
 export function PerfilUser() {
-  const [text, setText] = useState("")
+  const [nome, setNome] = useState("")
+  const [email, setEmail] = useState("")
+  const [tel, setTel] = useState("")
   return (
     <ContainerView>
       <SttsBar />
@@ -17,21 +19,21 @@ export function PerfilUser() {
           <Text style={styles.inputBoxLabel}>NOME</Text>
           <TextInput 
             style={styles.inputBox}
-            onChangeText={setText}
+            onChangeText={setNome}
           />
         </View>
         <View style={styles.inputBoxView}>
           <Text style={styles.inputBoxLabel}>EMAIL</Text>
           <TextInput 
             style={styles.inputBox}
-            onChangeText={setText}
+            onChangeText={setEmail}
           />
         </View>
         <View style={styles.inputBoxView}>
           <Text style={styles.inputBoxLabel}>TELEFONE</Text>
           <TextInput 
             style={styles.inputBox}
-            onChangeText={setText}
+            onChangeText={setTel}
           />
         </View>
       </View>
