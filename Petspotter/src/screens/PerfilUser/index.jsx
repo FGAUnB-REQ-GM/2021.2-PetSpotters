@@ -1,5 +1,6 @@
+import { useNavigation } from "@react-navigation/native";
 import React, { useState } from "react";
-import { View, Text, TextInput, TouchableOpacity } from "react-native";
+import { View, Text, TextInput, TouchableOpacity, ToastAndroid } from "react-native";
 import { ContainerView, ProfileLogo, SttsBar } from "../../components";
 import styles from "./styles"
 
@@ -7,6 +8,7 @@ export function PerfilUser() {
   const [nome, setNome] = useState("")
   const [email, setEmail] = useState("")
   const [tel, setTel] = useState("")
+  const navigation = useNavigation()
   return (
     <ContainerView>
       <SttsBar />
@@ -20,6 +22,7 @@ export function PerfilUser() {
           <TextInput 
             style={styles.inputBox}
             onChangeText={setNome}
+            value={nome}
           />
         </View>
         <View style={styles.inputBoxView}>
@@ -27,6 +30,7 @@ export function PerfilUser() {
           <TextInput 
             style={styles.inputBox}
             onChangeText={setEmail}
+            value={email}
           />
         </View>
         <View style={styles.inputBoxView}>
@@ -34,14 +38,15 @@ export function PerfilUser() {
           <TextInput 
             style={styles.inputBox}
             onChangeText={setTel}
+            value={tel}
           />
         </View>
       </View>
       <View style={{display: "flex", flexDirection: "row", marginTop: "20%"}}>
-        <TouchableOpacity style={styles.saveBtn}>
+        <TouchableOpacity style={styles.saveBtn} onPress={() => navigation.goBack()}>
           <Text style={{color: "#B66C6C", fontWeight: "bold"}}>CANCELAR</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.saveBtn}>
+        <TouchableOpacity style={styles.saveBtn} onPress={() => ToastAndroid.show("Edições salvas com sucesso", 2)}>
           <Text style={{color: "#B66C6C", fontWeight: "bold"}}>SALVAR</Text>
         </TouchableOpacity>
       </View>
