@@ -29,6 +29,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold"
   },
   saveBtn: {
+    position: "relative",
     borderWidth: 2,
     backgroundColor: "#FFD2CE",
     borderRadius: 10,
@@ -37,7 +38,7 @@ const styles = StyleSheet.create({
     height: 36,
     alignItems: "center",
     justifyContent: "space-around",
-    marginTop: "30%"
+    margin: 23
   }
 })
 

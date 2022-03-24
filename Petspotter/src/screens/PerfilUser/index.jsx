@@ -37,9 +37,15 @@ export function PerfilUser() {
           />
         </View>
       </View>
-      <TouchableOpacity style={styles.saveBtn}>
-        <Text style={{color: "#B66C6C", fontWeight: "bold"}}>SALVAR</Text>
-      </TouchableOpacity>
+      <View style={{display: "flex", flexDirection: "row", marginTop: "20%"}}>
+        <TouchableOpacity style={styles.saveBtn}>
+          <Text style={{color: "#B66C6C", fontWeight: "bold"}}>CANCELAR</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.saveBtn}>
+          <Text style={{color: "#B66C6C", fontWeight: "bold"}}>SALVAR</Text>
+        </TouchableOpacity>
+      </View>
+      
     </ContainerView>
   );
 }
