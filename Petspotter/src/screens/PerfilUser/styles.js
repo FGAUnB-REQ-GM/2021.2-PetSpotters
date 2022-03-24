@@ -8,17 +8,22 @@ const styles = StyleSheet.create({
   },
   form: {
     display: 'flex',
-    flexDirection: 'column'
+    flexDirection: 'column',
+    marginTop: 20
   },
   inputBoxView: {
-
+    margin: 10
   },
   inputBox: {
     height: 40,
     width: 250,
-
     borderWidth: 1,
     padding: 10,
+  },
+  inputBoxLabel: {
+    marginBottom: 5,
+    color: "#B66C6C",
+    fontWeight: "bold"
   }
 })
 

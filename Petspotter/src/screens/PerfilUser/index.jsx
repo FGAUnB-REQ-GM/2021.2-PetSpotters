@@ -14,21 +14,21 @@ export function PerfilUser() {
       </View>
       <View style={styles.form}>
         <View style={styles.inputBoxView}>
-          <Text>NOME</Text>
+          <Text style={styles.inputBoxLabel}>NOME</Text>
           <TextInput 
             style={styles.inputBox}
             onChangeText={setText}
           />
         </View>
         <View style={styles.inputBoxView}>
-          <Text>EMAIL</Text>
+          <Text style={styles.inputBoxLabel}>EMAIL</Text>
           <TextInput 
             style={styles.inputBox}
             onChangeText={setText}
           />
         </View>
         <View style={styles.inputBoxView}>
-          <Text>TELEFONE</Text>
+          <Text style={styles.inputBoxLabel}>TELEFONE</Text>
           <TextInput 
             style={styles.inputBox}
             onChangeText={setText}
