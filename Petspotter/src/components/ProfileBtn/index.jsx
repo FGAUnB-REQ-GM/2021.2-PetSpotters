@@ -2,7 +2,7 @@ import React from "react";
 import { View, Text } from "react-native";
 import styles from "./styles";
 
-function ProfileBtn(props) {
+export function ProfileBtn(props) {
   return (
     <View style={styles.container}>
       <View style={styles.insideView}>
@@ -12,5 +12,3 @@ function ProfileBtn(props) {
     </View>
   )
 }
-
-export default ProfileBtn

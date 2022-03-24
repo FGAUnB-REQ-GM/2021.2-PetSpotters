@@ -1,9 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import { View, Image, Text, TouchableOpacity } from "react-native";
-import SttsBar from "../../components/SttsBar";
-import { ContainerView } from "../../components/ContainerView";
+import { SttsBar, ContainerView, ProfileBtn } from "../../components";
 import styles from "./styles";
-import ProfileBtn from "../../components/ProfileBtn";
 
 export function SelectPerfil() {
   return (
