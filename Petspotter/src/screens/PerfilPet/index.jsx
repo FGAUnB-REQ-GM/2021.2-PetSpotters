@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigation } from "@react-navigation/native";
-import { View, Text, Image, TextInput, TouchableOpacity, ToastAndroid } from "react-native";
+import { View, Text, Image, TextInput, TouchableOpacity, ToastAndroid, ImageBackground } from "react-native";
 import { ContainerView, ProfileLogo, SttsBar } from "../../components";
 import styles from "./styles"
 
@@ -8,6 +8,7 @@ export function PerfilPet() {
   const [nome, setNome] = useState("")
   const [idade, setIdade] = useState(0)
   const navigation = useNavigation()
+  const [petPics, setPetPics] = useState({uri: null})
   return (
     <ContainerView>
       <SttsBar />
@@ -15,9 +16,19 @@ export function PerfilPet() {
       <View style={{marginTop: "15%"}}>
         <Text style={styles.perfilText}>PERFIL DO PET</Text>
       </View>
-      <View style={styles.profPicView}>
-        <Image source={require("../../../assets/img/eu.jpg")} style={{resizeMode: "center", borderRadius: 100}} />
-      </View>
+      <TouchableOpacity onPress={() => {setPetPics({uri: "https://i.natgeofe.com/n/4f5aaece-3300-41a4-b2a8-ed2708a0a27c/domestic-dog_thumb_4x3.jpg"})}}>
+        <View style={styles.profPicView}>
+          <ImageBackground
+            source={petPics}
+            style={{ width: 125, height: 125}}
+            imageStyle={{borderRadius: 80}}
+          >
+            <View>
+
+            </View>
+          </ImageBackground>
+        </View>
+      </TouchableOpacity>
       <View style={styles.form}>
         <View style={styles.inputBoxView}>
           <Text style={styles.inputBoxLabel}>NOME</Text>

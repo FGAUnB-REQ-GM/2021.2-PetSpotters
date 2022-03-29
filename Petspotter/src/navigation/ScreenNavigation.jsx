@@ -9,7 +9,7 @@ export const ScreenNavigation = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator screenOptions={{headerShown: false}}>
-        <Stack.Screen name="Teste" component={Teste} />
+        {/* <Stack.Screen name="Teste" component={Teste} /> */}
         <Stack.Screen name='Perfis' component={SelectPerfil} />
         <Stack.Screen name='PerfisUsuario' component={PerfilUser} />
         <Stack.Screen name='PerfisPet' component={PerfilPet} />
