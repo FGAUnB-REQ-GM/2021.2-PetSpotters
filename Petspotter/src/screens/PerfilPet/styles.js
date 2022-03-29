@@ -45,6 +45,14 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "space-around",
     margin: 23
+  },
+  cameraIcon: {
+    opacity: 0.6,
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderWidth: 1,
+    borderColor: '#fff',
+    borderRadius: 10
   }
 })
 

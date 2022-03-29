@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { useNavigation } from "@react-navigation/native";
-import { View, Text, Image, TextInput, TouchableOpacity, ToastAndroid, ImageBackground } from "react-native";
+import { View, Text, TextInput, TouchableOpacity, ToastAndroid, ImageBackground } from "react-native";
 import { ContainerView, ProfileLogo, SttsBar } from "../../components";
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import styles from "./styles"
 
 export function PerfilPet() {
@@ -23,8 +24,8 @@ export function PerfilPet() {
             style={{ width: 125, height: 125}}
             imageStyle={{borderRadius: 80}}
           >
-            <View>
-
+            <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
+              <Icon name="camera" size={35} color={"#fff"} style={styles.cameraIcon}></Icon>
             </View>
           </ImageBackground>
         </View>
