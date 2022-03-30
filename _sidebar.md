@@ -25,7 +25,7 @@
 
 - [Visão do Produto](docs/Unidade_3/visaoGeralProduto.md)
 - [PBB](docs/Unidade_3/pbb.md)
-- [Mapeamento de histórias](docs/Unidade_3/mapeamentodehistorias.md)
+- [Mapeamento de historias](docs/Unidade_3/mapeamentodehistorias.md)
 - [BDD](docs/Unidade_3/bdd.md)
 - [Apresentação](docs/Unidade_3/apresentacao.md)
 
@@ -33,3 +33,5 @@
 
 - [Visão do Produto](docs/Unidade_4/visaoGeralProduto.md)
 - [Visão Geral Projeto](docs/Unidade_4/visaoGeralProjeto.md)
+- [PBB](docs/Unidade_4/pbb.md)
+- [Mapeamento de historias](docs/Unidade_4/mapeamentodehistorias.md)
