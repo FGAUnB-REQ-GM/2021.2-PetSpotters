@@ -13,7 +13,7 @@ export function PerfilUser() {
     <ContainerView>
       <SttsBar />
       <ProfileLogo />
-      <View style={{marginTop: "15%"}}>
+      <View style={{marginTop: "5%"}}>
         <Text style={styles.perfilText}>MEU PERFIL</Text>
       </View>
       <View style={styles.form}>
