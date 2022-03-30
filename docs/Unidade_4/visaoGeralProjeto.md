@@ -26,10 +26,10 @@ Mudei aqui o cronograma -- Antonio
 | Sprint 4 | Canvas MVP, KanBan e Visão do Projeto | 17/02 | 24/02 |
 | Sprint 5 | Preparação do Ambiente React Native e Expo | 01/03 | 08/03 |
 | Sprint 6 | Canvas PBB, mapeamento de historias e BDD | 10/03 | 17/03 |
-| Sprint 7 | US01 **a** US05 | 22/03 | 29/03 |
-| Sprint 8 | US08 e US11 | 31/03 | 07/04 |
-| Sprint 9 | US09, US16 e US17 | 12/04 | 19/04 |
-| Sprint 10 | US18, US19, US20 e US21 | 21/04 | 28/04 |
+| Sprint 7 | US01 **a** US04 | 22/03 | 29/03 |
+| Sprint 8 | US07 e US10 | 31/03 | 07/04 |
+| Sprint 9 | US08, US15 e US16 | 12/04 | 19/04 |
+| Sprint 10 | US17, US18 e US20 | 21/04 | 28/04 |
 
 <br>
 
