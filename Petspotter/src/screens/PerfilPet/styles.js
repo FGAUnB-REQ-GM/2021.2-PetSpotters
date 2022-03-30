@@ -16,6 +16,7 @@ const styles = StyleSheet.create({
     marginTop: "12%",
     alignItems: "center",
     justifyContent: "center",
+    alignSelf: 'center'
   },
   inputBoxView: {
     margin: 10
