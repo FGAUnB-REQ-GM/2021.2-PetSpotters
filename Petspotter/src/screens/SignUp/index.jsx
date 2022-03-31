@@ -5,25 +5,14 @@ import {
   Image,
   Text,
   StyleSheet,
-  TextInput,
-  Button,
   LogBox,
-  ScrollView,
   FlatList,
+  TouchableOpacity,
 } from "react-native";
-import { useForm, Controller } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth, db } from "../../../firebase";
-import {
-  addDoc,
-  collection,
-  doc,
-  getDoc,
-  getDocs,
-  query,
-  setDoc,
-  where,
-} from "firebase/firestore";
+import { collection, getDocs, query, where } from "firebase/firestore";
 import InputCadastro from "../../components/InputCadastro";
 
 export function SignUp({ navigation }) {
@@ -37,31 +26,20 @@ export function SignUp({ navigation }) {
 
   LogBox.ignoreLogs(["Setting a timer"]);
 
-  const [user, setUser] = useState("");
-  const [users, setUsers] = useState([]);
-
   const OnSubmit = (data) => {
-    createUserWithEmailAndPassword(auth, data.email, data.senha).then((res) => {
-      console.log("criado");
-      setUser(res.user.email);
-    });
-    navigation.navigate("CadastroPet", { data: data });
+    try {
+      createUserWithEmailAndPassword(auth, data.email, data.senha)
+        .then(() => {
+          navigation.navigate("CadastroPet", { data: data });
+        })
+        .catch((error) => {
+          alert(error.message);
+        });
+    } catch (error) {
+      alert(error.message);
+    }
   };
 
-  /*  const q = query(
-    collection(db, "users"),
-    where("email", "==", "copatriciagalvao@gmail.com")
-  );
-  const querySnapshot = async () => {
-    await getDocs(q).then((res) =>
-      res.forEach((doc) => {
-        console.log(doc.id, "=>", doc.data());
-      })
-    );
-  };
-  querySnapshot(); */
-
-  let data = [];
   const renderItem = () => (
     <>
       <View style={styles.container}>
@@ -79,7 +57,12 @@ export function SignUp({ navigation }) {
         <InputCadastro title="telefone" control={control} errors={errors} />
         <InputCadastro title="senha" control={control} errors={errors} />
 
-        <Button title="Submit" onPress={handleSubmit(OnSubmit)} type="submit" />
+        <TouchableOpacity
+          style={styles.button}
+          onPress={handleSubmit(OnSubmit)}
+        >
+          <Text style={styles.text}>PRÓXIMO</Text>
+        </TouchableOpacity>
       </View>
     </>
   );
@@ -109,8 +92,27 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   container1: {
-    justifyContent: "flex-start",
+    justifyContent: "center",
     alignItems: "center",
     height: 500,
+  },
+  button: {
+    width: 150,
+    height: 40,
+    backgroundColor: "#FFD2CE",
+    borderColor: "#B66C6C",
+    borderWidth: 2,
+    borderRadius: 10,
+    justifyContent: "center",
+    alignItems: "center",
+    marginTop: "5%",
+  },
+  text: {
+    fontFamily: "Roboto",
+    fontStyle: "normal",
+    fontWeight: "700",
+    fontSize: 16,
+    lineHeight: 26,
+    color: "#B66C6C",
   },
 });

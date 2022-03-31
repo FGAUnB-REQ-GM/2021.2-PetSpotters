@@ -5,7 +5,7 @@ import {
   Image,
   Text,
   StyleSheet,
-  Button,
+  TouchableOpacity,
 } from "react-native";
 
 export function Initial({ navigation }) {
@@ -21,15 +21,18 @@ export function Initial({ navigation }) {
         />
       </View>
       <View style={styles.container1}>
-        <View style={styles.button}>
-          <Button
-            title="cadastro"
-            onPress={() => navigation.navigate("Cadastro")}
-          />
-        </View>
-        <View style={styles.button}>
+        <TouchableOpacity
+          style={styles.button}
+          onPress={() => navigation.navigate("Cadastro")}
+        >
+          <Text style={styles.text}>CADASTRO</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={styles.button}
+          onPress={() => navigation.navigate("Login")}
+        >
           <Text style={styles.text}>LOGIN</Text>
-        </View>
+        </TouchableOpacity>
       </View>
     </SafeAreaView>
   );

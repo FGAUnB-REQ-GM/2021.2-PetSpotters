@@ -39,7 +39,7 @@ const InputSelect = ({ title, control, errors, data }) => {
 const styles = StyleSheet.create({
   button: {
     width: 300,
-    height: 50,
+    height: 20,
     backgroundColor: "#FFD2CE",
     borderColor: "#B66C6C",
     borderWidth: 2,

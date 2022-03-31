@@ -1,5 +1,6 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
 import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 
@@ -7,16 +8,19 @@ import { getFirestore } from "firebase/firestore";
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyAHzo7Zoq4immU5VU1LPuYYjhSkrgum3OE",
-  authDomain: "pet-spotter.firebaseapp.com",
-  projectId: "pet-spotter",
-  storageBucket: "pet-spotter.appspot.com",
-  messagingSenderId: "547091297848",
-  appId: "1:547091297848:web:201a379405eb5a488f18cd",
+  apiKey: "AIzaSyARfb7AP-aozgv6_rkyNHI5qi4YUVWMNAs",
+  authDomain: "pet-spotters.firebaseapp.com",
+  projectId: "pet-spotters",
+  storageBucket: "pet-spotters.appspot.com",
+  messagingSenderId: "119195888955",
+  appId: "1:119195888955:web:38b49d02c2a7f95611db1e",
+  measurementId: "G-E3V4Y18DEN",
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
 export const auth = getAuth(app);
 export const db = getFirestore(app);
