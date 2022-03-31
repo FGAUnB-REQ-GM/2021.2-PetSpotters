@@ -14,12 +14,12 @@ export function SelectPerfil() {
       <View style={{marginTop: "5%"}}>
         <Text style={styles.perfilText}>MEUS PERFIS</Text>
       </View>
-      <TouchableOpacity onPress={() => {navigation.navigate('PerfisUsuarioEdit')}}>
+      <TouchableOpacity onPress={() => {navigation.navigate('PerfilUser')}}>
         <ProfileBtn textoExibido="Meu perfil">
           <Image source={require("../../../assets/img/eu.jpg")} style={styles.img} />
         </ProfileBtn>
       </TouchableOpacity>
-      <TouchableOpacity onPress={() => {navigation.navigate('PerfisPetEdit')}}>
+      <TouchableOpacity onPress={() => {navigation.navigate('PerfilPet')}}>
         <ProfileBtn textoExibido="Perfil do meu pet" >
           <Image source={require("../../../assets/img/dog.jpg")} style={styles.img} />
         </ProfileBtn>
