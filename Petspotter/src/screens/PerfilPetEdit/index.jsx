@@ -1,15 +1,14 @@
 import React, { useState } from "react";
 import { useNavigation } from "@react-navigation/native";
-import { View, Text, TextInput, TouchableOpacity, ToastAndroid, ImageBackground } from "react-native";
+import { View, Text, TextInput, TouchableOpacity, ToastAndroid, ImageBackground, ScrollView } from "react-native";
 import { ContainerView, ProfileLogo, SttsBar } from "../../components";
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import styles from "./styles"
-import { ScrollView } from "react-native-gesture-handler";
+// import { ScrollView } from "react-native-gesture-handler";
 
-export function PerfilPet() {
+export function PerfilPetEdit() {
   const navigation = useNavigation()
   const [nome, setNome] = useState("")
-  const [idade, setIdade] = useState(0)
   const [bio, setBio] = useState("")
   const [petPics, setPetPics] = useState({uri: null})
   return (

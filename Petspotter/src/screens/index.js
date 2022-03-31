@@ -1,4 +1,4 @@
 export { SelectPerfil } from './SelectPerfil'
-export { PerfilPet } from './PerfilPet'
-export { PerfilUser } from './PerfilUser'
+export { PerfilPetEdit } from './PerfilPetEdit'
+export { PerfilUserEdit } from './PerfilUserEdit'
 export { Teste } from './Teste'

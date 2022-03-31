@@ -4,7 +4,7 @@ import { View, Text, TextInput, TouchableOpacity, ToastAndroid } from "react-nat
 import { ContainerView, ProfileLogo, SttsBar } from "../../components";
 import styles from "./styles"
 
-export function PerfilUser() {
+export function PerfilUserEdit() {
   const [nome, setNome] = useState("")
   const [email, setEmail] = useState("")
   const [tel, setTel] = useState("")
