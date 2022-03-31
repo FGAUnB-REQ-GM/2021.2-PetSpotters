@@ -10,7 +10,6 @@
   },
   "dependencies": {
     "@babel/preset-env": "^7.1.6",
-    "@babel/preset-typescript": "*",
     "@react-navigation/native": "^6.0.8",
     "@react-navigation/native-stack": "^6.5.2",
     "expo": "~44.0.2",
