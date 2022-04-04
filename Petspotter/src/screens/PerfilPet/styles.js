@@ -40,8 +40,8 @@ const styles = StyleSheet.create({
   },
   profilePic: {
     backgroundColor: "rgba(100, 100, 100, 0.3)",
-    width: 50,
-    height: 50,
+    width: 40,
+    height: 40,
     marginLeft: 10,
     borderRadius: 100
   }
