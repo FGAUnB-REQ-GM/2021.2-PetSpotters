@@ -23,7 +23,7 @@ O Product Backlog Building (PDD) é um método que facilita a elaboração e a c
 - Estabelecida a correspondência entre os problemas relativos ao contexto do produto atual e os que as funcionalidades visam resolver.
 - Tendo em vista a necesssária relação entre as funcionalidades do PBB e do Canvas MVP, anteriormente realizado, acrescentamos alguns PBI´s a mais para que tal relação se concretizasse em sua totalidade.
 
-<!--
+
 ## COORG
 
 **COORG** é uma técnica eficiente para realizar a priorização de backlog, visando planejar e alinhar o fluxo de trabalho e as próximas sprints.
@@ -75,7 +75,7 @@ Os critérios de classificação foram:
 </tr>
 <caption>Legenda</caption>
 </table>
--->
+
 ![PBB](./assets/PBB.png)
 
 <a href="https://miro.com/app/board/uXjVOKrgeb4=/">Link para o PBB Canvas </a>
