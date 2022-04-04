@@ -34,7 +34,16 @@ const styles = StyleSheet.create({
     textShadowRadius: 15
   },
   topBar: {
-    
+    flexDirection: 'row',
+    alignItems: 'center',
+    width: '100%'
+  },
+  profilePic: {
+    backgroundColor: "rgba(100, 100, 100, 0.3)",
+    width: 50,
+    height: 50,
+    marginLeft: 10,
+    borderRadius: 100
   }
 })
 

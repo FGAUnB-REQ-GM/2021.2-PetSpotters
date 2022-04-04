@@ -1,11 +1,13 @@
 import React, { useState } from "react";
-import { Text, View, TouchableOpacity, Dimensions, Image, Pressable } from "react-native";
+import { Text, View, TouchableOpacity, Dimensions, Image, ImageBackground } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
 import Carousel, { Pagination } from 'react-native-snap-carousel'
 import { ContainerView, ProfileLogo, SttsBar } from "../../components"
 import styles from "./styles";
 
 export function PerfilPet() {
+  const navigation = useNavigation()
   
   const fotos = {
     foto1: 'https://images.wallpapersden.com/image/download/husky-dog-muzzle_aWtnapSZmpqtpaSklGZlbWWtZ2llZQ.jpg',
@@ -31,12 +33,16 @@ export function PerfilPet() {
   const { width } = Dimensions.get('window')
   
   const renderItem = (item, index) => {
-    return <Image
-    key={index}
-    style={{ width: '100%', height: '100%'}}
-    resizeMode='cover'
-    source={{uri: item.item.image}}
-    />
+    return (
+    <TouchableOpacity activeOpacity={1} onPress={() => {}}>
+      <Image
+      key={index}
+      style={{ width: '100%', height: '100%'}}
+      resizeMode='cover'
+      source={{uri: item.item.image}}
+      />
+    </TouchableOpacity>
+    )
   }
 
   const [activeSlide, setActiveSlide] = useState(0)
@@ -76,7 +82,18 @@ export function PerfilPet() {
     <ContainerView>
       <SttsBar />
       <View style={styles.topBar}>
-        <ProfileLogo style={{marginTop: 5, marginBottom: 5}} />
+
+        <TouchableOpacity style={styles.profilePic} activeOpacity={0.8} onPress={() => navigation.navigate('PerfisPetEdit')}>
+          <ImageBackground 
+            style={{width: 50, height: 50}}
+            source={{uri: images[0].image }}
+            resizeMode="cover"
+            borderRadius={100}
+          />
+        </TouchableOpacity>
+        <View>
+          <ProfileLogo style={{marginTop: 5, marginBottom: 5}} />
+        </View>
       </View>
       <View style={styles.profileImageView}>
         <Carousel
@@ -87,6 +104,7 @@ export function PerfilPet() {
           itemWidth={width}
           renderItem={renderItem}
           onSnapToItem={(index) => setActiveSlide(index)}
+          enableSnap={true}
           />
         <View style={{position: 'absolute'}}>
         {paginacao()}
@@ -95,9 +113,7 @@ export function PerfilPet() {
           <Text style={[styles.petDescription, {fontSize: 30}]}>Mel</Text>
           <Text style={[styles.petDescription]}>2 anos</Text>
           <Text style={styles.petDescription}>BullDog</Text>
-          <TouchableOpacity
-            style={styles.button}
-          >
+          <TouchableOpacity style={styles.button}>
             <Icon name='information' size={15} color={"#ffffffdd"} />
           </TouchableOpacity>
         </View>
