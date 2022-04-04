@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { Text, View, TouchableOpacity, FlatList, Dimensions, Image, ImageBackground, ScrollView } from "react-native";
+import { Text, View, TouchableOpacity, Dimensions, Image, Pressable } from "react-native";
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
 import Carousel, { Pagination } from 'react-native-snap-carousel'
 import { ContainerView, ProfileLogo, SttsBar } from "../../components"
 import styles from "./styles";
@@ -88,17 +89,19 @@ export function PerfilPet() {
           onSnapToItem={(index) => setActiveSlide(index)}
           />
         <View style={{position: 'absolute'}}>
-          {paginacao()}
+        {paginacao()}
         </View>
-      </View>
         <View style={styles.petDescriptionView}>
           <Text style={[styles.petDescription, {fontSize: 30}]}>Mel</Text>
           <Text style={[styles.petDescription]}>2 anos</Text>
           <Text style={styles.petDescription}>BullDog</Text>
+          <TouchableOpacity
+            style={styles.button}
+          >
+            <Icon name='information' size={15} color={"#ffffffdd"} />
+          </TouchableOpacity>
         </View>
-      <ScrollView style={{}}>
-        
-      </ScrollView>
+      </View>
     </ContainerView>
   )
 }

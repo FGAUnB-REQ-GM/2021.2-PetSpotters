@@ -7,7 +7,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold"
   },
   profileImageView: {
-    height: '60%',
+    flex: 1,
     position: 'relative',
     backgroundColor: '#000000',
     alignItems: 'center',
@@ -16,9 +16,13 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     width: '100%',
-    height: '10%',
     position: 'absolute',
-    marginTop: '100%',  
+    bottom: '13%'
+  },
+  button: {
+    marginLeft: 15,
+    elevation: 2,
+    backgroundColor: "#00000000"
   },
   petDescription: {
     color: '#fff',
