@@ -9,22 +9,27 @@ const styles = StyleSheet.create({
   profileImageView: {
     height: '60%',
     position: 'relative',
-    backgroundColor: '#00000043'
+    backgroundColor: '#000000',
+    alignItems: 'center',
   },
   petDescriptionView: {
     flexDirection: 'row',
-    justifyContent: 'space-around',
     alignItems: 'center',
     width: '100%',
     height: '10%',
     position: 'absolute',
-    marginTop: '130%',
-    backgroundColor: '#B66C6C43',
-    
+    marginTop: '100%',  
   },
   petDescription: {
-    color: '#B66C6C',
-    fontSize: 24,
+    color: '#fff',
+    fontSize: 20,
+    fontWeight: 'bold',
+    marginLeft: '5%',
+    textShadowColor: 'rgba(0, 0, 0, 0.75)',
+    textShadowOffset: {width: -1, height: 1},
+    textShadowRadius: 15
+  },
+  topBar: {
     
   }
 })
