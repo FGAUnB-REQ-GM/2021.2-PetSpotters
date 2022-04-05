@@ -36,3 +36,4 @@
 - [PBB](docs/Unidade_4/pbb.md)
 - [Mapeamento de historias](docs/Unidade_4/mapeamentodehistorias.md)
 - [BDD](docs/Unidade_4/bdd.md)
+- [User Story Map](docs/Unidade_4/usm.md)
