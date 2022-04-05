@@ -23,6 +23,10 @@ O Product Backlog Building (PDD) é um método que facilita a elaboração e a c
 - Estabelecida a correspondência entre os problemas relativos ao contexto do produto atual e os que as funcionalidades visam resolver.
 - Tendo em vista a necesssária relação entre as funcionalidades do PBB e do Canvas MVP, anteriormente realizado, acrescentamos alguns PBI´s a mais para que tal relação se concretizasse em sua totalidade.
 
+![PBB](./assets/PBB.png)
+
+<a href="https://miro.com/app/board/uXjVOKrgeb4=/">Link para o PBB Canvas </a>
+
 
 ## COORG
 
@@ -31,6 +35,7 @@ Assim, foi aplicado o COORG para classificar, ordernar e organizar as funcionali
 
 Os critérios de classificação foram:
 
+<!--
 - **Frenquência de Uso**
 
 <table>
@@ -49,36 +54,58 @@ Os critérios de classificação foram:
 <caption>Legenda</caption>
 </table>
 <br>
+-->
+- ## **Escala de valores**
+ ### **Prioridade de uso: Dependência  + valor de negócio**
 
-- **Relevância**
-
+###  Valor de negócio
 <table>
 <tr>
-        <td > 8 </td>
-        <td>Muito relevante. Todos os demais PBI's necessitam da implementação deste.</td>
-</tr>
-<tr>
-        <td> 7 </td>
-        <td> Muito Relevante. Outras funcionalidades podem ser implementadas antes, mas esta <br> ainda estabelece elevado grau de importância em relação às outras. </td>
-</tr>
-<tr>
-        <td> 6 </td>
-        <td> Relevante. Ainda que boa parte tenha sido implementada, esta estabelece <br> influência sobre as subsequentes </td>
+        <td > 2 </td>
+        <td>Algo que faz sentido, mas que não agrega muito valor no momento atual, um valor de negócio baixo.</td>
 </tr>
 <tr>
         <td> 5 </td>
-        <td> Intermediário. Possui certo grau de relevância, mas faz parte de uma cadeia menor <br> de importância em relação às anteriormente realizadas. </td>
+        <td> Algo que possui certo grau de importância, um valor de negócio médio. </td>
+</tr>
+<tr>
+        <td> 8 </td>
+        <td> Muito importante, principal, algo com um valor de negócio alto. </td>
+</tr>
+
+</table>
+- : 
+- (): 
+- (): 
+- (): 
+- (7): 
+
+###  Dependências
+<table>
+<tr>
+        <td > Menor que 4 </td>
+        <td> Exerce pouca dependência em relação às demais. Desconsiderado no processo de priorização.</td>
 </tr>
 <tr>
         <td> 4 </td>
-        <td> Menos relevante. Possui menor relevância em relação às outras, mas ainda agrega <br> valor ao projeto. </td>
+        <td> Exerce menos dependência em relação às demais. Possui menor relevância em relação às outras, mas ainda agrega valor ao projeto. </td>
 </tr>
-<caption>Legenda</caption>
+<tr>
+        <td> 5 </td>
+        <td> Exerce dependência intermediária em relação às demais . Possui certo grau de relevância, mas faz parte de uma cadeia menor de importância em relação às anteriormente realizadas. </td>
+</tr>
+<tr>
+        <td> 6 </td>
+        <td> Exerce forte dependência em relação às demais. Outras funcionalidades podem ser implementadas antes, mas esta ainda estabelece elevado grau de importância em relação às outras. </td>
+</tr>
+<tr>
+        <td> 7 </td>
+        <td> Essencial para a realização das demais. Todos os demais PBI's necessitam da implementação deste. </td>
+</tr>
+
 </table>
 
-![PBB](./assets/PBB.png)
-
-<a href="https://miro.com/app/board/uXjVOKrgeb4=/">Link para o PBB Canvas </a>
+![PBB](./assets/coorg4.png)
 
 # Critérios de Aceitação das US's
 
