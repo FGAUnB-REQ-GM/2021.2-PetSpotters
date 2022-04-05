@@ -20,10 +20,10 @@ export function PerfilPetEdit() {
         <Text style={styles.perfilText}>EDITAR PERFIL DO PET</Text>
       </View>
       <ScrollView style={{display: 'flex', alignContent: 'center', width: '100%', }}>
-        <TouchableOpacity onPress={() => {setPetPics({uri: "https://i.natgeofe.com/n/4f5aaece-3300-41a4-b2a8-ed2708a0a27c/domestic-dog_thumb_4x3.jpg"})}}>
+        <TouchableOpacity onPress={() => {console.log(data.images[0].image)}}>
           <View style={styles.profPicView}>
             <ImageBackground
-              source={petPics}
+              source={{uri: data.images[1].image}}
               style={{ width: 125, height: 125}}
               imageStyle={{borderRadius: 80}}
             >
@@ -40,6 +40,7 @@ export function PerfilPetEdit() {
               style={[styles.inputBox, {width: "100%"}]}
               onChangeText={setNome}
               value={nome}
+              placeholder={data.data.NOME}
             />
           </View>
           <View style={styles.inputBoxView}>
