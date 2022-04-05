@@ -6,8 +6,8 @@ export function SelectPerfil() {
   return (
     <SafeAreaView>
       <View style={styles.logo}>
-        <Image source={require('../../../assets/img/petspooter_logo.png')} />
+        <Image source={require("../../../assets/img/petspooter_logo.png")} />
       </View>
     </SafeAreaView>
-  )
-} 
+  );
+}
