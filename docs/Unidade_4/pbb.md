@@ -74,11 +74,6 @@ Os critérios de classificação foram:
 </tr>
 
 </table>
-- : 
-- (): 
-- (): 
-- (): 
-- (7): 
 
 ###  Dependências
 <table>
