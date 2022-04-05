@@ -18,7 +18,7 @@ const InputCadastro = ({ title, control, errors }) => {
               onBlur={onBlur}
               onChangeText={onChange}
               value={value}
-              secureTextEntry={title == "senha" && true}
+              secureTextEntry={title == "SENHA" && true}
             />
           </>
         )}
@@ -45,7 +45,7 @@ const styles = StyleSheet.create({
     fontFamily: "Roboto",
     fontStyle: "normal",
     fontWeight: "700",
-    fontSize: 16,
+    fontSize: 14,
     lineHeight: 26,
     color: "#B66C6C",
   },

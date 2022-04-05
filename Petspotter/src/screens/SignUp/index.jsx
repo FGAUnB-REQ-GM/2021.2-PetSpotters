@@ -52,10 +52,10 @@ export function SignUp({ navigation }) {
         />
       </View>
       <View style={styles.container1}>
-        <InputCadastro title="nome" control={control} errors={errors} />
-        <InputCadastro title="email" control={control} errors={errors} />
-        <InputCadastro title="telefone" control={control} errors={errors} />
-        <InputCadastro title="senha" control={control} errors={errors} />
+        <InputCadastro title="NOME" control={control} errors={errors} />
+        <InputCadastro title="EMAIL" control={control} errors={errors} />
+        <InputCadastro title="TELEFONE" control={control} errors={errors} />
+        <InputCadastro title="SENHA" control={control} errors={errors} />
 
         <TouchableOpacity
           style={styles.button}

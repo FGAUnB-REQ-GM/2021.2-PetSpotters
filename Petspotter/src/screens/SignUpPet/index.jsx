@@ -85,20 +85,20 @@ export function SignUpPet({ navigation, route }) {
         <Text style={styles.text}>CADASTRE SEU PET</Text>
 
         <InputSelect
-          title="especie"
+          title="ESPECIE"
           control={control}
           errors={errors}
           data={especie}
         />
-        <InputCadastro title="raca" control={control} errors={errors} />
+        <InputCadastro title="RACA" control={control} errors={errors} />
         <InputSelect
-          title="genero"
+          title="GENERO"
           control={control}
           errors={errors}
           data={genero}
         />
         <InputSelect
-          title="porte"
+          title="PORTE"
           control={control}
           errors={errors}
           data={porte}
