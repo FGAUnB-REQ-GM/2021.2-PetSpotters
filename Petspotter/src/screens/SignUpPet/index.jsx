@@ -31,14 +31,14 @@ export function SignUpPet({ navigation, route }) {
 
     const docRef = async () => {
       await addDoc(collection(db, "users"), {
-        nome: route.params.data.nome,
-        email: route.params.data.email,
-        telefone: route.params.data.telefone,
+        nome: route.params.data.NOME,
+        email: route.params.data.EMAIL,
+        telefone: route.params.data.TELEFONE,
         pet: {
-          raca: data.raca,
-          especie: data.especie,
-          genero: data.genero,
-          porte: data.porte,
+          raca: data.RACA,
+          especie: data.ESPECIE,
+          genero: data.GENERO,
+          porte: data.PORTE,
         },
       });
     };

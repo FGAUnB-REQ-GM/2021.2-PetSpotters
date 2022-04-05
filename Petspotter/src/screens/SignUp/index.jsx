@@ -28,7 +28,7 @@ export function SignUp({ navigation }) {
 
   const OnSubmit = (data) => {
     try {
-      createUserWithEmailAndPassword(auth, data.email, data.senha)
+      createUserWithEmailAndPassword(auth, data.EMAIL, data.SENHA)
         .then(() => {
           navigation.navigate("CadastroPet", { data: data });
         })
