@@ -11,6 +11,14 @@ const styles = StyleSheet.create({
     position: "absolute",
     borderRadius: 100,
     borderColor: "#000",
+  },
+  backButton: {
+    backgroundColor: '#B66C6C',
+    width: 150,
+    height: 40,
+    borderRadius: 20,
+    alignItems: 'center',
+    justifyContent: 'center'
   }
 })
 

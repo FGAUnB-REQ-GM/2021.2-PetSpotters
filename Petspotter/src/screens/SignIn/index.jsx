@@ -13,7 +13,6 @@ import {
   TouchableOpacity,
 } from "react-native";
 import { useForm, Controller } from "react-hook-form";
-import { useNavigation } from "@react-navigation/native";
 import { signInWithEmailAndPassword, onAuthStateChanged } from "firebase/auth";
 import { auth, db } from "../../../firebase";
 import {
@@ -37,8 +36,6 @@ export function SignIn({ navigation }) {
     defaultValues: {},
   });
 
-  const navigator = useNavigation()
-
   LogBox.ignoreLogs(["Setting a timer"]);
 
   const [user, setUser] = useState("");
@@ -46,9 +43,9 @@ export function SignIn({ navigation }) {
 
   const OnSubmit = (data) => {
     try {
-      signInWithEmailAndPassword(auth, data.email, data.senha)
+      signInWithEmailAndPassword(auth, data.EMAIL, data.SENHA)
         .then(() => {
-          navigation.navigate("Match", { data: data });
+          navigation.navigate("PerfilPet", { data: data });
         })
         .catch((error) => {
           alert(error.message);
@@ -105,7 +102,7 @@ export function SignIn({ navigation }) {
         </TouchableOpacity>
         <TouchableOpacity
           style={styles.button}
-          onPress={() => navigator.navigate("Cadastro")}
+          onPress={() => navigation.navigate("Cadastro")}
         >
           <Text style={styles.text}>CRIAR CONTA</Text>
         </TouchableOpacity>

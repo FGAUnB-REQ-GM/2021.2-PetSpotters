@@ -27,7 +27,7 @@ export function SignUpPet({ navigation, route }) {
   LogBox.ignoreLogs(["Setting a timer"]);
 
   const OnSubmit = (data) => {
-    navigation.navigate("Match", { data: data });
+    navigation.navigate("PerfilPet", { data: data });
 
     const docRef = async () => {
       await addDoc(collection(db, "users"), {

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Text, View, TouchableOpacity, Dimensions, Image, ImageBackground } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
@@ -8,6 +8,26 @@ import styles from "./styles";
 
 export function PerfilPet() {
   const navigation = useNavigation()
+  
+  const [petData, setPetData] = useState({
+    nome: '',
+    raca: '',
+    porte: '',
+    genero: '',
+    idade: '',
+    bio: ''
+  })
+
+  useEffect(() => {
+    setPetData({
+      nome: 'Mel',
+      raca: 'BullDog',
+      porte: 'Grande',
+      genero: 'Femea',
+      idade: '2 anos',
+      bio: 'Doginho fofo'
+    })
+  }, [])
   
   const fotos = {
     foto1: 'https://images.wallpapersden.com/image/download/husky-dog-muzzle_aWtnapSZmpqtpaSklGZlbWWtZ2llZQ.jpg',
@@ -34,7 +54,7 @@ export function PerfilPet() {
   
   const renderItem = (item, index) => {
     return (
-    <TouchableOpacity activeOpacity={1} onPress={() => {}}>
+    <TouchableOpacity activeOpacity={1} onPress={() => navigation.navigate("PetData", petData)}>
       <Image
       key={index}
       style={{ width: '100%', height: '100%'}}
@@ -78,6 +98,8 @@ export function PerfilPet() {
     )
   }
 
+
+
   return (
     <ContainerView>
       <SttsBar />
@@ -109,9 +131,9 @@ export function PerfilPet() {
         {paginacao()}
         </View>
         <View style={styles.petDescriptionView}>
-          <Text style={[styles.petDescription, {fontSize: 30}]}>Mel</Text>
-          <Text style={[styles.petDescription]}>2 anos</Text>
-          <Text style={styles.petDescription}>BullDog</Text>
+          <Text style={[styles.petDescription, {fontSize: 30}]}>{petData.nome}</Text>
+          <Text style={[styles.petDescription]}>{petData.idade}</Text>
+          <Text style={styles.petDescription}>{petData.raca}</Text>
           <TouchableOpacity style={styles.button}>
             <Icon name='information' size={15} color={"#ffffffdd"} />
           </TouchableOpacity>

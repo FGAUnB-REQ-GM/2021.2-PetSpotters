@@ -11,7 +11,6 @@ import {
 } from "react-native";
 import { useForm } from "react-hook-form";
 import { createUserWithEmailAndPassword } from "firebase/auth";
-import { useNavigation } from "@react-navigation/native";
 import { auth, db } from "../../../firebase";
 import { collection, getDocs, query, where } from "firebase/firestore";
 import InputCadastro from "../../components/InputCadastro";
@@ -24,8 +23,6 @@ export function SignUp({ navigation }) {
   } = useForm({
     defaultValues: {},
   });
-
-  const navigator = useNavigation()
 
   LogBox.ignoreLogs(["Setting a timer"]);
 
@@ -68,7 +65,7 @@ export function SignUp({ navigation }) {
         </TouchableOpacity>
         <TouchableOpacity
           style={styles.button}
-          onPress={() => navigator.navigate("Login")}
+          onPress={() => navigation.navigate("Login")}
         >
           <Text style={styles.text}>JÁ POSSUI CONTA?</Text>
         </TouchableOpacity>
