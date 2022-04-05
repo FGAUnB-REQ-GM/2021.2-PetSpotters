@@ -13,6 +13,7 @@ import {
   TouchableOpacity,
 } from "react-native";
 import { useForm, Controller } from "react-hook-form";
+import { useNavigation } from "@react-navigation/native";
 import { signInWithEmailAndPassword, onAuthStateChanged } from "firebase/auth";
 import { auth, db } from "../../../firebase";
 import {
@@ -35,6 +36,8 @@ export function SignIn({ navigation }) {
   } = useForm({
     defaultValues: {},
   });
+
+  const navigator = useNavigation()
 
   LogBox.ignoreLogs(["Setting a timer"]);
 
@@ -91,14 +94,20 @@ export function SignIn({ navigation }) {
         />
       </View>
       <View style={styles.container1}>
-        <InputCadastro title="email" control={control} errors={errors} />
-        <InputCadastro title="senha" control={control} errors={errors} />
+        <InputCadastro title="EMAIL" control={control} errors={errors} />
+        <InputCadastro title="SENHA" control={control} errors={errors} />
 
         <TouchableOpacity
           style={styles.button}
           onPress={handleSubmit(OnSubmit)}
         >
           <Text style={styles.text}>ENTRAR</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={styles.button}
+          onPress={() => navigator.navigate("Cadastro")}
+        >
+          <Text style={styles.text}>CRIAR CONTA</Text>
         </TouchableOpacity>
       </View>
     </>
