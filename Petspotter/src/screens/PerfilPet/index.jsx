@@ -82,7 +82,7 @@ export function PerfilPet() {
     <ContainerView>
       <SttsBar />
       <View style={styles.topBar}>
-        <TouchableOpacity style={styles.profilePic} activeOpacity={0.8} onPress={() => navigation.navigate('PerfisPetEdit')}>
+        <TouchableOpacity style={styles.profilePic} activeOpacity={0.8} onPress={() => navigation.navigate('Perfis')}>
           <ImageBackground 
             style={{width: 40, height: 40}}
             source={{uri: images[0].image }}
