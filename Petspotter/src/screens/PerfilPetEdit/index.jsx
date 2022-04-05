@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigation } from "@react-navigation/native";
+import { useNavigation, useRoute } from "@react-navigation/native";
 import { View, Text, TextInput, TouchableOpacity, ToastAndroid, ImageBackground, ScrollView } from "react-native";
 import { ContainerView, ProfileLogo, SttsBar } from "../../components";
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
@@ -7,6 +7,8 @@ import styles from "./styles"
 
 export function PerfilPetEdit() {
   const navigation = useNavigation()
+  const routes = useRoute()
+  const data = routes.params
   const [nome, setNome] = useState("")
   const [bio, setBio] = useState("")
   const [petPics, setPetPics] = useState({uri: null})

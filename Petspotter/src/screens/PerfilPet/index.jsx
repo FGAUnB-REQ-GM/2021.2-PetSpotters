@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Text, View, TouchableOpacity, Dimensions, Image, ImageBackground } from "react-native";
-import { useNavigation } from "@react-navigation/native";
+import { useNavigation, useRoute } from "@react-navigation/native";
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
 import Carousel, { Pagination } from 'react-native-snap-carousel'
 import { ContainerView, ProfileLogo, SttsBar } from "../../components"
@@ -8,6 +8,8 @@ import styles from "./styles";
 
 export function PerfilPet() {
   const navigation = useNavigation()
+  const routes = useRoute()
+  const data = routes.params.data
   
   const [petData, setPetData] = useState({
     nome: '',
@@ -17,7 +19,7 @@ export function PerfilPet() {
     idade: '',
     bio: ''
   })
-
+  
   useEffect(() => {
     setPetData({
       nome: 'Mel',
@@ -27,8 +29,9 @@ export function PerfilPet() {
       idade: '2 anos',
       bio: 'Doginho fofo'
     })
+    console.log(data)
   }, [])
-  
+
   const fotos = {
     foto1: 'https://images.wallpapersden.com/image/download/husky-dog-muzzle_aWtnapSZmpqtpaSklGZlbWWtZ2llZQ.jpg',
     foto2: 'https://mfiles.alphacoders.com/885/885461.jpg',
@@ -54,7 +57,7 @@ export function PerfilPet() {
   
   const renderItem = (item, index) => {
     return (
-    <TouchableOpacity activeOpacity={1} onPress={() => navigation.navigate("PetData", petData)}>
+    <TouchableOpacity activeOpacity={1} onPress={() => {}}>
       <Image
       key={index}
       style={{ width: '100%', height: '100%'}}
@@ -99,12 +102,11 @@ export function PerfilPet() {
   }
 
 
-
   return (
     <ContainerView>
       <SttsBar />
       <View style={styles.topBar}>
-        <TouchableOpacity style={styles.profilePic} activeOpacity={0.8} onPress={() => navigation.navigate('Perfis')}>
+        <TouchableOpacity style={styles.profilePic} activeOpacity={0.8} onPress={() => navigation.navigate('Perfis', {data, images})}>
           <ImageBackground 
             style={{width: 40, height: 40}}
             source={{uri: images[0].image }}
@@ -131,9 +133,9 @@ export function PerfilPet() {
         {paginacao()}
         </View>
         <View style={styles.petDescriptionView}>
-          <Text style={[styles.petDescription, {fontSize: 30}]}>{petData.nome}</Text>
+          <Text style={[styles.petDescription, {fontSize: 30}]}>{data.NOME}</Text>
           <Text style={[styles.petDescription]}>{petData.idade}</Text>
-          <Text style={styles.petDescription}>{petData.raca}</Text>
+          <Text style={styles.petDescription}>{data.RAÇA}</Text>
           <TouchableOpacity style={styles.button}>
             <Icon name='information' size={15} color={"#ffffffdd"} />
           </TouchableOpacity>

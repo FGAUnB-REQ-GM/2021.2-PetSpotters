@@ -24,9 +24,9 @@ export const ScreenNavigation = () => {
       <Stack.Navigator screenOptions={{headerShown: false}}>
         {/* <Stack.Screen name="Teste" component={Teste} /> */}
         <Stack.Screen name="Login" component={SignIn} />
+        <Stack.Screen name='PerfilPet' component={PerfilPet} />
         <Stack.Screen name='Perfis' component={SelectPerfil} />
         <Stack.Screen name="Cadastro" component={SignUp} />
-        <Stack.Screen name='PerfilPet' component={PerfilPet} />
         <Stack.Screen name='PerfisUsuarioEdit' component={PerfilUserEdit} />
         <Stack.Screen name='PerfisPetEdit' component={PerfilPetEdit} />
         <Stack.Screen name='PerfilUser' component={PerfilUser} />

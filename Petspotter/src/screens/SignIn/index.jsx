@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 import {
   SafeAreaView,
   View,
@@ -26,6 +27,7 @@ import {
   where,
 } from "firebase/firestore";
 import InputCadastro from "../../components/InputCadastro";
+import { ContainerView, ProfileLogo } from "../../components";
 
 export function SignIn({ navigation }) {
   const {
@@ -38,14 +40,20 @@ export function SignIn({ navigation }) {
 
   LogBox.ignoreLogs(["Setting a timer"]);
 
-  const [user, setUser] = useState("");
-  const [users, setUsers] = useState([]);
+  const checkLogin = async () => {
+    const user = await AsyncStorage.getItem("@user") 
+    if(user) {
+      console.log(user)
+      navigation.replace("PerfilPet");
+    }
+  }
 
   const OnSubmit = (data) => {
     try {
       signInWithEmailAndPassword(auth, data.EMAIL, data.SENHA)
-        .then(() => {
-          navigation.navigate("PerfilPet", { data: data });
+        .then(async () => {
+          await AsyncStorage.setItem("@user", JSON.stringify(data))
+          navigation.replace("PerfilPet", data);
         })
         .catch((error) => {
           alert(error.message);
@@ -53,6 +61,10 @@ export function SignIn({ navigation }) {
     } catch (error) {
       alert(error.message);
     }
+
+    useEffect(() => {
+      checkLogin()
+    }, [])
 
     /* const docRef = async () => {
       await addDoc(collection(db, "users"), {
@@ -81,15 +93,7 @@ export function SignIn({ navigation }) {
   let data = [];
   const renderItem = () => (
     <>
-      <View style={styles.container}>
-        <Image
-          source={require("../../../assets/img/petspooter_logo.png")}
-          style={{
-            width: "90%",
-            resizeMode: "contain",
-          }}
-        />
-      </View>
+      <ProfileLogo />
       <View style={styles.container1}>
         <InputCadastro title="EMAIL" control={control} errors={errors} />
         <InputCadastro title="SENHA" control={control} errors={errors} />
@@ -117,7 +121,7 @@ export function SignIn({ navigation }) {
     },
   ];
   return (
-    <SafeAreaView style={{ flex: 1, justifyContent: "center" }}>
+    <ContainerView>
       <FlatList
         data={DATA}
         renderItem={renderItem}
@@ -126,7 +130,7 @@ export function SignIn({ navigation }) {
           top: "15%",
         }}
       />
-    </SafeAreaView>
+    </ContainerView>
   );
 }
 

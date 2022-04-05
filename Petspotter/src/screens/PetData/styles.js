@@ -8,9 +8,7 @@ const styles = StyleSheet.create({
   },
   profileImageView: {
     flex: 1,
-    // position: 'relative',
     backgroundColor: '#000000',
-    // alignItems: 'center',
   },
   petDescriptionView: {
     flexDirection: 'row',
@@ -44,6 +42,27 @@ const styles = StyleSheet.create({
     height: 40,
     marginLeft: 10,
     borderRadius: 100
+  },
+  centeredView: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginTop: 22,
+    backgroundColor: "#272727",
+  },
+  modal: {
+    margin: 20,
+    borderRadius: 20,
+    padding: 35,
+    alignItems: 'center',
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 2
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 4,
+    elevation: 5
   }
 })
 

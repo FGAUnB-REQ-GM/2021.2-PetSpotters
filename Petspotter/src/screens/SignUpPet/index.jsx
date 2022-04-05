@@ -14,6 +14,7 @@ import { db } from "../../../firebase";
 import { addDoc, collection } from "firebase/firestore";
 import InputCadastro from "../../components/InputCadastro";
 import InputSelect from "../../components/InputSelect";
+import { ContainerView, ProfileLogo } from "../../components";
 
 export function SignUpPet({ navigation, route }) {
   const {
@@ -27,7 +28,7 @@ export function SignUpPet({ navigation, route }) {
   LogBox.ignoreLogs(["Setting a timer"]);
 
   const OnSubmit = (data) => {
-    navigation.navigate("PerfilPet", { data: data });
+    navigation.replace("PerfilPet", { data: data });
 
     const docRef = async () => {
       await addDoc(collection(db, "users"), {
@@ -47,6 +48,7 @@ export function SignUpPet({ navigation, route }) {
   };
 
   let data = [];
+  const nome = ''
   const especie = [
     { label: "", value: "" },
     { label: "Cachorro", value: "cachorro" },
@@ -72,15 +74,7 @@ export function SignUpPet({ navigation, route }) {
         flex: 1,
       }}
     >
-      <View style={styles.container}>
-        <Image
-          source={require("../../../assets/img/petspooter_logo.png")}
-          style={{
-            width: "90%",
-            resizeMode: "contain",
-          }}
-        />
-      </View>
+      <ProfileLogo />
       <View style={styles.container1}>
         <Text style={styles.text}>CADASTRE SEU PET</Text>
 
@@ -90,6 +84,7 @@ export function SignUpPet({ navigation, route }) {
           errors={errors}
           data={especie}
         />
+        <InputCadastro title="NOME" control={control} errors={errors} />
         <InputCadastro title="RACA" control={control} errors={errors} />
         <InputSelect
           title="GENERO"
@@ -121,16 +116,48 @@ export function SignUpPet({ navigation, route }) {
     },
   ];
   return (
-    <SafeAreaView style={{ flex: 1, justifyContent: "center" }}>
-      <FlatList
+    <ContainerView>
+      {/* <FlatList
         data={DATA}
         renderItem={renderItem}
         keyExtractor={(item) => item.id}
         style={{
-          top: "15%",
+          // top: "15%",
         }}
-      />
-    </SafeAreaView>
+      /> */}
+      <ProfileLogo />
+      <View style={styles.container1}>
+        <Text style={styles.text}>CADASTRE SEU PET</Text>
+
+        <InputCadastro title="NOME" control={control} errors={errors} />
+        <InputSelect
+          title="TIPO"
+          control={control}
+          errors={errors}
+          data={especie}
+        />
+        <InputCadastro title="RAÇA" control={control} errors={errors} />
+        <InputSelect
+          title="GENERO"
+          control={control}
+          errors={errors}
+          data={genero}
+        />
+        <InputSelect
+          title="PORTE"
+          control={control}
+          errors={errors}
+          data={porte}
+        />
+
+        <TouchableOpacity
+          style={styles.button}
+          onPress={handleSubmit(OnSubmit)}
+        >
+          <Text style={styles.text}>CADASTRAR</Text>
+        </TouchableOpacity>
+      </View>
+    </ContainerView>
   );
 }
 
@@ -139,9 +166,9 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   container1: {
+    marginTop: '10%',
     justifyContent: "flex-start",
     alignItems: "center",
-    height: 500,
   },
   button: {
     width: 150,

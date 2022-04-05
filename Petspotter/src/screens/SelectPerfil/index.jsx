@@ -1,11 +1,13 @@
 import React from "react";
 import { View, Image, Text, TouchableOpacity } from "react-native";
 import { SttsBar, ContainerView, ProfileBtn, ProfileLogo } from "../../components";
-import { useNavigation } from "@react-navigation/native";
+import { useNavigation, useRoute } from "@react-navigation/native";
 import styles from "./styles";
 
 export function SelectPerfil() {
   const navigation = useNavigation()
+  const routes = useRoute()
+  const data = routes.params
 
   return (
     <ContainerView>
@@ -19,7 +21,7 @@ export function SelectPerfil() {
           <Image source={require("../../../assets/img/eu.jpg")} style={styles.img} />
         </ProfileBtn>
       </TouchableOpacity>
-      <TouchableOpacity onPress={() => {navigation.navigate('PerfisPetEdit')}} activeOpacity={0.8}>
+      <TouchableOpacity onPress={() => {navigation.navigate('PerfisPetEdit', data)}} activeOpacity={0.8}>
         <ProfileBtn textoExibido="Editar perfil do pet" >
           <Image source={require("../../../assets/img/dog.jpg")} style={styles.img} />
         </ProfileBtn>
