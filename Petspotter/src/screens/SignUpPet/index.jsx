@@ -8,13 +8,19 @@ import {
   LogBox,
   FlatList,
   TouchableOpacity,
+  ScrollView,
 } from "react-native";
 import { useForm } from "react-hook-form";
-import { db } from "../../../firebase";
+import { db, storage } from "../../../firebase";
 import { addDoc, collection } from "firebase/firestore";
 import InputCadastro from "../../components/InputCadastro";
 import InputSelect from "../../components/InputSelect";
-import { ContainerView, ProfileLogo } from "../../components";
+import { ContainerView, ProfileBtn, ProfileLogo } from "../../components";
+import { useScreenContext } from "../../context/ContextScreen";
+import { Match } from "../Match";
+import { getDownloadURL, listAll, ref } from "firebase/storage";
+import { SelectPhoto } from "../../components/SelectPhoto";
+import { useUserContext } from "../../context/ContextUser";
 
 export function SignUpPet({ navigation, route }) {
   const {
@@ -27,94 +33,44 @@ export function SignUpPet({ navigation, route }) {
 
   LogBox.ignoreLogs(["Setting a timer"]);
 
-  const OnSubmit = (data) => {
-    navigation.replace("PerfilPet", { data: data });
+  const { userLogged, setUserLogged } = useScreenContext();
+  const { user, setUser } = useUserContext();
 
+  console.log("primeira tela", route.params.data);
+  const OnSubmit = (data) => {
+    console.log(data);
     const docRef = async () => {
       await addDoc(collection(db, "users"), {
         nome: route.params.data.NOME,
         email: route.params.data.EMAIL,
         telefone: route.params.data.TELEFONE,
-        pet: {
-          raca: data.RACA,
-          especie: data.ESPECIE,
-          genero: data.GENERO,
-          porte: data.PORTE,
-        },
-      });
+        Petnome: data.NOME,
+        PetdataN: data.NASCIMENTO,
+        Petendereco: data.ENDEREÇO,
+        Petbio: data.BIO,
+        Petraca: data.RAÇA,
+      })
+        .then(() => {
+          setUserLogged(true);
+          setUser({
+            nome: route.params.data.NOME,
+            email: route.params.data.EMAIL,
+            telefone: route.params.data.TELEFONE,
+            Petnome: data.NOME,
+            PetdataN: data.NASCIMENTO,
+            Petendereco: data.ENDEREÇO,
+            Petbio: data.BIO,
+            Petraca: data.RAÇA,
+          });
+        })
+        .catch((error) => {
+          alert(error.message);
+        });
     };
 
     docRef();
   };
 
-  let data = [];
-  const nome = ''
-  const especie = [
-    { label: "", value: "" },
-    { label: "Cachorro", value: "cachorro" },
-    { label: "Gato", value: "gato" },
-  ];
-
-  const genero = [
-    { label: "", value: "" },
-    { label: "Macho", value: "macho" },
-    { label: "Fêmea", value: "femea" },
-  ];
-
-  const porte = [
-    { label: "", value: "" },
-    { label: "Pequeno", value: "pequeno" },
-    { label: "Médio", value: "medio" },
-    { label: "Grande", value: "grande" },
-  ];
-
-  const renderItem = () => (
-    <View
-      style={{
-        flex: 1,
-      }}
-    >
-      <ProfileLogo />
-      <View style={styles.container1}>
-        <Text style={styles.text}>CADASTRE SEU PET</Text>
-
-        <InputSelect
-          title="ESPECIE"
-          control={control}
-          errors={errors}
-          data={especie}
-        />
-        <InputCadastro title="NOME" control={control} errors={errors} />
-        <InputCadastro title="RACA" control={control} errors={errors} />
-        <InputSelect
-          title="GENERO"
-          control={control}
-          errors={errors}
-          data={genero}
-        />
-        <InputSelect
-          title="PORTE"
-          control={control}
-          errors={errors}
-          data={porte}
-        />
-
-        <TouchableOpacity
-          style={styles.button}
-          onPress={handleSubmit(OnSubmit)}
-        >
-          <Text style={styles.text}>CADASTRAR</Text>
-        </TouchableOpacity>
-      </View>
-    </View>
-  );
-
-  const DATA = [
-    {
-      id: "bd7acbea-c1b1-46c2-aed5-3ad53abb28ba",
-      title: "First Item",
-    },
-  ];
   return (
     <ContainerView>
       {/* <FlatList
@@ -128,34 +84,32 @@ export function SignUpPet({ navigation, route }) {
       <ProfileLogo />
       <View style={styles.container1}>
         <Text style={styles.text}>CADASTRE SEU PET</Text>
-
-        <InputCadastro title="NOME" control={control} errors={errors} />
-        <InputSelect
-          title="TIPO"
-          control={control}
-          errors={errors}
-          data={especie}
-        />
-        <InputCadastro title="RAÇA" control={control} errors={errors} />
-        <InputSelect
-          title="GENERO"
-          control={control}
-          errors={errors}
-          data={genero}
-        />
-        <InputSelect
-          title="PORTE"
-          control={control}
-          errors={errors}
-          data={porte}
-        />
-
-        <TouchableOpacity
-          style={styles.button}
-          onPress={handleSubmit(OnSubmit)}
+        <ScrollView
+          style={{
+            flex: 1,
+            alignContent: "center",
+            width: "100%",
+          }}
         >
-          <Text style={styles.text}>CADASTRAR</Text>
-        </TouchableOpacity>
+          <View>
+            <ProfileBtn textoExibido="Foto do pet">
+              <SelectPhoto email={route.params.data.EMAIL} nome="perfilPet" />
+            </ProfileBtn>
+          </View>
+
+          <InputCadastro title="NOME" control={control} errors={errors} />
+          <InputCadastro title="RAÇA" control={control} errors={errors} />
+          <InputCadastro title="BIO" control={control} errors={errors} />
+          <InputCadastro title="NASCIMENTO" control={control} errors={errors} />
+          <InputCadastro title="ENDEREÇO" control={control} errors={errors} />
+
+          <TouchableOpacity
+            style={[styles.button, { marginBottom: 150 }]}
+            onPress={handleSubmit(OnSubmit)}
+          >
+            <Text style={styles.text}>CADASTRAR</Text>
+          </TouchableOpacity>
+        </ScrollView>
       </View>
     </ContainerView>
   );
@@ -166,7 +120,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   container1: {
-    marginTop: '10%',
+    marginTop: "10%",
     justifyContent: "flex-start",
     alignItems: "center",
   },
@@ -188,5 +142,13 @@ const styles = StyleSheet.create({
     fontSize: 16,
     lineHeight: 26,
     color: "#B66C6C",
+  },
+  img: {
+    resizeMode: "cover",
+    position: "absolute",
+    borderRadius: 30,
+    borderColor: "#000",
+    width: 200,
+    height: 150,
   },
 });

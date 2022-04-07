@@ -8,12 +8,14 @@ import {
   LogBox,
   FlatList,
   TouchableOpacity,
+  ActivityIndicator,
 } from "react-native";
 import { useForm } from "react-hook-form";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth, db } from "../../../firebase";
 import { collection, getDocs, query, where } from "firebase/firestore";
 import InputCadastro from "../../components/InputCadastro";
+import { Match } from "../Match";
 
 export function SignUp({ navigation }) {
   const {
@@ -26,10 +28,14 @@ export function SignUp({ navigation }) {
 
   LogBox.ignoreLogs(["Setting a timer"]);
 
+  const [loading, setLoading] = useState(false);
+
   const OnSubmit = (data) => {
     try {
+      setLoading(true);
       createUserWithEmailAndPassword(auth, data.EMAIL, data.SENHA)
         .then(() => {
+          setLoading(false);
           navigation.navigate("CadastroPet", { data: data });
         })
         .catch((error) => {
@@ -57,12 +63,19 @@ export function SignUp({ navigation }) {
         <InputCadastro title="TELEFONE" control={control} errors={errors} />
         <InputCadastro title="SENHA" control={control} errors={errors} />
 
-        <TouchableOpacity
-          style={styles.button}
-          onPress={handleSubmit(OnSubmit)}
-        >
-          <Text style={styles.text}>PRÓXIMO</Text>
-        </TouchableOpacity>
+        {loading ? (
+          <View style={styles.horizontal}>
+            <Text>Loading...</Text>
+          </View>
+        ) : (
+          <TouchableOpacity
+            style={styles.button}
+            onPress={handleSubmit(OnSubmit)}
+          >
+            <Text style={styles.text}>PRÓXIMO</Text>
+          </TouchableOpacity>
+        )}
+
         <TouchableOpacity
           style={styles.button}
           onPress={() => navigation.navigate("Login")}
@@ -120,5 +133,14 @@ const styles = StyleSheet.create({
     fontSize: 16,
     lineHeight: 26,
     color: "#B66C6C",
+  },
+  loading: {
+    flex: 1,
+    justifyContent: "center",
+  },
+  horizontal: {
+    flexDirection: "row",
+    justifyContent: "space-around",
+    padding: 10,
   },
 });

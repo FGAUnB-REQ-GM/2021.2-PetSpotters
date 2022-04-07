@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import {
   SafeAreaView,
@@ -20,6 +20,8 @@ import { collection, getDocs, query, where } from "firebase/firestore";
 import InputCadastro from "../../components/InputCadastro";
 import { ContainerView, ProfileLogo } from "../../components";
 import ModalRecover from "../../components/Modal";
+import { useScreenContext } from "../../context/ContextScreen";
+import { useUserContext } from "../../context/ContextUser";
 
 export function SignIn({ navigation }) {
   const {
@@ -32,19 +34,30 @@ export function SignIn({ navigation }) {
 
   LogBox.ignoreLogs(["Setting a timer"]);
 
-  const checkLogin = async () => {
-    const user = await AsyncStorage.getItem("@user") 
-    if(user) {
-      console.log(user)
-      navigation.replace("PerfilPet");
-    }
-  }
+  const { userLogged, setUserLogged } = useScreenContext();
+  const { user, setUser } = useUserContext();
+  console.log({ user });
 
   const OnSubmit = (data) => {
     try {
       signInWithEmailAndPassword(auth, data.EMAIL, data.SENHA)
         .then(() => {
-          navigation.navigate("Match", { data: data });
+          setUserLogged(true);
+
+          const q = query(
+            collection(db, "users"),
+            where("email", "==", data.EMAIL)
+          );
+          console.log(data.EMAIL);
+          const querySnapshot = async () => {
+            await getDocs(q).then((res) =>
+              res.forEach((doc) => {
+                console.log(doc.id, "=>", doc.data());
+                setUser(doc.data());
+              })
+            );
+          };
+          querySnapshot();
         })
         .catch((error) => {
           alert(error.message);
@@ -52,10 +65,6 @@ export function SignIn({ navigation }) {
     } catch (error) {
       alert(error.message);
     }
-
-    useEffect(() => {
-      checkLogin()
-    }, [])
 
     /* const docRef = async () => {
       await addDoc(collection(db, "users"), {
@@ -67,19 +76,6 @@ export function SignIn({ navigation }) {
 
     docRef(); */
   };
-
-  const q = query(
-    collection(db, "users"),
-    where("email", "==", "copatriciagalvao@gmail.com")
-  );
-  const querySnapshot = async () => {
-    await getDocs(q).then((res) =>
-      res.forEach((doc) => {
-        console.log(doc.id, "=>", doc.data());
-      })
-    );
-  };
-  querySnapshot();
 
   const [modalVisible, setModalVisible] = useState(false);
 
