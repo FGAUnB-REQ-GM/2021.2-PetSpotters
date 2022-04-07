@@ -50,7 +50,7 @@ export default function ModalRecover({ modalVisible, setModalVisible }) {
       <View style={styles.centeredView}>
         <View style={styles.modalView}>
           <Pressable onPress={() => setModalVisible(!modalVisible)}>
-            <Text>fechar</Text>
+            <Text>x</Text>
           </Pressable>
           <InputCadastro title="email" control={control} errors={errors} />
 
