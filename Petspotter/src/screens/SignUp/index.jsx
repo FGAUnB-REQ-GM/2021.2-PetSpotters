@@ -39,6 +39,7 @@ export function SignUp({ navigation }) {
           navigation.navigate("CadastroPet", { data: data });
         })
         .catch((error) => {
+          setLoading(false);
           alert(error.message);
         });
     } catch (error) {
