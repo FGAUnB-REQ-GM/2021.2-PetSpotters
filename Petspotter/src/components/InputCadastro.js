@@ -2,7 +2,7 @@ import React from "react";
 import { Controller } from "react-hook-form";
 import { StyleSheet, Text, TextInput, View } from "react-native";
 
-const InputCadastro = ({ title, control, errors }) => {
+const InputCadastro = ({ title, control, errors, placeholder }) => {
   return (
     <>
       <Controller
@@ -11,7 +11,7 @@ const InputCadastro = ({ title, control, errors }) => {
           required: true,
         }}
         render={({ field: { onChange, onBlur, value } }) => (
-          <View style={{alignItems: 'center', margin: '2%'}}>
+          <View style={{ alignItems: "center", margin: "2%" }}>
             <Text style={styles.text}>{title}</Text>
             <TextInput
               style={styles.button}
@@ -19,6 +19,7 @@ const InputCadastro = ({ title, control, errors }) => {
               onChangeText={onChange}
               value={value}
               secureTextEntry={title == "SENHA" && true}
+              placeholder={placeholder}
             />
           </View>
         )}
