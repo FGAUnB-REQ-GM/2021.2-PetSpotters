@@ -35,7 +35,7 @@ export function SignIn({ navigation }) {
 
   const OnSubmit = (data) => {
     try {
-      signInWithEmailAndPassword(auth, data.email, data.senha)
+      signInWithEmailAndPassword(auth, data.EMAIL, data.SENHA)
         .then(() => {
           navigation.navigate("Match", { data: data });
         })
@@ -84,8 +84,8 @@ export function SignIn({ navigation }) {
         />
       </View>
       <View style={styles.container1}>
-        <InputCadastro title="email" control={control} errors={errors} />
-        <InputCadastro title="senha" control={control} errors={errors} />
+        <InputCadastro title="EMAIL" control={control} errors={errors} />
+        <InputCadastro title="SENHA" control={control} errors={errors} />
 
         <TouchableOpacity
           style={styles.button}
