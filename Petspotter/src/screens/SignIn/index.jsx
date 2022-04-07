@@ -5,27 +5,19 @@ import {
   Image,
   Text,
   StyleSheet,
-  TextInput,
-  Button,
   LogBox,
-  ScrollView,
   FlatList,
   TouchableOpacity,
 } from "react-native";
 import { useForm, Controller } from "react-hook-form";
-import { signInWithEmailAndPassword, onAuthStateChanged } from "firebase/auth";
-import { auth, db } from "../../../firebase";
 import {
-  addDoc,
-  collection,
-  doc,
-  getDoc,
-  getDocs,
-  query,
-  setDoc,
-  where,
-} from "firebase/firestore";
+  signInWithEmailAndPassword,
+  sendPasswordResetEmail,
+} from "firebase/auth";
+import { auth, db } from "../../../firebase";
+import { collection, getDocs, query, where } from "firebase/firestore";
 import InputCadastro from "../../components/InputCadastro";
+import ModalRecover from "../../components/Modal";
 
 export function SignIn({ navigation }) {
   const {
@@ -78,7 +70,8 @@ export function SignIn({ navigation }) {
   };
   querySnapshot();
 
-  let data = [];
+  const [modalVisible, setModalVisible] = useState(false);
+
   const renderItem = () => (
     <>
       <View style={styles.container}>
@@ -100,7 +93,18 @@ export function SignIn({ navigation }) {
         >
           <Text style={styles.text}>ENTRAR</Text>
         </TouchableOpacity>
+        <TouchableOpacity
+          style={{ top: "3%" }}
+          onPress={() => setModalVisible(true)}
+        >
+          <Text style={styles.text}>Esqueci minha senha</Text>
+        </TouchableOpacity>
       </View>
+
+      <ModalRecover
+        modalVisible={modalVisible}
+        setModalVisible={setModalVisible}
+      />
     </>
   );
 
@@ -151,5 +155,47 @@ const styles = StyleSheet.create({
     fontSize: 16,
     lineHeight: 26,
     color: "#B66C6C",
+  },
+
+  centeredView: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    marginTop: 22,
+  },
+  modalView: {
+    margin: 20,
+    backgroundColor: "white",
+    borderRadius: 20,
+    padding: 35,
+    alignItems: "center",
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 4,
+    elevation: 5,
+  },
+  buttonModal: {
+    borderRadius: 20,
+    padding: 10,
+    elevation: 2,
+  },
+  buttonOpen: {
+    backgroundColor: "#F194FF",
+  },
+  buttonClose: {
+    backgroundColor: "#2196F3",
+  },
+  textStyle: {
+    color: "white",
+    fontWeight: "bold",
+    textAlign: "center",
+  },
+  modalText: {
+    marginBottom: 15,
+    textAlign: "center",
   },
 });
