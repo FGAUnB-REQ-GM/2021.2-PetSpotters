@@ -1,7 +1,7 @@
 import { Picker } from "@react-native-picker/picker";
 import React, { useState } from "react";
 import { Controller } from "react-hook-form";
-import { StyleSheet, Text, TextInput } from "react-native";
+import { StyleSheet, Text, View } from "react-native";
 
 const InputSelect = ({ title, control, errors, data }) => {
   return (
@@ -12,7 +12,7 @@ const InputSelect = ({ title, control, errors, data }) => {
           required: true,
         }}
         render={({ field: { onChange, onBlur, value } }) => (
-          <>
+          <View style={{alignItems: 'center', margin: '2%'}}>
             <Text style={styles.text}>{title}</Text>
             <Picker
               style={styles.button}
@@ -27,7 +27,7 @@ const InputSelect = ({ title, control, errors, data }) => {
                 />
               ))}
             </Picker>
-          </>
+          </View>
         )}
         name={title}
       />

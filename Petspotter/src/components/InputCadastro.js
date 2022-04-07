@@ -1,6 +1,6 @@
 import React from "react";
 import { Controller } from "react-hook-form";
-import { StyleSheet, Text, TextInput } from "react-native";
+import { StyleSheet, Text, TextInput, View } from "react-native";
 
 const InputCadastro = ({ title, control, errors }) => {
   return (
@@ -11,7 +11,7 @@ const InputCadastro = ({ title, control, errors }) => {
           required: true,
         }}
         render={({ field: { onChange, onBlur, value } }) => (
-          <>
+          <View style={{alignItems: 'center', margin: '2%'}}>
             <Text style={styles.text}>{title}</Text>
             <TextInput
               style={styles.button}
@@ -20,7 +20,7 @@ const InputCadastro = ({ title, control, errors }) => {
               value={value}
               secureTextEntry={title == "SENHA" && true}
             />
-          </>
+          </View>
         )}
         name={title}
       />
@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     justifyContent: "center",
     alignItems: "center",
-    marginBottom: "5%",
+    // marginBottom: "5%",
   },
   text: {
     fontFamily: "Roboto",

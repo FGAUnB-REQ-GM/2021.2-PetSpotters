@@ -63,6 +63,12 @@ export function SignUp({ navigation }) {
         >
           <Text style={styles.text}>PRÓXIMO</Text>
         </TouchableOpacity>
+        <TouchableOpacity
+          style={styles.button}
+          onPress={() => navigation.navigate("Login")}
+        >
+          <Text style={styles.text}>JÁ POSSUI CONTA?</Text>
+        </TouchableOpacity>
       </View>
     </>
   );
