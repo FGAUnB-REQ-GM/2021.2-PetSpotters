@@ -4,7 +4,7 @@ const styles = StyleSheet.create({
   perfilText: {
     fontSize: 30,
     color: "#B66C6C",
-    fontWeight: "bold"
+    fontWeight: "bold",
   },
   profPicView: {
     borderColor: "#B66C6C",
@@ -24,28 +24,28 @@ const styles = StyleSheet.create({
   inputBox: {
     height: 40,
     width: 250,
-    borderWidth: 2,
     padding: 10,
     backgroundColor: "#FFD2CE",
     borderRadius: 10,
-    borderColor: "#B66C6C"
+    elevation: 4
   },
   inputBoxLabel: {
     marginBottom: 5,
     color: "#B66C6C",
-    fontWeight: "bold"
+    fontWeight: "bold",
   },
   saveBtn: {
     position: "relative",
-    borderWidth: 2,
     backgroundColor: "#FFD2CE",
     borderRadius: 10,
-    borderColor: "#B66C6C",
+    // borderWidth: 2,
+    // borderColor: "#B66C6C",
     width: 100,
     height: 36,
     alignItems: "center",
     justifyContent: "space-around",
-    margin: 10
+    margin: 10,
+    elevation: 5
   },
   cameraIcon: {
     opacity: 0.6,

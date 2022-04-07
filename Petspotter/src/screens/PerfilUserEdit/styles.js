@@ -9,7 +9,8 @@ const styles = StyleSheet.create({
   form: {
     display: 'flex',
     flexDirection: 'column',
-    marginTop: 20
+    marginTop: 20,
+    marginTop: '25%'
   },
   inputBoxView: {
     margin: 10
@@ -17,11 +18,12 @@ const styles = StyleSheet.create({
   inputBox: {
     height: 40,
     width: 250,
-    borderWidth: 2,
+    // borderWidth: 2,
     padding: 10,
     backgroundColor: "#FFD2CE",
     borderRadius: 10,
-    borderColor: "#B66C6C"
+    // borderColor: "#B66C6C"
+    elevation: 4
   },
   inputBoxLabel: {
     marginBottom: 5,
@@ -30,15 +32,14 @@ const styles = StyleSheet.create({
   },
   saveBtn: {
     position: "relative",
-    borderWidth: 2,
     backgroundColor: "#FFD2CE",
     borderRadius: 10,
-    borderColor: "#B66C6C",
     width: 100,
     height: 36,
     alignItems: "center",
     justifyContent: "space-around",
-    margin: 23
+    margin: 23,
+    elevation: 4
   }
 })
 

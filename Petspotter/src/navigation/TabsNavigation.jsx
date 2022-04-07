@@ -1,13 +1,22 @@
 import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
 import { Match, PerfilPet, SelectPerfil, SignIn } from "../screens";
 
 const Tab = createMaterialBottomTabNavigator();
 
 export default function MyTabs() {
   return (
-    <Tab.Navigator>
-      <Tab.Screen name="Perfis" component={SelectPerfil} />
-      <Tab.Screen name="Match" component={Match} />
+    <Tab.Navigator
+    activeColor="#f9f9f9"
+    inactiveColor="#111"
+      barStyle={{backgroundColor: '#B66C6C'}} 
+    >
+      <Tab.Screen name="Perfis" component={SelectPerfil} options={{tabBarIcon: () => (
+          <Icon name="book-open" size={25} color={"#f9f9f9"} />
+        )}} />
+      <Tab.Screen name="Match" component={PerfilPet} options={{tabBarIcon: () => (
+          <Icon name="dog" size={25} color={"#f9f9f9"} />
+        )}}/>
     </Tab.Navigator>
   );
 }

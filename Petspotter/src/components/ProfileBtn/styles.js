@@ -9,9 +9,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     borderRadius: 10,
     margin: "5%",
-    borderColor: "#000",
-    borderWidth: 1,
-    alignSelf: 'center'
+    alignSelf: 'center',
+    elevation: 4
   },
 
   insideView: {
@@ -23,14 +22,14 @@ const styles = StyleSheet.create({
     flexDirection: "column",
     alignItems: "center",
     justifyContent: "center",
-    borderColor: "#000",
-    borderWidth: 1
+    borderColor: "#f9f9f9cc",
+    borderWidth: 0.3
   },
 
   textoExibido: {
     fontWeight: "bold",
     fontSize: 18,
-    color: "#000",
+    color: "#f9f9f9",
     position: 'relative'
   }
 })

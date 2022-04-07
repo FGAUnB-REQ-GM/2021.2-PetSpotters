@@ -53,25 +53,10 @@ export function SelectPerfil() {
           navigation.navigate("PerfisUsuarioEdit");
         }}
         activeOpacity={0.8}
-        style={{
-          backgroundColor: "#B66C6C",
-          width: 200,
-          height: 50,
-          justifyContent: "center",
-          alignItems: "center",
-          borderRadius: 10,
-          margin: "5%",
-          borderColor: "#000",
-          borderWidth: 1,
-        }}
+        style={styles.userEditBtn}
       >
         <Text
-          style={{
-            fontWeight: "bold",
-            fontSize: 18,
-            color: "#000",
-            position: "relative",
-          }}
+          style={styles.userEditText}
         >
           Editar meu perfil
         </Text>
@@ -99,7 +84,7 @@ export function SelectPerfil() {
           setUserLogged(false);
         }}
       >
-        <Text style={{ fontWeight: "bold" }}>SAIR</Text>
+        <Text style={{ fontWeight: "bold", color: '#f9f9f9' }}>SAIR</Text>
       </TouchableOpacity>
     </ContainerView>
   );
