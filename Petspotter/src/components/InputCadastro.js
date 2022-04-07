@@ -39,7 +39,6 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     justifyContent: "center",
     alignItems: "center",
-    // marginBottom: "5%",
   },
   text: {
     fontFamily: "Roboto",
@@ -48,6 +47,9 @@ const styles = StyleSheet.create({
     fontSize: 14,
     lineHeight: 26,
     color: "#B66C6C",
+    textShadowColor: 'rgba(0, 0, 0, 0.75)',
+    textShadowOffset: {width: -0.2, height: 0.2},
+    textShadowRadius: 2,
   },
 });
 

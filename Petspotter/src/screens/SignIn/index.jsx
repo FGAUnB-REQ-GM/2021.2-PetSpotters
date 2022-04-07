@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import {
   SafeAreaView,
@@ -27,9 +27,10 @@ import {
   where,
 } from "firebase/firestore";
 import InputCadastro from "../../components/InputCadastro";
-import { ContainerView, ProfileLogo } from "../../components";
+import { ContainerView, ProfileLogo, SttsBar } from "../../components";
 
 export function SignIn({ navigation }) {
+  const [user, setUser] = useState({})
   const {
     control,
     handleSubmit,
@@ -43,17 +44,19 @@ export function SignIn({ navigation }) {
   const checkLogin = async () => {
     const user = await AsyncStorage.getItem("@user") 
     if(user) {
-      console.log(user)
+      // console.log(user)
       navigation.replace("PerfilPet");
     }
   }
+
+  
 
   const OnSubmit = (data) => {
     try {
       signInWithEmailAndPassword(auth, data.EMAIL, data.SENHA)
         .then(async () => {
-          await AsyncStorage.setItem("@user", JSON.stringify(data))
-          navigation.replace("PerfilPet", data);
+          
+          navigation.replace("PerfilPet", user);
         })
         .catch((error) => {
           alert(error.message);
@@ -62,9 +65,7 @@ export function SignIn({ navigation }) {
       alert(error.message);
     }
 
-    useEffect(() => {
-      checkLogin()
-    }, [])
+    
 
     /* const docRef = async () => {
       await addDoc(collection(db, "users"), {
@@ -79,21 +80,33 @@ export function SignIn({ navigation }) {
 
   const q = query(
     collection(db, "users"),
-    where("email", "==", "copatriciagalvao@gmail.com")
+    where("email", "==", "herick.lima77@gmail.com")
   );
   const querySnapshot = async () => {
     await getDocs(q).then((res) =>
       res.forEach((doc) => {
-        console.log(doc.id, "=>", doc.data());
+        // console.log(doc.id, "=>", doc.data());
+        setUser(doc.data())
       })
     );
   };
-  querySnapshot();
 
-  let data = [];
-  const renderItem = () => (
-    <>
+  useEffect(() => {
+    querySnapshot();
+    checkLogin()
+  }, [])
+
+  const DATA = [
+    {
+      id: "bd7acbea-c1b1-46c2-aed5-3ad53abb28ba",
+      title: "First Item",
+    },
+  ];
+  return (
+    <ContainerView>
+      <SttsBar />
       <ProfileLogo />
+      <Text style={styles.loginText}>LOGIN</Text>
       <View style={styles.container1}>
         <InputCadastro title="EMAIL" control={control} errors={errors} />
         <InputCadastro title="SENHA" control={control} errors={errors} />
@@ -111,25 +124,6 @@ export function SignIn({ navigation }) {
           <Text style={styles.text}>CRIAR CONTA</Text>
         </TouchableOpacity>
       </View>
-    </>
-  );
-
-  const DATA = [
-    {
-      id: "bd7acbea-c1b1-46c2-aed5-3ad53abb28ba",
-      title: "First Item",
-    },
-  ];
-  return (
-    <ContainerView>
-      <FlatList
-        data={DATA}
-        renderItem={renderItem}
-        keyExtractor={(item) => item.id}
-        style={{
-          top: "15%",
-        }}
-      />
     </ContainerView>
   );
 }
@@ -141,7 +135,7 @@ const styles = StyleSheet.create({
   container1: {
     justifyContent: "center",
     alignItems: "center",
-    height: 500,
+    marginTop: '15%'
   },
   button: {
     width: 150,
@@ -161,5 +155,17 @@ const styles = StyleSheet.create({
     fontSize: 16,
     lineHeight: 26,
     color: "#B66C6C",
+    textShadowColor: 'rgba(0, 0, 0, 0.75)',
+    textShadowOffset: {width: -0.2, height: 0.2},
+    textShadowRadius: 2
   },
+  loginText: {
+    marginTop: '20%',
+    fontSize: 30,
+    color: "#B66C6C",
+    fontWeight: "bold",
+    textShadowColor: 'rgba(0, 0, 0, 0.75)',
+    textShadowOffset: {width: -0.5, height: 0.5},
+    textShadowRadius: 6
+  }
 });

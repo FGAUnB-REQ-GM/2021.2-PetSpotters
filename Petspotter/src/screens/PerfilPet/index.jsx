@@ -9,7 +9,7 @@ import styles from "./styles";
 export function PerfilPet() {
   const navigation = useNavigation()
   const routes = useRoute()
-  const data = routes.params.data
+  const data = routes.params
   
   const [petData, setPetData] = useState({
     nome: '',
@@ -29,7 +29,7 @@ export function PerfilPet() {
       idade: '2 anos',
       bio: 'Doginho fofo'
     })
-    console.log(data)
+    // console.log(data)
   }, [])
 
   const fotos = {
@@ -133,9 +133,9 @@ export function PerfilPet() {
         {paginacao()}
         </View>
         <View style={styles.petDescriptionView}>
-          <Text style={[styles.petDescription, {fontSize: 30}]}>{data.NOME}</Text>
+          <Text style={[styles.petDescription, {fontSize: 30}]}>{}</Text>
           <Text style={[styles.petDescription]}>{petData.idade}</Text>
-          <Text style={styles.petDescription}>{data.RAÇA}</Text>
+          <Text style={styles.petDescription}>{}</Text>
           <TouchableOpacity style={styles.button}>
             <Icon name='information' size={15} color={"#ffffffdd"} />
           </TouchableOpacity>
