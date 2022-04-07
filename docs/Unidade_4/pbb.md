@@ -102,9 +102,9 @@ Os critérios de classificação foram:
 
 ![PBB](./assets/coorg4.png)
 
-# Critérios de Aceitação das US's
+# Critérios de Aceitação das US's do MVP1
 
-Os critérios de aceitação de todas as User Stories podem ser visualizados através do link abaixo da imagem.
+Os critérios de aceitação das User Stories do MVP1 podem ser visualizados através do link abaixo da imagem.
 
 ![criterios](./assets/criteriosAceitacao.png)
 

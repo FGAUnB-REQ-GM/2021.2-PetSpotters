@@ -1,5 +1,5 @@
 # User Story Mapping
-O USM pode ser totalmente analisado no **Miro** disponível no link abaixo da imagem.
+O USM pode ser melhor analisado no **Miro** disponível no link abaixo da imagem.
 
 ![USM](./assets/USM.png)
 
