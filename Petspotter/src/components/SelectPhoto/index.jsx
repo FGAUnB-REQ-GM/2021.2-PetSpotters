@@ -5,11 +5,13 @@ import {
   View,
   Image,
   TouchableHighlight,
+  TouchableOpacity
 } from "react-native";
 import * as ImagePicker from "expo-image-picker";
 import { storage } from "../../../firebase";
 import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
 import styles from "./styles";
+import { NewPhotoView } from "../NewPhotoView";
 
 export function SelectPhoto({ email, nome }) {
   useEffect(() => {
@@ -47,21 +49,25 @@ export function SelectPhoto({ email, nome }) {
   };
 
   return (
-    <View
+    <TouchableOpacity
       style={{
-        flex: 1,
+        width: '100%',
+        height: '100%',
         backgroundColor: "#fff",
         alignItems: "center",
         justifyContent: "center",
+        borderRadius: 7
       }}
+      onPress={pickImage}
+      activeOpacity={0.8}
     >
       {imageList && imageList.length > 0 ? (
         <Image source={{ uri: imageList[0] }} style={styles.img} />
       ) : (
-        <TouchableHighlight onPress={pickImage}>
-          <Text>selecionar imagem</Text>
-        </TouchableHighlight>
+        <View>
+            <NewPhotoView />
+          </View>
       )}
-    </View>
+    </TouchableOpacity>
   );
 }

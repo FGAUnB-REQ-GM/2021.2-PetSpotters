@@ -10,7 +10,8 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     margin: "5%",
     borderColor: "#000",
-    borderWidth: 1
+    borderWidth: 1,
+    alignSelf: 'center'
   },
 
   insideView: {

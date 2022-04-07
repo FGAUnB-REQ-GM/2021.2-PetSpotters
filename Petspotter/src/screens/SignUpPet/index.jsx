@@ -102,13 +102,15 @@ export function SignUpPet({ navigation, route }) {
           <InputCadastro title="BIO" control={control} errors={errors} />
           <InputCadastro title="NASCIMENTO" control={control} errors={errors} />
           <InputCadastro title="ENDEREÇO" control={control} errors={errors} />
-
-          <TouchableOpacity
-            style={[styles.button, { marginBottom: 150 }]}
-            onPress={handleSubmit(OnSubmit)}
-          >
-            <Text style={styles.text}>CADASTRAR</Text>
-          </TouchableOpacity>
+          
+          <View style={{width: '100%', alignItems: 'center'}}>
+            <TouchableOpacity
+              style={[styles.button, { marginBottom: 150 }]}
+              onPress={handleSubmit(OnSubmit)}
+            >
+              <Text style={styles.text}>CADASTRAR</Text>
+            </TouchableOpacity>
+          </View>
         </ScrollView>
       </View>
     </ContainerView>
@@ -138,7 +140,7 @@ const styles = StyleSheet.create({
   text: {
     fontFamily: "Roboto",
     fontStyle: "normal",
-    fontWeight: "700",
+    fontWeight: "bold",
     fontSize: 16,
     lineHeight: 26,
     color: "#B66C6C",
