@@ -37,4 +37,4 @@
 - [Mapeamento de historias](docs/Unidade_4/mapeamentodehistorias.md)
 - [BDD](docs/Unidade_4/bdd.md)
 - [User Story Map](docs/Unidade_4/usm.md)
-- [Vídeo de apresentação](docs/Unidade_4/apresentacao4.md)
+- [Apresentação](docs/Unidade_4/apresentacao4.md)
