@@ -2,7 +2,6 @@ import {
   View,
   Text,
   Modal,
-  Pressable,
   StyleSheet,
   TouchableOpacity,
 } from "react-native";
@@ -23,7 +22,7 @@ export default function ModalRecover({ modalVisible, setModalVisible }) {
 
   const OnSubmit = (data) => {
     try {
-      sendPasswordResetEmail(auth, data.email)
+      sendPasswordResetEmail(auth, data.EMAIL)
         .then(() => {
           alert("email enviado!");
           setModalVisible(!modalVisible);
@@ -49,16 +48,18 @@ export default function ModalRecover({ modalVisible, setModalVisible }) {
     >
       <View style={styles.centeredView}>
         <View style={styles.modalView}>
-          <Pressable onPress={() => setModalVisible(!modalVisible)}>
-            <Text>x</Text>
-          </Pressable>
-          <InputCadastro title="email" control={control} errors={errors} />
-
+          <InputCadastro title="EMAIL" control={control} errors={errors} />
           <TouchableOpacity
             style={styles.button}
             onPress={handleSubmit(OnSubmit)}
           >
             <Text style={styles.text}>ENVIAR</Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={styles.button}
+            onPress={() => setModalVisible(!modalVisible)}
+          >
+            <Text style={styles.text}>CANCELAR</Text>
           </TouchableOpacity>
         </View>
       </View>
@@ -92,12 +93,11 @@ const styles = StyleSheet.create({
     width: 150,
     height: 40,
     backgroundColor: "#FFD2CE",
-    borderColor: "#B66C6C",
-    borderWidth: 2,
     borderRadius: 10,
     justifyContent: "center",
     alignItems: "center",
     marginTop: "5%",
+    elevation: 4
   },
   buttonOpen: {
     backgroundColor: "#F194FF",

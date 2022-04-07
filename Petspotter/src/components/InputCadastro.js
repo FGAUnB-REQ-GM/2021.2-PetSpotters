@@ -35,12 +35,10 @@ const styles = StyleSheet.create({
     width: 300,
     height: 50,
     backgroundColor: "#FFD2CE",
-    borderColor: "#B66C6C",
-    borderWidth: 2,
     borderRadius: 10,
     justifyContent: "center",
     alignItems: "center",
-    // marginBottom: "5%",
+    elevation: 4
   },
   text: {
     fontFamily: "Roboto",

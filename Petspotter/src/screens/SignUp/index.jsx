@@ -4,17 +4,16 @@ import {
   View,
   Image,
   Text,
-  StyleSheet,
   LogBox,
   FlatList,
   TouchableOpacity,
-  ActivityIndicator,
 } from "react-native";
 import { useForm } from "react-hook-form";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth, db } from "../../../firebase";
 import { collection, getDocs, query, where } from "firebase/firestore";
 import InputCadastro from "../../components/InputCadastro";
+import styles from "./styles";
 import { Match } from "../Match";
 
 export function SignUp({ navigation }) {
@@ -106,42 +105,3 @@ export function SignUp({ navigation }) {
     </SafeAreaView>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    alignItems: "center",
-  },
-  container1: {
-    justifyContent: "center",
-    alignItems: "center",
-    height: 500,
-  },
-  button: {
-    width: 150,
-    height: 40,
-    backgroundColor: "#FFD2CE",
-    borderColor: "#B66C6C",
-    borderWidth: 2,
-    borderRadius: 10,
-    justifyContent: "center",
-    alignItems: "center",
-    marginTop: "5%",
-  },
-  text: {
-    fontFamily: "Roboto",
-    fontStyle: "normal",
-    fontWeight: "700",
-    fontSize: 16,
-    lineHeight: 26,
-    color: "#B66C6C",
-  },
-  loading: {
-    flex: 1,
-    justifyContent: "center",
-  },
-  horizontal: {
-    flexDirection: "row",
-    justifyContent: "space-around",
-    padding: 10,
-  },
-});

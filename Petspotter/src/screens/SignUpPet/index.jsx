@@ -1,12 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import {
-  SafeAreaView,
   View,
-  Image,
   Text,
-  StyleSheet,
   LogBox,
-  FlatList,
   TouchableOpacity,
   ScrollView,
 } from "react-native";
@@ -14,13 +10,12 @@ import { useForm } from "react-hook-form";
 import { db, storage } from "../../../firebase";
 import { addDoc, collection } from "firebase/firestore";
 import InputCadastro from "../../components/InputCadastro";
-import InputSelect from "../../components/InputSelect";
 import { ContainerView, ProfileBtn, ProfileLogo } from "../../components";
 import { useScreenContext } from "../../context/ContextScreen";
-import { Match } from "../Match";
 import { getDownloadURL, listAll, ref } from "firebase/storage";
 import { SelectPhoto } from "../../components/SelectPhoto";
 import { useUserContext } from "../../context/ContextUser";
+import styles from "./styles";
 
 export function SignUpPet({ navigation, route }) {
   const {
@@ -73,14 +68,6 @@ export function SignUpPet({ navigation, route }) {
 
   return (
     <ContainerView>
-      {/* <FlatList
-        data={DATA}
-        renderItem={renderItem}
-        keyExtractor={(item) => item.id}
-        style={{
-          // top: "15%",
-        }}
-      /> */}
       <ProfileLogo />
       <View style={styles.container1}>
         <Text style={styles.text}>CADASTRE SEU PET</Text>
@@ -116,41 +103,3 @@ export function SignUpPet({ navigation, route }) {
     </ContainerView>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    alignItems: "center",
-  },
-  container1: {
-    marginTop: "10%",
-    justifyContent: "flex-start",
-    alignItems: "center",
-  },
-  button: {
-    width: 150,
-    height: 40,
-    backgroundColor: "#FFD2CE",
-    borderColor: "#B66C6C",
-    borderWidth: 2,
-    borderRadius: 10,
-    justifyContent: "center",
-    alignItems: "center",
-    marginTop: "5%",
-  },
-  text: {
-    fontFamily: "Roboto",
-    fontStyle: "normal",
-    fontWeight: "bold",
-    fontSize: 16,
-    lineHeight: 26,
-    color: "#B66C6C",
-  },
-  img: {
-    resizeMode: "cover",
-    position: "absolute",
-    borderRadius: 30,
-    borderColor: "#000",
-    width: 200,
-    height: 150,
-  },
-});

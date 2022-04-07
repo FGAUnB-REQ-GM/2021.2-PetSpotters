@@ -1,11 +1,8 @@
 import React, { useEffect, useState } from "react";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import {
-  SafeAreaView,
   View,
-  Image,
   Text,
-  StyleSheet,
   LogBox,
   FlatList,
   TouchableOpacity,
@@ -13,7 +10,6 @@ import {
 import { useForm, Controller } from "react-hook-form";
 import {
   signInWithEmailAndPassword,
-  sendPasswordResetEmail,
 } from "firebase/auth";
 import { auth, db } from "../../../firebase";
 import { collection, getDocs, query, where } from "firebase/firestore";
@@ -21,6 +17,7 @@ import InputCadastro from "../../components/InputCadastro";
 import { ContainerView, ProfileLogo } from "../../components";
 import ModalRecover from "../../components/Modal";
 import { useScreenContext } from "../../context/ContextScreen";
+import styles from "./styles";
 import { useUserContext } from "../../context/ContextUser";
 
 export function SignIn({ navigation }) {
@@ -33,6 +30,14 @@ export function SignIn({ navigation }) {
   });
 
   LogBox.ignoreLogs(["Setting a timer"]);
+
+  const checkLogin = async () => {
+    const user = await AsyncStorage.getItem("@user") 
+    if(user) {
+      console.log(user)
+      navigation.replace("PerfilPet");
+    }
+  }
 
   const { userLogged, setUserLogged } = useScreenContext();
   const { user, setUser } = useUserContext();
@@ -81,7 +86,7 @@ export function SignIn({ navigation }) {
 
   const renderItem = () => (
     <>
-      <ProfileLogo />
+      <ProfileLogo style={{alignSelf: 'center'}} />
       <View style={styles.container1}>
         <InputCadastro title="EMAIL" control={control} errors={errors} />
         <InputCadastro title="SENHA" control={control} errors={errors} />
@@ -132,75 +137,3 @@ export function SignIn({ navigation }) {
     </ContainerView>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    alignItems: "center",
-  },
-  container1: {
-    justifyContent: "center",
-    alignItems: "center",
-    height: 500,
-  },
-  button: {
-    width: 150,
-    height: 40,
-    backgroundColor: "#FFD2CE",
-    borderColor: "#B66C6C",
-    borderWidth: 2,
-    borderRadius: 10,
-    justifyContent: "center",
-    alignItems: "center",
-    marginTop: "5%",
-  },
-  text: {
-    fontFamily: "Roboto",
-    fontStyle: "normal",
-    fontWeight: "700",
-    fontSize: 16,
-    lineHeight: 26,
-    color: "#B66C6C",
-  },
-
-  centeredView: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-    marginTop: 22,
-  },
-  modalView: {
-    margin: 20,
-    backgroundColor: "white",
-    borderRadius: 20,
-    padding: 35,
-    alignItems: "center",
-    shadowColor: "#000",
-    shadowOffset: {
-      width: 0,
-      height: 2,
-    },
-    shadowOpacity: 0.25,
-    shadowRadius: 4,
-    elevation: 5,
-  },
-  buttonModal: {
-    borderRadius: 20,
-    padding: 10,
-    elevation: 2,
-  },
-  buttonOpen: {
-    backgroundColor: "#F194FF",
-  },
-  buttonClose: {
-    backgroundColor: "#2196F3",
-  },
-  textStyle: {
-    color: "white",
-    fontWeight: "bold",
-    textAlign: "center",
-  },
-  modalText: {
-    marginBottom: 15,
-    textAlign: "center",
-  },
-});
