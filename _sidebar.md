@@ -38,3 +38,7 @@
 - [BDD](docs/Unidade_4/bdd.md)
 - [User Story Map](docs/Unidade_4/usm.md)
 - [Apresentação](docs/Unidade_4/apresentacao4.md)
+
+**Releases**
+
+- [MVP 1](docs/outros/releases/mvp1.md)
