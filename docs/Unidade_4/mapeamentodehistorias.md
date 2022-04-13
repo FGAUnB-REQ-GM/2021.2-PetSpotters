@@ -5,15 +5,18 @@ Mudanças no mapeamento de histórias:
 
 As histórias de usuário a seguir, foram geradas a partir do nosso PBB:
 
+<span style="color:red">REVEJAM OS VALORES DE NEGÓCIO DAS HISTÓRIAS. COMENTO ALGUNS EXEMPLOS, ABAIXO. SE PERGUNTEM: QUAL O VALOR DE NEGÓCIO/OBJETIVO/BENEFÍCIO TEREI COM UMA DETERMINADA AÇÃO?</span>
+
 * ## Criar um perfil para o pet
 <table>
   <tr>
     <td> <b> 1 </b> </td> 
-    <td> Eu como usuário desejo criar o perfil do meu pet para divulgar meu pet na plataforma <td>US07</td> 
+    <td> Eu como usuário desejo criar o perfil do meu pet para divulgar meu pet na plataforma (<span style="color:red">o valor de negócio é: divulgar o pet na plataforma? Não seria mais adequado: dar maior visibilidade ao meu pet, por exemplo?</span>)
+<td>US07</td> 
   </tr>
   <tr>
     <td> <b> 2 </b> </td> 
-    <td> Eu como usuário desejo poder editar o perfil do meu pet para não precisar criar outro perfil caso eu queria mudar algo <td>US09</td> 
+    <td> Eu como usuário desejo poder editar o perfil do meu pet para não precisar criar outro perfil caso eu queria mudar algo (<span style="color:red">o valor de negócio é: não precisar criar outro perfil? que valor isso gera?</span>)<td>US09</td> 
   </tr>
   <tr>
     <td> <b> 3 </b> </td> 
@@ -26,7 +29,7 @@ As histórias de usuário a seguir, foram geradas a partir do nosso PBB:
 <table>
   <tr>
     <td> <b> 1 </b> </td> 
-    <td> Eu como usuário desejo visualizar uma lista com os matches por mim realizados para eu saber em quais pets eu tenho match <td>US18</td> 
+    <td> Eu como usuário desejo visualizar uma lista com os matches por mim realizados para eu saber em quais pets eu tenho match (<span style="color:red">aqui, o valor de negócio e a ação são praticamente a mesma coisa, escrita de maneira diferente. Ajustem o valor de negócio.</span>)<td>US18</td> 
   </tr>
   <tr>
     <td> <b> 2 </b> </td> 
