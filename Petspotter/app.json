@@ -2,10 +2,15 @@
   "expo": {
     "name": "Petspotter",
     "slug": "Petspotter",
+    "icon": "./assets/img/icon.png",
     "version": "1.0.0",
     "assetBundlePatterns": [
       "**/*"
-    ]
+    ],
+    "android": {
+      "package": "com.petspotters.petspotter",
+      "versionCode": 1
+    }
   },
   "name": "Petspotter"
 }

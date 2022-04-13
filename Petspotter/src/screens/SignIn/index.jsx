@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import AsyncStorage from "@react-native-async-storage/async-storage";
+// import AsyncStorage from "@react-native-async-storage/async-storage";
 import {
   View,
   Text,
@@ -31,13 +31,13 @@ export function SignIn({ navigation }) {
 
   LogBox.ignoreLogs(["Setting a timer"]);
 
-  const checkLogin = async () => {
-    const user = await AsyncStorage.getItem("@user") 
-    if(user) {
-      console.log(user)
-      navigation.replace("PerfilPet");
-    }
-  }
+  // const checkLogin = async () => {
+  //   const user = await AsyncStorage.getItem("@user") 
+  //   if(user) {
+  //     console.log(user)
+  //     navigation.replace("PerfilPet");
+  //   }
+  // }
 
   const { userLogged, setUserLogged } = useScreenContext();
   const { user, setUser } = useUserContext();
