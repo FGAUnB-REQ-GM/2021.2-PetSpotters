@@ -39,6 +39,10 @@
 - [User Story Map](docs/Unidade_4/usm.md)
 - [Apresentação](docs/Unidade_4/apresentacao4.md)
 
+**Unidade 5**
+- [User Story Map](docs/Unidade_5/usm.md)
+- [Casos de Uso](docs/Unidade_5/casosDeUso.md)
+
 **Releases**
 
 - [MVP 1](docs/outros/releases/mvp1.md)
