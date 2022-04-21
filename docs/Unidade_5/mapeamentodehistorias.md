@@ -5,8 +5,6 @@ Mudanças no mapeamento de histórias:
 
 As histórias de usuário a seguir, foram geradas a partir do nosso PBB:
 
-<span style="color:red">REVEJAM OS VALORES DE NEGÓCIO DAS HISTÓRIAS. COMENTO ALGUNS EXEMPLOS, ABAIXO. SE PERGUNTEM: QUAL O VALOR DE NEGÓCIO/OBJETIVO/BENEFÍCIO TEREI COM UMA DETERMINADA AÇÃO?</span>
-
 * ## Criar um perfil para o pet
 <table>
   <tr>
