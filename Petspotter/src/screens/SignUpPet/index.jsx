@@ -40,7 +40,7 @@ export function SignUpPet({ navigation, route }) {
         email: route.params.data.EMAIL,
         telefone: route.params.data.TELEFONE,
         Petnome: data.NOME,
-        PetdataN: data.NASCIMENTO,
+        Petidade: data.IDADE,
         Petendereco: data.ENDEREÇO,
         Petbio: data.BIO,
         Petraca: data.RAÇA,
@@ -52,7 +52,7 @@ export function SignUpPet({ navigation, route }) {
             email: route.params.data.EMAIL,
             telefone: route.params.data.TELEFONE,
             Petnome: data.NOME,
-            PetdataN: data.NASCIMENTO,
+            Petidade: data.IDADE,
             Petendereco: data.ENDEREÇO,
             Petbio: data.BIO,
             Petraca: data.RAÇA,
@@ -87,7 +87,7 @@ export function SignUpPet({ navigation, route }) {
           <InputCadastro title="NOME" control={control} errors={errors} />
           <InputCadastro title="RAÇA" control={control} errors={errors} />
           <InputCadastro title="BIO" control={control} errors={errors} />
-          <InputCadastro title="NASCIMENTO" control={control} errors={errors} />
+          <InputCadastro title="IDADE" control={control} errors={errors} />
           <InputCadastro title="ENDEREÇO" control={control} errors={errors} />
           
           <View style={{width: '100%', alignItems: 'center'}}>
