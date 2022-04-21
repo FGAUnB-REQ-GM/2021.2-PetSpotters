@@ -6,26 +6,17 @@ import {
   Image,
   Text,
   StyleSheet,
-  TextInput,
-  Button,
   LogBox,
-  ScrollView,
   FlatList,
   TouchableOpacity,
 } from "react-native";
 import { useForm, Controller } from "react-hook-form";
-import { signInWithEmailAndPassword, onAuthStateChanged } from "firebase/auth";
-import { auth, db } from "../../../firebase";
 import {
-  addDoc,
-  collection,
-  doc,
-  getDoc,
-  getDocs,
-  query,
-  setDoc,
-  where,
-} from "firebase/firestore";
+  signInWithEmailAndPassword,
+  sendPasswordResetEmail,
+} from "firebase/auth";
+import { auth, db } from "../../../firebase";
+import { collection, getDocs, query, where } from "firebase/firestore";
 import InputCadastro from "../../components/InputCadastro";
 import { ContainerView, ProfileLogo, SttsBar } from "../../components";
 
@@ -54,9 +45,8 @@ export function SignIn({ navigation }) {
   const OnSubmit = (data) => {
     try {
       signInWithEmailAndPassword(auth, data.EMAIL, data.SENHA)
-        .then(async () => {
-          
-          navigation.replace("PerfilPet", user);
+        .then(() => {
+          navigation.navigate("Match", { data: data });
         })
         .catch((error) => {
           alert(error.message);
@@ -122,6 +112,12 @@ export function SignIn({ navigation }) {
           onPress={() => navigation.navigate("Cadastro")}
         >
           <Text style={styles.text}>CRIAR CONTA</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={{ top: "3%" }}
+          onPress={() => setModalVisible(true)}
+        >
+          <Text style={styles.text}>Esqueci minha senha</Text>
         </TouchableOpacity>
       </View>
     </ContainerView>
