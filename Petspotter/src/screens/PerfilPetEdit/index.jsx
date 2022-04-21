@@ -30,8 +30,7 @@ export function PerfilPetEdit() {
   const [raca, setRaca] = useState("");
   const [bio, setBio] = useState("");
   const [endereco, setEndereco] = useState("");
-  const [dataN, setDataN] = useState("");
-  const [petPics, setPetPics] = useState({ uri: null });
+  const [idade, setIdade] = useState("");
 
   const { user, setUser } = useUserContext();
 
@@ -55,8 +54,8 @@ export function PerfilPetEdit() {
             }).then((res) => (user["Petendereco"] = endereco)));
           dataN &&
             (await updateDoc(docs(db, "users", doc.id), {
-              PetdataN: dataN,
-            }).then((res) => (user["Petidade"] = dataN)));
+              Petidade: idade,
+            }).then((res) => (user["Petidade"] = idade)));
         })
       );
     };
@@ -115,13 +114,13 @@ export function PerfilPetEdit() {
             />
           </View>
           <View style={styles.inputBoxView}>
-            <Text style={styles.inputBoxLabel}>DATA DE NASCIMENTO</Text>
+            <Text style={styles.inputBoxLabel}>IDADE</Text>
             <TextInput
               style={[styles.inputBox, { width: "100%" }]}
-              onChangeText={setDataN}
-              value={dataN}
+              onChangeText={setIdade}
+              value={idade}
               multiline={true}
-              placeholder={user?.PetdataN}
+              placeholder={user?.Petidade}
             />
           </View>
         </View>
