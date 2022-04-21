@@ -28,8 +28,8 @@ export const ScreenNavigation = () => {
     <NavigationContainer>
       <Stack.Navigator screenOptions={{ headerShown: false }}>
         {/* <Stack.Screen name="Teste" component={Teste} /> */}
-        {userLogged ? (
-          <>
+            <Stack.Screen name="Login" component={SignIn} />
+            <Stack.Screen name="Cadastro" component={SignUp} />
             <Stack.Screen name="Tabs" component={MyTabs} />
             <Stack.Screen name="Match" component={Match} />
             <Stack.Screen name="PerfilPet" component={PerfilPet} />
@@ -39,14 +39,6 @@ export const ScreenNavigation = () => {
             <Stack.Screen name="PerfilUser" component={PerfilUser} />
             <Stack.Screen name="Inicial" component={Initial} />
             <Stack.Screen name="PetData" component={PetData} />
-          </>
-        ) : (
-          <>
-            <Stack.Screen name="Login" component={SignIn} />
-            <Stack.Screen name="Cadastro" component={SignUp} />
-            <Stack.Screen name="CadastroPet" component={SignUpPet} />
-          </>
-        )}
       </Stack.Navigator>
     </NavigationContainer>
   );

@@ -11,10 +11,10 @@ export default function MyTabs() {
     inactiveColor="#111"
       barStyle={{backgroundColor: '#B66C6C'}} 
     >
-      <Tab.Screen name="Perfis" component={SelectPerfil} options={{tabBarIcon: () => (
+      <Tab.Screen name=" " component={SelectPerfil} options={{tabBarIcon: () => (
           <Icon name="book-open" size={25} color={"#f9f9f9"} />
         )}} />
-      <Tab.Screen name="Match" component={PerfilPet} options={{tabBarIcon: () => (
+      <Tab.Screen name="  " component={PerfilPet} options={{tabBarIcon: () => (
           <Icon name="dog" size={25} color={"#f9f9f9"} />
         )}}/>
     </Tab.Navigator>

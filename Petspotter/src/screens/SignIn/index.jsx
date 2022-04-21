@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-// import AsyncStorage from "@react-native-async-storage/async-storage";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 import {
   View,
   Text,
@@ -19,8 +19,10 @@ import ModalRecover from "../../components/Modal";
 import { useScreenContext } from "../../context/ContextScreen";
 import styles from "./styles";
 import { useUserContext } from "../../context/ContextUser";
+import { useNavigation } from "@react-navigation/native";
 
-export function SignIn({ navigation }) {
+// export function SignIn({ navigation }) {
+export function SignIn() {
   const {
     control,
     handleSubmit,
@@ -29,19 +31,21 @@ export function SignIn({ navigation }) {
     defaultValues: {},
   });
 
+  const navigation = useNavigation()
+
   LogBox.ignoreLogs(["Setting a timer"]);
 
-  // const checkLogin = async () => {
-  //   const user = await AsyncStorage.getItem("@user") 
-  //   if(user) {
-  //     console.log(user)
-  //     navigation.replace("PerfilPet");
-  //   }
-  // }
+  const checkLogin = async () => {
+    const user = await AsyncStorage.getItem("@user") 
+    if(user) {
+      console.log("VAI NAVEGAR", user)
+      navigation.replace("PerfilPet", { user });
+    }
+  }
 
   const { userLogged, setUserLogged } = useScreenContext();
   const { user, setUser } = useUserContext();
-  console.log({ user });
+  // console.log({ user });
 
   const OnSubmit = (data) => {
     try {
@@ -56,9 +60,10 @@ export function SignIn({ navigation }) {
           console.log(data.EMAIL);
           const querySnapshot = async () => {
             await getDocs(q).then((res) =>
-              res.forEach((doc) => {
-                console.log(doc.id, "=>", doc.data());
+              res.forEach(async (doc) => {
+                // console.log(doc.id, "=>", doc.data());
                 setUser(doc.data());
+                await AsyncStorage.setItem("@user", JSON.stringify(doc.data()))
               })
             );
           };
@@ -81,6 +86,10 @@ export function SignIn({ navigation }) {
 
     docRef(); */
   };
+
+  useEffect(() => {
+    checkLogin()
+  }, [])
 
   const [modalVisible, setModalVisible] = useState(false);
 
