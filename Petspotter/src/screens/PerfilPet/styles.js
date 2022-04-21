@@ -39,7 +39,6 @@ const styles = StyleSheet.create({
     width: '100%'
   },
   profilePic: {
-    backgroundColor: "rgba(100, 100, 100, 0.3)",
     width: 40,
     height: 40,
     marginLeft: 10,

@@ -11,15 +11,21 @@ import { useNavigation, useRoute } from "@react-navigation/native";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 import Carousel, { Pagination } from "react-native-snap-carousel";
 import { ContainerView, ProfileLogo, SttsBar } from "../../components";
+import { useUserContext } from "../../context/ContextUser";
+import { getDownloadURL, listAll, ref } from "firebase/storage";
+import { storage } from "../../../firebase";
 import styles from "./styles";
 
 export function PerfilPet() {
   const navigation = useNavigation();
   const routes = useRoute();
-  const data = routes.params?.user;
+  const user = useUserContext()
+  const [images, setImages] = useState([])
+  const imageListRef = ref(storage, `${user.user.email}/`);
+  console.log(user.user)
 
   const [petData, setPetData] = useState({
-    nome: "",
+    nome: user.user.petnome,
     raca: "",
     porte: "",
     genero: "",
@@ -28,40 +34,37 @@ export function PerfilPet() {
   });
 
   useEffect(() => {
-    setPetData({
-      nome: "Mel",
-      raca: "BullDog",
-      porte: "Grande",
-      genero: "Femea",
-      idade: "2 anos",
-      bio: "Doginho fofo",
+    listAll(imageListRef).then((list) => {
+      list.items.forEach((item) => {
+        getDownloadURL(item).then((url) => {
+          console.log(url)
+          setImages([...images, url]);
+        });
+      }); 
     });
-    console.log(data);
   }, []);
 
   const fotos = {
-    foto1:
-      "https://images.wallpapersden.com/image/download/husky-dog-muzzle_aWtnapSZmpqtpaSklGZlbWWtZ2llZQ.jpg",
+    foto1:"https://images.wallpapersden.com/image/download/husky-dog-muzzle_aWtnapSZmpqtpaSklGZlbWWtZ2llZQ.jpg",
     foto2: "https://mfiles.alphacoders.com/885/885461.jpg",
     foto3: "https://mfiles.alphacoders.com/936/thumb-1920-936778.jpg",
-    foto4:
-      "https://images.wallpapersden.com/image/download/nebula_am5sZ2qUmZqaraWkpJRmZW1lrWdpZWU.jpg",
+    foto4:"https://images.wallpapersden.com/image/download/nebula_am5sZ2qUmZqaraWkpJRmZW1lrWdpZWU.jpg",
     foto5: "https://cdn.wallpapersafari.com/38/84/dmy3p2.jpg",
     foto6: "https://wallpaperaccess.com/full/1139878.jpg",
     foto7: "https://cdn.wallpapersafari.com/83/78/K0ZSkI.jpg",
     foto8: "https://wallpapercave.com/wp/wp5549771.jpg",
   };
 
-  const [images, setImages] = useState([
-    { id: "1", image: fotos.foto1 },
-    { id: "2", image: fotos.foto2 },
-    { id: "3", image: fotos.foto3 },
-    { id: "4", image: fotos.foto4 },
-    { id: "5", image: fotos.foto5 },
-    { id: "6", image: fotos.foto6 },
-    { id: "7", image: fotos.foto7 },
-    { id: "8", image: fotos.foto8 },
-  ]);
+  // const [images, setImages] = useState([
+  //   { id: "1", image: fotos.foto1 },
+  //   { id: "2", image: fotos.foto2 },
+  //   { id: "3", image: fotos.foto3 },
+  //   { id: "4", image: fotos.foto4 },
+  //   { id: "5", image: fotos.foto5 },
+  //   { id: "6", image: fotos.foto6 },
+  //   { id: "7", image: fotos.foto7 },
+  //   { id: "8", image: fotos.foto8 },
+  // ]);
   const { width } = Dimensions.get("window");
 
   const renderItem = (item, index) => {
@@ -71,7 +74,7 @@ export function PerfilPet() {
           key={index}
           style={{ width: "100%", height: "100%" }}
           resizeMode="cover"
-          source={{ uri: item.item.image }}
+          source={{ uri: item.item }}
         />
       </TouchableOpacity>
     );
@@ -117,14 +120,9 @@ export function PerfilPet() {
         <TouchableOpacity
           style={styles.profilePic}
           activeOpacity={0.8}
-          onPress={() => navigation.navigate("Perfis", { data, images })}
+          onPress={() => navigation.goBack()}
         >
-          <ImageBackground
-            style={{ width: 40, height: 40 }}
-            source={{ uri: images[0].image }}
-            resizeMode="cover"
-            borderRadius={100}
-          />
+          <Icon name="arrow-left" size={40} color={"#B66C6Ced"} />
         </TouchableOpacity>
         <View style={{ alignSelf: "center" }}>
           <ProfileLogo style={{ marginTop: 5, marginBottom: 5 }} />
@@ -139,15 +137,15 @@ export function PerfilPet() {
           itemWidth={width}
           renderItem={renderItem}
           onSnapToItem={(index) => setActiveSlide(index)}
-          enableSnap={true}
+          enableSnap
         />
         <View style={{ position: "absolute" }}>{paginacao()}</View>
         <View style={styles.petDescriptionView}>
           <Text style={[styles.petDescription, { fontSize: 30 }]}>
-            {data?.Petnome}
+            {user.user?.Petnome}
           </Text>
-          <Text style={[styles.petDescription]}>{petData.idade}</Text>
-          <Text style={styles.petDescription}>{data?.Petraca}</Text>
+          <Text style={[styles.petDescription]}>{user.user?.Petidade}</Text>
+          <Text style={styles.petDescription}>{user.user?.Petraca}</Text>
           <TouchableOpacity style={styles.button}>
             <Icon name="information" size={15} color={"#ffffffdd"} />
           </TouchableOpacity>

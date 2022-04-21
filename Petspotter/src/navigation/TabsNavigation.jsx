@@ -14,7 +14,7 @@ export default function MyTabs() {
       <Tab.Screen name=" " component={SelectPerfil} options={{tabBarIcon: () => (
           <Icon name="book-open" size={25} color={"#f9f9f9"} />
         )}} />
-      <Tab.Screen name="  " component={PerfilPet} options={{tabBarIcon: () => (
+      <Tab.Screen name="  " component={Match} options={{tabBarIcon: () => (
           <Icon name="dog" size={25} color={"#f9f9f9"} />
         )}}/>
     </Tab.Navigator>

@@ -87,14 +87,6 @@ export function SignIn({ navigation }) {
     }
   };
 
-  // if(!isLoaded) {
-  //   return (
-  //     <View style={{flex: 1, justifyContent: "center"}}>
-  //       <ActivityIndicator size="large" color="#B66C6C" />
-  //     </View>
-  //   )
-  // }
-
   useEffect(() => {
     checkLogin()
   }, [])

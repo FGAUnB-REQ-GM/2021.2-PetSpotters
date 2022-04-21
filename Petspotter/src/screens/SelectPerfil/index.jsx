@@ -55,15 +55,13 @@ export function SelectPerfil() {
         activeOpacity={0.8}
         style={styles.userEditBtn}
       >
-        <Text
-          style={styles.userEditText}
-        >
+        <Text style={styles.userEditText}>
           Editar meu perfil
         </Text>
       </TouchableOpacity>
       <TouchableOpacity
         onPress={() => {
-          navigation.navigate("PerfisPetEdit");
+          navigation.navigate("PerfilPet");
         }}
         activeOpacity={0.8}
       >
