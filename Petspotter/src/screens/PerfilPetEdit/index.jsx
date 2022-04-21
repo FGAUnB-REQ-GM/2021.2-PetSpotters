@@ -35,7 +35,7 @@ export function PerfilPetEdit() {
   const [petPics, setPetPics] = useState({ uri: null });
 
   const { user, setUser } = useUserContext();
-  console.log(user);
+  console.log(data);
 
   const onSubmit = () => {
     const q = query(collection(db, "users"), where("email", "==", user.email));
@@ -58,7 +58,7 @@ export function PerfilPetEdit() {
           dataN &&
             (await updateDoc(docs(db, "users", doc.id), {
               PetdataN: dataN,
-            }).then((res) => (user["PetdataN"] = dataN)));
+            }).then((res) => (user["Petidade"] = dataN)));
         })
       );
     };

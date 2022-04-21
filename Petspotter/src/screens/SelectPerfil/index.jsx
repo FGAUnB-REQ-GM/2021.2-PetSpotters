@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { View, Image, Text, TouchableOpacity } from "react-native";
+import { View, Image, Text, TouchableOpacity, LogBox } from "react-native";
 import {
   SttsBar,
   ContainerView,
   ProfileBtn,
   ProfileLogo,
 } from "../../components";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 import { useNavigation, useRoute } from "@react-navigation/native";
 import styles from "./styles";
 import { useUserContext } from "../../context/ContextUser";
@@ -16,8 +17,8 @@ import { storage } from "../../../firebase";
 export function SelectPerfil() {
   const navigation = useNavigation();
   const routes = useRoute();
-  const data = routes.params;
-
+  const data = routes.params?.user;
+  LogBox.ignoreAllLogs()
   const { userLogged, setUserLogged } = useScreenContext();
 
   const { user, setUser } = useUserContext();
@@ -27,18 +28,17 @@ export function SelectPerfil() {
   const [imag, setImag] = useState(false);
   const imageListRef = ref(storage, `${user.email}/`);
 
+  LogBox.ignoreLogs(["Setting a timer"]);
+
   useEffect(() => {
     listAll(imageListRef).then((list) => {
       list.items.forEach((item) => {
         getDownloadURL(item).then((url) => {
           setImageList((prev) => [...prev, url]);
         });
-      });
+      }); 
     });
-
-    setTimeout(() => {
-      setImag(true);
-    }, 2000);
+    setImag(true)
   }, [imag]);
 
   return (
@@ -71,17 +71,19 @@ export function SelectPerfil() {
           {imag ? (
             <Image source={{ uri: imageList[0] }} style={styles.img} />
           ) : (
-            <Text>Loading...</Text>
+            <Text>Carregando...</Text>
           )}
         </ProfileBtn>
       </TouchableOpacity>
       <TouchableOpacity
         style={styles.backButton}
         activeOpacity={0.8}
-        onPress={() => {
+        onPress={async () => {
           setImageList([]);
           setUser({});
           setUserLogged(false);
+          await AsyncStorage.removeItem("@user")
+          navigation.replace("Login")
         }}
       >
         <Text style={{ fontWeight: "bold", color: '#f9f9f9' }}>SAIR</Text>

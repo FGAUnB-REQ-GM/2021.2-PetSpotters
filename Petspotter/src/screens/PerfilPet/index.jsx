@@ -16,7 +16,7 @@ import styles from "./styles";
 export function PerfilPet() {
   const navigation = useNavigation();
   const routes = useRoute();
-  const data = routes.params?.data;
+  const data = routes.params?.user;
 
   const [petData, setPetData] = useState({
     nome: "",
@@ -144,10 +144,10 @@ export function PerfilPet() {
         <View style={{ position: "absolute" }}>{paginacao()}</View>
         <View style={styles.petDescriptionView}>
           <Text style={[styles.petDescription, { fontSize: 30 }]}>
-            {data?.NOME}
+            {data?.Petnome}
           </Text>
           <Text style={[styles.petDescription]}>{petData.idade}</Text>
-          <Text style={styles.petDescription}>{data?.RAÇA}</Text>
+          <Text style={styles.petDescription}>{data?.Petraca}</Text>
           <TouchableOpacity style={styles.button}>
             <Icon name="information" size={15} color={"#ffffffdd"} />
           </TouchableOpacity>
