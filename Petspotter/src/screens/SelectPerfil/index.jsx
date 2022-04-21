@@ -16,8 +16,6 @@ import { storage } from "../../../firebase";
 
 export function SelectPerfil() {
   const navigation = useNavigation();
-  const routes = useRoute();
-  const data = routes.params?.user;
   LogBox.ignoreAllLogs()
   const { userLogged, setUserLogged } = useScreenContext();
 
@@ -38,7 +36,9 @@ export function SelectPerfil() {
         });
       }); 
     });
-    setImag(true)
+    setTimeout(() => {
+      setImag(true)
+    }, 1000);
   }, [imag]);
 
   return (
