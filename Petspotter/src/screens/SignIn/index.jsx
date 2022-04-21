@@ -3,9 +3,10 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 import {
   View,
   Text,
-  LogBox,
   FlatList,
+  LogBox,
   TouchableOpacity,
+  ActivityIndicator
 } from "react-native";
 import { useForm, Controller } from "react-hook-form";
 import {
@@ -14,15 +15,14 @@ import {
 import { auth, db } from "../../../firebase";
 import { collection, getDocs, query, where } from "firebase/firestore";
 import InputCadastro from "../../components/InputCadastro";
-import { ContainerView, ProfileLogo } from "../../components";
+import { ContainerView, ProfileLogo, SttsBar } from "../../components";
 import ModalRecover from "../../components/Modal";
 import { useScreenContext } from "../../context/ContextScreen";
 import styles from "./styles";
 import { useUserContext } from "../../context/ContextUser";
-import { useNavigation } from "@react-navigation/native";
+import { SafeAreaProvider } from "react-native-safe-area-context";
 
-// export function SignIn({ navigation }) {
-export function SignIn() {
+export function SignIn({ navigation }) {
   const {
     control,
     handleSubmit,
@@ -31,28 +31,38 @@ export function SignIn() {
     defaultValues: {},
   });
 
-  const navigation = useNavigation()
-
   LogBox.ignoreLogs(["Setting a timer"]);
 
-  const checkLogin = async () => {
-    const user = await AsyncStorage.getItem("@user") 
-    if(user) {
-      console.log("VAI NAVEGAR", user)
-      navigation.replace("PerfilPet", { user });
-    }
-  }
-
+  const [isLoaded, setIsLoaded] = useState(false)
+  
   const { userLogged, setUserLogged } = useScreenContext();
   const { user, setUser } = useUserContext();
   // console.log({ user });
 
+  LogBox.ignoreAllLogs()
+  const checkLogin = async () => {
+    const usuario = await AsyncStorage.getItem("@user") 
+    if(usuario) {
+      const userObj = JSON.parse(usuario)
+      setUser(userObj);
+
+      setTimeout(() => {
+        navigation.replace("Perfis", {userObj});
+        setUserLogged(true) 
+        setIsLoaded(true)
+      }, 1000);
+    } else {
+      setTimeout(() => {
+        setIsLoaded(true)
+      }, 1000);
+    }
+  }
+  
   const OnSubmit = (data) => {
     try {
       signInWithEmailAndPassword(auth, data.EMAIL, data.SENHA)
         .then(() => {
           setUserLogged(true);
-
           const q = query(
             collection(db, "users"),
             where("email", "==", data.EMAIL)
@@ -61,7 +71,7 @@ export function SignIn() {
           const querySnapshot = async () => {
             await getDocs(q).then((res) =>
               res.forEach(async (doc) => {
-                // console.log(doc.id, "=>", doc.data());
+                console.log(doc.id, "=>", doc.data());
                 setUser(doc.data());
                 await AsyncStorage.setItem("@user", JSON.stringify(doc.data()))
               })
@@ -75,16 +85,6 @@ export function SignIn() {
     } catch (error) {
       alert(error.message);
     }
-
-    /* const docRef = async () => {
-      await addDoc(collection(db, "users"), {
-        nome: data.nome,
-        email: data.email,
-        telefone: data.telefone,
-      });
-    };
-
-    docRef(); */
   };
 
   useEffect(() => {
@@ -135,14 +135,20 @@ export function SignIn() {
   ];
   return (
     <ContainerView>
-      <FlatList
+      <SttsBar />
+      {isLoaded ? (<FlatList
         data={DATA}
         renderItem={renderItem}
         keyExtractor={(item) => item.id}
         style={{
           top: "15%",
         }}
-      />
+      />) : (
+      <SafeAreaProvider>
+        <ActivityIndicator size="large" color="#B66C6C"/>
+      </SafeAreaProvider>)}
+      
+
     </ContainerView>
   );
 }
