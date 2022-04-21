@@ -144,7 +144,7 @@ export function PerfilPet() {
           <Text style={[styles.petDescription, { fontSize: 30 }]}>
             {user.user?.Petnome}
           </Text>
-          <Text style={[styles.petDescription]}>{user.user?.Petidade}</Text>
+          <Text style={[styles.petDescription]}>{user.user?.Petidade === "1" ? user.user?.Petidade + " ano" : user.user?.Petidade+  " anos"}</Text>
           <Text style={styles.petDescription}>{user.user?.Petraca}</Text>
           <TouchableOpacity style={styles.button}>
             <Icon name="information" size={15} color={"#ffffffdd"} />
