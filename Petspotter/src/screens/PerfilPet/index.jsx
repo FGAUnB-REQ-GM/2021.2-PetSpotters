@@ -5,9 +5,8 @@ import {
   TouchableOpacity,
   Dimensions,
   Image,
-  ImageBackground,
 } from "react-native";
-import { useNavigation, useRoute } from "@react-navigation/native";
+import { useNavigation } from "@react-navigation/native";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 import Carousel, { Pagination } from "react-native-snap-carousel";
 import { ContainerView, ProfileLogo, SttsBar } from "../../components";
@@ -18,58 +17,26 @@ import styles from "./styles";
 
 export function PerfilPet() {
   const navigation = useNavigation();
-  const routes = useRoute();
   const user = useUserContext()
   const [images, setImages] = useState([])
   const imageListRef = ref(storage, `${user.user.email}/`);
-  console.log(user.user)
-
-  const [petData, setPetData] = useState({
-    nome: user.user.petnome,
-    raca: "",
-    porte: "",
-    genero: "",
-    idade: "",
-    bio: "",
-  });
 
   useEffect(() => {
+    setImages([])
     listAll(imageListRef).then((list) => {
       list.items.forEach((item) => {
         getDownloadURL(item).then((url) => {
-          console.log(url)
           setImages([...images, url]);
         });
       }); 
     });
   }, []);
 
-  const fotos = {
-    foto1:"https://images.wallpapersden.com/image/download/husky-dog-muzzle_aWtnapSZmpqtpaSklGZlbWWtZ2llZQ.jpg",
-    foto2: "https://mfiles.alphacoders.com/885/885461.jpg",
-    foto3: "https://mfiles.alphacoders.com/936/thumb-1920-936778.jpg",
-    foto4:"https://images.wallpapersden.com/image/download/nebula_am5sZ2qUmZqaraWkpJRmZW1lrWdpZWU.jpg",
-    foto5: "https://cdn.wallpapersafari.com/38/84/dmy3p2.jpg",
-    foto6: "https://wallpaperaccess.com/full/1139878.jpg",
-    foto7: "https://cdn.wallpapersafari.com/83/78/K0ZSkI.jpg",
-    foto8: "https://wallpapercave.com/wp/wp5549771.jpg",
-  };
-
-  // const [images, setImages] = useState([
-  //   { id: "1", image: fotos.foto1 },
-  //   { id: "2", image: fotos.foto2 },
-  //   { id: "3", image: fotos.foto3 },
-  //   { id: "4", image: fotos.foto4 },
-  //   { id: "5", image: fotos.foto5 },
-  //   { id: "6", image: fotos.foto6 },
-  //   { id: "7", image: fotos.foto7 },
-  //   { id: "8", image: fotos.foto8 },
-  // ]);
   const { width } = Dimensions.get("window");
 
   const renderItem = (item, index) => {
     return (
-      <TouchableOpacity activeOpacity={1} onPress={() => {}}>
+      <TouchableOpacity activeOpacity={1} onPress={() => {navigation.navigate("PerfisPetEdit")}}>
         <Image
           key={index}
           style={{ width: "100%", height: "100%" }}

@@ -25,7 +25,6 @@ import { db } from "../../../firebase";
 
 export function PerfilPetEdit() {
   const navigation = useNavigation();
-  const routes = useRoute();
   const [nome, setNome] = useState("");
   const [raca, setRaca] = useState("");
   const [bio, setBio] = useState("");
@@ -119,7 +118,7 @@ export function PerfilPetEdit() {
               style={[styles.inputBox, { width: "100%" }]}
               onChangeText={setIdade}
               value={idade}
-              multiline={true}
+              multiline
               placeholder={user?.Petidade}
             />
           </View>
