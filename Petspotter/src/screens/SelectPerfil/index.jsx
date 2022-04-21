@@ -20,7 +20,7 @@ export function SelectPerfil() {
   const { userLogged, setUserLogged } = useScreenContext();
 
   const { user, setUser } = useUserContext();
-  console.log(user);
+  // console.log(user);
 
   const [imageList, setImageList] = useState([]);
   const [imag, setImag] = useState(false);

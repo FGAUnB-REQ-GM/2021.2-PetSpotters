@@ -67,11 +67,11 @@ export function SignIn({ navigation }) {
             collection(db, "users"),
             where("email", "==", data.EMAIL)
           );
-          console.log(data.EMAIL);
+          // console.log(data.EMAIL);
           const querySnapshot = async () => {
             await getDocs(q).then((res) =>
               res.forEach(async (doc) => {
-                console.log(doc.id, "=>", doc.data());
+                // console.log(doc.id, "=>", doc.data());
                 setUser(doc.data());
                 await AsyncStorage.setItem("@user", JSON.stringify(doc.data()))
               })

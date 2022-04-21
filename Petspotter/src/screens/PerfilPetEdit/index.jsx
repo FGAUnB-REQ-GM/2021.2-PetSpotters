@@ -38,7 +38,7 @@ export function PerfilPetEdit() {
     const querySnapshot = async () => {
       await getDocs(q).then((res) =>
         res.forEach(async (doc) => {
-          console.log(doc.id, "=>", doc.data());
+          // console.log(doc.id, "=>", doc.data());
           nome &&
             (await updateDoc(docs(db, "users", doc.id), {
               Petnome: nome,

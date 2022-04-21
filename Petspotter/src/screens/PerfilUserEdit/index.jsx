@@ -29,7 +29,7 @@ export function PerfilUserEdit() {
   const [tel, setTel] = useState("");
   const navigation = useNavigation();
   const { user, setUser } = useUserContext();
-  console.log(user);
+  // console.log(user);
 
   const [imageList, setImageList] = useState([]);
   const imageListRef = ref(storage, `${user.email}/`);
@@ -48,7 +48,7 @@ export function PerfilUserEdit() {
     const querySnapshot = async () => {
       await getDocs(q).then((res) =>
         res.forEach(async (doc) => {
-          console.log(doc.id, "=>", doc.data());
+          // console.log(doc.id, "=>", doc.data());
           nome &&
             (await updateDoc(docs(db, "users", doc.id), { nome: nome }).then(
               (res) => (user["nome"] = nome)

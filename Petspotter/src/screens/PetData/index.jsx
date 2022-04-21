@@ -12,7 +12,7 @@ export function PetData() {
   const data = routes.params
 
   useEffect(() => {
-    console.log(data)
+    // console.log(data)
   }, [])
 
   return (

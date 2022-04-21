@@ -31,9 +31,9 @@ export function SignUpPet({ navigation, route }) {
   const { userLogged, setUserLogged } = useScreenContext();
   const { user, setUser } = useUserContext();
 
-  console.log("primeira tela", route.params.data);
+  // console.log("primeira tela", route.params.data);
   const OnSubmit = (data) => {
-    console.log(data);
+    // console.log(data);
     const docRef = async () => {
       await addDoc(collection(db, "users"), {
         nome: route.params.data.NOME,

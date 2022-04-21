@@ -28,7 +28,6 @@ export default function ModalRecover({ modalVisible, setModalVisible }) {
           setModalVisible(!modalVisible);
         })
         .catch((error) => {
-          console.log(data.email);
           alert(error.message);
         });
     } catch (error) {
