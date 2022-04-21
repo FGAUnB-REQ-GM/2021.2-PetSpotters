@@ -63,7 +63,7 @@ export function SelectPerfil() {
       </TouchableOpacity>
       <TouchableOpacity
         onPress={() => {
-          navigation.navigate("PerfisPetEdit", data);
+          navigation.navigate("PerfisPetEdit");
         }}
         activeOpacity={0.8}
       >

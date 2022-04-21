@@ -9,7 +9,7 @@ export default function MyTabs() {
     <Tab.Navigator
     activeColor="#f9f9f9"
     inactiveColor="#111"
-      barStyle={{backgroundColor: '#B66C6C'}} 
+      barStyle={{backgroundColor: '#B66C6C', height: 40}} 
     >
       <Tab.Screen name=" " component={SelectPerfil} options={{tabBarIcon: () => (
           <Icon name="book-open" size={25} color={"#f9f9f9"} />

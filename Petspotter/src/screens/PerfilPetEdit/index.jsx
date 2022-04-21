@@ -26,7 +26,6 @@ import { db } from "../../../firebase";
 export function PerfilPetEdit() {
   const navigation = useNavigation();
   const routes = useRoute();
-  const data = routes.params;
   const [nome, setNome] = useState("");
   const [raca, setRaca] = useState("");
   const [bio, setBio] = useState("");
@@ -35,7 +34,6 @@ export function PerfilPetEdit() {
   const [petPics, setPetPics] = useState({ uri: null });
 
   const { user, setUser } = useUserContext();
-  console.log(data);
 
   const onSubmit = () => {
     const q = query(collection(db, "users"), where("email", "==", user.email));

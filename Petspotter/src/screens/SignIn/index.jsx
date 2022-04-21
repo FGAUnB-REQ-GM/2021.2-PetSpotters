@@ -87,6 +87,14 @@ export function SignIn({ navigation }) {
     }
   };
 
+  // if(!isLoaded) {
+  //   return (
+  //     <View style={{flex: 1, justifyContent: "center"}}>
+  //       <ActivityIndicator size="large" color="#B66C6C" />
+  //     </View>
+  //   )
+  // }
+
   useEffect(() => {
     checkLogin()
   }, [])
@@ -144,9 +152,9 @@ export function SignIn({ navigation }) {
           top: "15%",
         }}
       />) : (
-      <SafeAreaProvider>
-        <ActivityIndicator size="large" color="#B66C6C"/>
-      </SafeAreaProvider>)}
+      <View style={{flex: 1, justifyContent: "center"}}>
+        <ActivityIndicator size="large" color="#B66C6C" />
+      </View>)}
       
 
     </ContainerView>
