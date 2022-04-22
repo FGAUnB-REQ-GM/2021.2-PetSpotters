@@ -118,10 +118,10 @@ export function Match() {
           </TouchableOpacity>
         </View>
         <View style={styles.likedislike}>
-          <TouchableOpacity style={[styles.avaliatebtn, {borderColor: "#ee3333aa"}]}>
+          <TouchableOpacity style={[styles.avaliatebtn, {borderColor: "#ee3333aa"}]} activeOpacity={0.4}>
             <Icon name="heart-off" size={50} color={"#ee3333ee"} />
           </TouchableOpacity>
-          <TouchableOpacity style={[styles.avaliatebtn, {borderColor: "#33ff33aa"}]}>
+          <TouchableOpacity style={[styles.avaliatebtn, {borderColor: "#33ff33aa"}]} activeOpacity={0.4}>
             <Icon name="heart" size={50} color={"#33ff33ee"} />
           </TouchableOpacity>
         </View>

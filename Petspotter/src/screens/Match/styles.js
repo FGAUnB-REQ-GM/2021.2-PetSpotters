@@ -53,7 +53,7 @@ const styles = StyleSheet.create({
   },
   avaliatebtn: {
     borderWidth: 2,
-    borderRadius: 150
+    borderRadius: 150,
   }
 })
 
