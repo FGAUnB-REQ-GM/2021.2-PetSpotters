@@ -1,4 +1,10 @@
 # Casos de Uso
+## Histórico de revisão
+| Data       | Autor                                        | Modificações                      | Versão |
+| ---------- | -------------------------------------------- | --------------------------------- | ------ |
+| 20/04/2022 | [antoniotoineto](https://github.com/antoniotoineto) | Adicionando modelo de caso de uso | 1.0 |
+| 26/04/2022 | [art1505](https://github.com/art1505) | Adicionando modelo de caso de uso | 2.0|
+
 ## Requisitos 
 * [RF01] O sistema deverá permitir o cadastro do usuário
 * [RF02] O sistema deverá solicitar login para o acesso
@@ -20,6 +26,6 @@
 | RF8, RF9, RF12 | Avaliar outro perfil |
 | RF10, RF11 | Lista de matchs | 
 
-<img src="./assets/casoDeUso.png" alt="drawing" width="400"/>
+<img src="./assets/ModeloUseCase.png" alt="drawing" width="700"/>
 
 [Link para o Caso de uso](https://lucid.app/lucidchart/c4d571e6-094a-4be3-ab39-0a694e252935/edit?beaconFlowId=E1292F59395CAA4E&page=.Q4MUjXso07N&invitationId=inv_63b98f12-242e-4861-8c55-32954a99b37a#)
