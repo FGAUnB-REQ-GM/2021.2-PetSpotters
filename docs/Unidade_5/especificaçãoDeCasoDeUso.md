@@ -32,7 +32,7 @@ Usuário fez login e cadastrou seu pet.
 ### 5.1 FE01 - O cliente não seleciona uma opção de avaliação
 No passo 4.4 do fluxo básico, caso o cliente tente passar o perfil sem que haja a escolha de uma opção de avaliação, o sistema não poderá fazer a validação e, futuramente, o armazenamento da avaliação. Desta forma, ele fornece uma mensagem dizendo: "Nenhuma opção foi marcada". E, o caso de uso retorna ao passo 4.3 do fluxo básico.
 
-## 6 Regra de Negócio (FE)
+## 6 Regra de Negócio (RN)
 ### 6.1 RN01 - Opção de avaliação necessária
 No passo 4.3 do fluxo básico, se faz necessário que as opções de avaliação "like" ou "deslike" sejam marcadas.
 
