@@ -4,6 +4,7 @@
   - [Sptrints](docs/sprints.md)
 -->
 
+<!--
 **Unidade 1**
 
 - [Visão Geral](docs/Unidade_1/visaoGeral.md)
@@ -38,11 +39,15 @@
 - [BDD](docs/Unidade_4/bdd.md)
 - [User Story Map](docs/Unidade_4/usm.md)
 - [Apresentação](docs/Unidade_4/apresentacao4.md)
-
-**Unidade 5**
-- [User Story Map](docs/Unidade_5/usm.md)
+-->
+**Entrega Final**
+- [Visão de Produto](docs/Unidade_5/visaoProdutoFinal.md)
+- [Visão de Projeto](docs/Unidade_5/visaoProjetoFinal.md)
+- [PBB](docs/Unidade_5/pbbFinal.md)
+- [User Story Map](docs/Unidade_5/usmFinal.md)
 - [Casos de Uso](docs/Unidade_5/casosDeUso.md)
 
 **Releases**
 
 - [MVP 1](docs/outros/releases/mvp1.md)
+- [MVP 2](docs/outros/releases/mvp2.md)
