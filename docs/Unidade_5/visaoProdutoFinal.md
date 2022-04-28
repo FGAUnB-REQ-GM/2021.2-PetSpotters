@@ -107,7 +107,7 @@ Portanto, acreditamos que a criação de um aplicativo que possibilite os donos 
 OBS: As mudanças foram os valores de negócios e coluna US foi trocada de lugar
 -->
 
-![SafeFinal](./assets/SafeFinal.png)
+![SafeFinal](./assets/reqSafeFinal.png)
 
 <a href="https://docs.google.com/spreadsheets/d/1-uMMVV517KptQm8iZ8H7HGmlVPqYcNHyairslKIF8ZA/edit#gid=0">Link para o SAFe</a>
 
