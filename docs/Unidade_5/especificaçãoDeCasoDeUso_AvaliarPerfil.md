@@ -4,6 +4,7 @@
 | Data       | Autor                                        | Modificações                      | Versão |
 | ---------- | -------------------------------------------- | --------------------------------- | ------ |
 | 26/04/2022 | [art1505](https://github.com/art1505) | Adicionando especificação do caso de uso | 1.0    |
+| 27/04/2022 | [art1505](https://github.com/art1505) | Adicionando especificação do caso de uso | 1.1    |
 
 ## 1 Breve Descrição
 Caso de uso que engloba o fluxo de atividades relativas à avaliação, por parte do cliente, de perfis de outros usuários da plataforma. Tal avaliação se dá através de "likes" e "deslikes" a outros perfis, e finaliza com a validação e armazenamento, por parte do sistema, das opções escolhidas.
@@ -12,7 +13,7 @@ Caso de uso que engloba o fluxo de atividades relativas à avaliação, por part
 
 ### 2.1   Clientes
    
-   * 2.1.1  Donos de pets que buscam proporcionar momentos de diversão e lazer aos seus amigos de 4 patas por meio de interações com outros animais.
+   2.1.1  Donos de pets que buscam proporcionar momentos de diversão e lazer aos seus amigos de 4 patas por meio de interações com outros animais.
 
 ## 3 Condições Prévias
 
@@ -20,7 +21,7 @@ Usuário fez login e cadastrou seu pet.
    
 ## 4 Fluxo Básico de Eventos
 
-1. O cliente seleciona a opção "explorar".
+1. Este caso de uso se inicia quando o cliente deseja avaliar outro perfil.
 2. O sistema oferece um perfil por vez.
 3. O cliente seleciona a opção de avaliação (RN01).
 4. O sistema faz a validação da opção escolhida(FE01). 
