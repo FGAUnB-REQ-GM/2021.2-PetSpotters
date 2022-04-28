@@ -46,6 +46,7 @@
 - [PBB](docs/Unidade_5/pbbFinal.md)
 - [User Story Map](docs/Unidade_5/usmFinal.md)
 - [Casos de Uso](docs/Unidade_5/casosDeUso.md)
+- [Especificação de Casos de Uso](docs/Unidade_5/especificacaoCasos.md)
 
 **Releases**
 
