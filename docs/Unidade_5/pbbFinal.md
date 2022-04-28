@@ -24,7 +24,7 @@ O Product Backlog Building (PDD) é um método que facilita a elaboração e a c
 
 # Critérios de Aceitação das US's do MVP
 
-Os critérios de aceitação das User Stories do MVP1 podem ser visualizados através do link abaixo da imagem.
+Todos os critérios de aceitação das User Stories do MVP podem ser visualizados através do link abaixo da imagem.
 
 ![criterios](./assets/criteriosAceitacao.png)
 
