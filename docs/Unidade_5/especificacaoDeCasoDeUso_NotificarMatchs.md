@@ -5,6 +5,7 @@
 | ---------- | -------------------------------------------- | --------------------------------- | ------ |
 | 28/04/2022 | [Levi Queiroz](https://github.com/LeviQ27) | Adicionando especificação do caso de uso | 1.0    |
 | 28/04/2022 | [art1505](https://github.com/art1505) | Adicionando especificação do caso de uso | 1.1    |
+| 28/04/2022 | [Levi Queiroz](https://github.com/LeviQ27) | Adicionando letras e corrigindo erros ortográficos | 1.2    |
 
 ## 1 Breve Descrição
 <div style="text-align: justify">
@@ -21,7 +22,7 @@ Caso de uso que engloba o fluxo de atividades relativas à notificação, pelo s
 
 ## 3 Condições Prévias
 
-Usuário fez login e cadastrou seu pet.
+Usuário fez login, cadastrou seu pet e passou pela avaliação de perfis.
   
 ## 4 Fluxo Básico de Eventos (FB)
 
@@ -45,6 +46,7 @@ Não se aplica.
 </div>
   
 ## 6 Fluxo Exceção(FE)
+<<<<<<< Updated upstream
  
  ### 6.1 FE01 - O usuário não efetua nenhum like antes de solicitar a ação do sistema
 <div style="text-align: justify">
@@ -52,6 +54,10 @@ No passo 4.1 do fluxo básico, caso o primeiro usuário não efetuado nenhum lik
 </div>
  
  ### 6.2 FE02 - O usuário não corresponde ao like efetuado
+=======
+
+### 6.1 FE01 - O usuário não corresponde ao like efetuado
+>>>>>>> Stashed changes
 <div style="text-align: justify">
 No passo 4.4 do fluxo básico, caso o usuário ao qual foi efetuado o like não corresponde à ação, o sistema retorna a mensagem: "Nenhum like foi realizado". E, o caso de uso segue para o passo 4.6.
 </div>

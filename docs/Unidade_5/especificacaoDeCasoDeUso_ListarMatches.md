@@ -54,18 +54,18 @@ No passo 4.5 do fluxo básico, o leitor deseja fazer uma busca específica na li
   
 ## 6 Fluxo Exceção(FE)
 
-### 6.1 FE01 - FE01 Nenhum like foi realizado ainda
+### 6.1 FE01 - Nenhum like foi realizado ainda
 
 <div style="text-align: justify">
 No passo 4.2 do fluxo básico, caso o cliente busque obter uma lista de matches sem ter efetuado um like sequer, o sistema verifica que a lista de likes está vazia e não pode então prosseguir com o fluxo básico. Desta forma, ele fornece uma mensagem dizendo: "Nenhum like foi efetuado". E, o caso de uso segue para o passo 4.6 do fluxo básico.
 </div>
 
-### 6.2 FE02 - FE02 Não houve nenhum like mútuo encontrado
+### 6.2 FE02 - Não houve nenhum like mútuo encontrado
 <div style="text-align: justify">
 No passo 4.3 do fluxo básico, caso o cliente tenha efetuado likes sem que nenhum deles tenha sido correspondido, o sistema verifica que a lista de likes dos usuários de interesse não possuem o perfil do usuário interessado e não pode prosseguir com o fluxo básico. Desta forma, ele fornece uma mensagem dizendo: "Nenhum match foi encontrado". E, o caso de uso segue para o passo 4.6 do fluxo básico.
 </div> 
 
-### 6.3 FE03 - FE03 No match específico não existe na lista
+### 6.3 FE03 - No match específico não existe na lista
 <div style="text-align: justify">
 No passo 5.1.3 do fluxo alternativo, caso o cliente busca achar um match específico que ou não existe ou não correspondeu ao like que o cliente realizou, o sistema não encontra o usuário e não pode prosseguir com o fluxo alternativo. O sistema retorna a mensagem: "Match não foi encontrado" e o caso de uso segue para o passo 4.6 do fluxo básico.
 </div>
