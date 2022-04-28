@@ -65,7 +65,8 @@ O objetivo principal do projeto PetSpotters é a melhora da qualidade de vida de
 
 Portanto, acreditamos que a criação de um aplicativo que possibilite os donos de pets a encontrarem novos amigos ou parceiros para seus animais irá contribuir significativamente nessa causa. E assim surge o app PetSpotter.
 
-## Desenvolvimento de Software
+# Desenvolvimento de Software
+
 ## 2.1 Questões levantadas para a decisão do Desenvolvimento de Software
 
 ### 2.1.1 <b> Questões técnicas </b>
@@ -138,40 +139,6 @@ Nosso modelo irá contar com os seguintes eventos e artefatos:
 Portanto, decidimos nos basear no Scrum, pelos diversos fatores que nos beneficiam em aspectos de flexibilidade, entrega, feedback contínuo, descentralização de poder e dinamismo.
 Portanto, decidimos nos basear no Scrum, pelos diversos fatores que nos beneficiam em aspectos de flexibilidade, entrega, feedback contínuo, descentralização de poder e dinamismo.
 
-## Escopo do Produto
-
-<br>
-
-### 3.1 Requisitos funcionais
-- [RF01] O sistema deverá permitir o cadastro do usuário
-- [RF02] O sistema deverá solicitar login para o acesso
-- [RF03] O sistema deverá permitir a redefinição de senha
-- [RF04] O sistema deverá prover um perfil ao usuário
-- [RF05] O sistema deverá permitir a edição do perfil do usuário
-- [RF06] O sistema deverá permitir a inserção de novas fotos do pet do usuário
-- [RF07] O sistema deverá permitir a alteração de preferências de localização, raça, porte e gênero dos pets
-- [RF08] O sistema deverá exibir um perfil para o usuário decidir se possui ou não interesse no pet
-- [RF09] O sistema deverá dar um match quando dois usuários gostarem do pet um do outro
-- [RF10] O sistema deverá exibir uma lista com os matches do usuário
-- [RF11] O sistema deverá permitir que o usuário busque por um match específico
-- [RF12] O sistema deverá permitir que os usuários que derem match troquem mensagens entre si
-- [RF13] O sistema deverá permitir que um usuário reporte o outro caso haja algum problema
-
-
-### 3.2 Requisitos não funcionais 
-
-- [RNF01] O app deverá estar disponível 24 horas, 7 dias por semana, ou o mais próximo possível disso
-- [RNF02] O app deverá ser compatível com a plataforma Android 
-- [RNF03] O app deverá proporcionar segurança ao guardar os dados do usuário
-- [RNF04] O app deverá apresentar linguagem de fácil entendimento
-- [RNF05] O app deverá possuir interface intuitiva e de fácil compreensão
-- [RNF06] O app deverá apresentar um layout responsivo
-- [RNF07] O sistema não apresentará aos usuários quaisquer dados de cunho privativo 
-- [RNF08] O sistema deverá ser desenvolvido na linguagem Javascript juntamente com o framework de desenvolvimento mobile React Native, para o front-end. Para o back-end, o sistema deverá ser desenvolvido com o auxílio das tecnologias NodeJS e rest API axios.
-- [RNF09] O sistema deverá fazer uso da tecnologia Firebase para o processo de implementação da base de dados.
-
-<br>
-
 # Abordagem de Engenharia de Requisitos
 
 Quanto à abordagem de Engenharia de Requisitos a ser utilizada, teremos a Abordagem Ágil como ferramenta norteadora a qual será de extrema importância no que diz respeito à realização das quatro principais atividades dentro dos processos de engenharia de requisitos: avaliação da utilidade do sistema para a empresa (estudo de viabilidade), descoberta de requisitos (elicitação e análise), conversão de tais requisitos em alguma forma-padrão (especificação), e verificação se os requisitos realmente definem o sistema que o cliente quer (validação).
@@ -217,7 +184,41 @@ Quanto à abordagem de Engenharia de Requisitos a ser utilizada, teremos a Abord
 | ----------------------------------------------------------- | -------------------------------- | ------------------------- |
 | Adaptação da equipe com as possíveis mudanças de requisitos | Revisão frequente dos requisitos | Documentação, Google Meet |
 
-## Requisitos com padrão SAFe
+# Escopo do Produto
+
+<br>
+
+### 3.1 Requisitos funcionais
+- [RF01] O sistema deverá permitir o cadastro do usuário
+- [RF02] O sistema deverá solicitar login para o acesso
+- [RF03] O sistema deverá permitir a redefinição de senha
+- [RF04] O sistema deverá prover um perfil ao usuário
+- [RF05] O sistema deverá permitir a edição do perfil do usuário
+- [RF06] O sistema deverá permitir a inserção de novas fotos do pet do usuário
+- [RF07] O sistema deverá permitir a alteração de preferências de localização, raça, porte e gênero dos pets
+- [RF08] O sistema deverá exibir um perfil para o usuário decidir se possui ou não interesse no pet
+- [RF09] O sistema deverá dar um match quando dois usuários gostarem do pet um do outro
+- [RF10] O sistema deverá exibir uma lista com os matches do usuário
+- [RF11] O sistema deverá permitir que o usuário busque por um match específico
+- [RF12] O sistema deverá permitir que os usuários que derem match troquem mensagens entre si
+- [RF13] O sistema deverá permitir que um usuário reporte o outro caso haja algum problema
+
+
+### 3.2 Requisitos não funcionais 
+
+- [RNF01] O app deverá estar disponível 24 horas, 7 dias por semana, ou o mais próximo possível disso
+- [RNF02] O app deverá ser compatível com a plataforma Android 
+- [RNF03] O app deverá proporcionar segurança ao guardar os dados do usuário
+- [RNF04] O app deverá apresentar linguagem de fácil entendimento
+- [RNF05] O app deverá possuir interface intuitiva e de fácil compreensão
+- [RNF06] O app deverá apresentar um layout responsivo
+- [RNF07] O sistema não apresentará aos usuários quaisquer dados de cunho privativo 
+- [RNF08] O sistema deverá ser desenvolvido na linguagem Javascript juntamente com o framework de desenvolvimento mobile React Native, para o front-end. Para o back-end, o sistema deverá ser desenvolvido com o auxílio das tecnologias NodeJS e rest API axios.
+- [RNF09] O sistema deverá fazer uso da tecnologia Firebase para o processo de implementação da base de dados.
+
+<br>
+
+# Requisitos com padrão SAFe
 <!--
 ### Comentários do professor: 
 <span style="color:red">Essa estrutura precisa ser revista. Existem vários relacionamentos 1..1 entre features e histórias. Por favor, corrijam</span>
@@ -229,7 +230,7 @@ OBS: As mudanças foram os valores de negócios e coluna US foi trocada de lugar
 
 <a href="https://docs.google.com/spreadsheets/d/1-uMMVV517KptQm8iZ8H7HGmlVPqYcNHyairslKIF8ZA/edit#gid=0">Link para o SAFe</a>
 
-## Mínimo Produto Viável (MVP)
+# Mínimo Produto Viável (MVP)
 
 ## Canvas MVP
 
