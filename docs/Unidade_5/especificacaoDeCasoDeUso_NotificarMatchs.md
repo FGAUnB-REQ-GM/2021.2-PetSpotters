@@ -46,18 +46,8 @@ Não se aplica.
 </div>
   
 ## 6 Fluxo Exceção(FE)
-<<<<<<< Updated upstream
- 
- ### 6.1 FE01 - O usuário não efetua nenhum like antes de solicitar a ação do sistema
-<div style="text-align: justify">
-No passo 4.1 do fluxo básico, caso o primeiro usuário não efetuado nenhum like, o sistema não retorna a notificação para o usuário que efetuou o like. E, o caso de uso segue para o passo 4.6.
-</div>
- 
- ### 6.2 FE02 - O usuário não corresponde ao like efetuado
-=======
 
 ### 6.1 FE01 - O usuário não corresponde ao like efetuado
->>>>>>> Stashed changes
 <div style="text-align: justify">
 No passo 4.4 do fluxo básico, caso o usuário ao qual foi efetuado o like não corresponde à ação, o sistema retorna a mensagem: "Nenhum like foi realizado". E, o caso de uso segue para o passo 4.6.
 </div>
