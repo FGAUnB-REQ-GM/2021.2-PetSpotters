@@ -30,6 +30,6 @@
 | RF9 | Notificar matches | 
 | RF12 | Trocar mensagens | 
 
-<img src="./docs/Unidade_5/assets/ModeloUseCase.PNG" alt="drawing" width="700"/>
+![UseCase](./assets/ModeloUseCase.PNG)
 
 [Link para o Caso de uso](https://lucid.app/lucidchart/c4d571e6-094a-4be3-ab39-0a694e252935/edit?beaconFlowId=E1292F59395CAA4E&page=.Q4MUjXso07N&invitationId=inv_63b98f12-242e-4861-8c55-32954a99b37a#)
