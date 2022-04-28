@@ -1,6 +1,6 @@
 # Especificação de Casos de Uso
 
-## Especificação de caso de Uso - Avaliar outro Perfil
+##  Avaliar outro Perfil
 
 ### Histórico de revisão
 | Data       | Autor                                        | Modificações                      | Versão |
@@ -45,7 +45,7 @@ Para FB: registro, pelo sistema, da lista de avaliações e atualizações peri�
 ### 8 Ponto de Extensão
 Não se aplica.
 
-## Especificação de Caso de Uso: <Lista de matchs>
+## Lista de matchs
 
 ### Histórico de revisão
 | Data       | Autor                                        | Modificações                      | Versão |
@@ -133,7 +133,7 @@ Para FA: atualizações periódicas da busca de matches específicos encontrados
 ### 9 Ponto de Extensão
 Não se aplica.
 
-## Especificação de Caso de Uso: <Notificar Matchs>
+## Notificar Matchs
 
 ### Histórico de revisão
 | Data       | Autor                                        | Modificações                      | Versão |
@@ -206,7 +206,7 @@ Para FB: atualizações periódicas de notificações encontradas.
 ### 9 Ponto de Extensão
 Notificar matches é um ponto de extensão do caso de uso "Avaliar outro Perfil".
 
-## Especificação de Caso de Uso: <Notificar Matchs>
+## Notificar Matchs
 
 ### Histórico de revisão
 | Data       | Autor                                        | Modificações                      | Versão |
