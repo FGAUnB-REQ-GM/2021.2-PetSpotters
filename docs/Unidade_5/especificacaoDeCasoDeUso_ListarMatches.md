@@ -65,7 +65,7 @@ No passo 4.2 do fluxo básico, caso o cliente busque obter uma lista de matches 
 No passo 4.3 do fluxo básico, caso o cliente tenha efetuado likes sem que nenhum deles tenha sido correspondido, o sistema verifica que a lista de likes dos usuários de interesse não possuem o perfil do usuário interessado e não pode prosseguir com o fluxo básico. Desta forma, ele fornece uma mensagem dizendo: "Nenhum match foi encontrado". E, o caso de uso segue para o passo 4.6 do fluxo básico.
 </div> 
 
-### 6.3 FE03 - FE03 NO match específico não existe na lista
+### 6.3 FE03 - FE03 No match específico não existe na lista
 <div style="text-align: justify">
 No passo 5.1.3 do fluxo alternativo, caso o cliente busca achar um match específico que ou não existe ou não correspondeu ao like que o cliente realizou, o sistema não encontra o usuário e não pode prosseguir com o fluxo alternativo. O sistema retorna a mensagem: "Match não foi encontrado" e o caso de uso segue para o passo 4.6 do fluxo básico.
 </div>
@@ -79,6 +79,7 @@ No passo 4.2 do fluxo básico, se faz necessário que pelo menos um like tenha s
 ## 8 Pós-condições
 <div style="text-align: justify">
 Para FB: atualizações periódicas da lista de matches encontrados.
+Para FA01: atualizações periódicas da busca de matches específicos encontrados.
 </div>
   
 ## 9 Ponto de Extensão
