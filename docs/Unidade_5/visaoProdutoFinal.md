@@ -2,7 +2,7 @@
 
 <br>
 
-## 1 Declaração do problema
+### 1 Declaração do problema
 
 <br>
 <table>
@@ -26,7 +26,7 @@
 
 <br>
 
-## 1.2 Declaração de Posição do Produto
+### 1.2 Declaração de Posição do Produto
 
 <br>
 <table>
@@ -55,7 +55,7 @@
 
 <br>
 
-## 1.3 Objetivos do Produto
+### 1.3 Objetivos do Produto
 
 <br>
 
@@ -67,7 +67,7 @@ Portanto, acreditamos que a criação de um aplicativo que possibilite os donos 
 
 # Desenvolvimento de Software
 
-## 2.1 Questões levantadas para a decisão do Desenvolvimento de Software
+### 2.1 Questões levantadas para a decisão do Desenvolvimento de Software
 
 ### 2.1.1 <b> Questões técnicas </b>
 <table>
@@ -121,7 +121,7 @@ Portanto, acreditamos que a criação de um aplicativo que possibilite os donos 
   </tr>
 </table>
 
-## 2.2 Metodologia baseada no Scrum
+### 2.2 Metodologia baseada no Scrum
 
 Dadas as questões levantadas, decidimos adotar um sistema ágil baseado no Scrum, e dessa forma, podemos gerenciar nosso projeto baseado em vários conceitos positivos para nós, como a entrega incremental, adaptabilidade a mudanças e flexibilidade de requisitos.
 Além disso, nos escoramos em conceitos de Ian Sommerville, em seu livro “Engenharia de Software". Em seu trabalho, destaca a fase central do Scrum, chamada ciclos de sprint, como a mais inovadora característica de tal abordagem. "Um sprint do Scrum é uma unidade de planejamento na qual o trabalho a ser feito é avaliado, os recursos para o desenvolvimento são selecionados e o software é implementado".
@@ -147,7 +147,7 @@ Quanto à abordagem de Engenharia de Requisitos a ser utilizada, teremos a Abord
 ![Ágil](../../assets/agil/agil.png)
 <br/><br/>
 
-## 3.1 Elicitação de Requisitos
+### 3.1 Elicitação de Requisitos
 
 | Atividade                                 | Método        | Ferramenta        |
 | ----------------------------------------- | ------------- | ----------------- |
@@ -155,13 +155,13 @@ Quanto à abordagem de Engenharia de Requisitos a ser utilizada, teremos a Abord
 | Classificação e organização de requisitos | Cenários      | Plataforma "Miro" |
 | Priorização e negociação de requisitos    | Casos de Uso  | Plataforma "Miro" |s
 
-## 3.2 Análise de Requisitos
+### 3.2 Análise de Requisitos
 
 | Atividade                                                      | Método                               | Ferramenta        |
 | -------------------------------------------------------------- | ------------------------------------ | ----------------- |
 | Definição do quão implementáveis são os requisistos elicitados | Casos de Uso, Cenários ou Storyboard | Plataforma "Miro" |
 
-## 3.3 Documentação de Requisitos
+### 3.3 Documentação de Requisitos
 
 | Atividade                                                         | Método                             | Ferramenta                                                                               |
 | ----------------------------------------------------------------- | ---------------------------------- | ---------------------------------------------------------------------------------------- |
@@ -169,7 +169,7 @@ Quanto à abordagem de Engenharia de Requisitos a ser utilizada, teremos a Abord
 <!--
 <span style="color:red">Para documentar vão usar casos de uso, cenários e storyborads? É isso?</span>
 -->
-## 3.4 Verificação e Validação de Requisitos
+### 3.4 Verificação e Validação de Requisitos
 
 | Atividade      | Método                                                                       | Ferramenta               |
 | -------------- | ---------------------------------------------------------------------------- | ------------------------ |
@@ -179,7 +179,7 @@ Quanto à abordagem de Engenharia de Requisitos a ser utilizada, teremos a Abord
 | Reunião        | Semanais com os participantes do grupo                                         | Google Meet              |
 | Correção       | Cada entrega será feita uma avaliação e depois uma segunda entrega           | Google Meet              |
 | Acompanhamento | Semanais para verificar a corretabilidade do produto                           | Google Meet              |
-## 3.5 Gerenciamento de Requisitos
+### 3.5 Gerenciamento de Requisitos
 | Atividade                                                   | Método                           | Ferramenta                |
 | ----------------------------------------------------------- | -------------------------------- | ------------------------- |
 | Adaptação da equipe com as possíveis mudanças de requisitos | Revisão frequente dos requisitos | Documentação, Google Meet |
