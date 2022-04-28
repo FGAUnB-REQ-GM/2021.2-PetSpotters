@@ -1,6 +1,6 @@
-# 4 Visão geral do projeto
+# Visão geral do projeto
 
-## 4.1 Organização do projeto
+## 1 Organização do projeto
 
 <br>
 
@@ -12,7 +12,7 @@
 
 <br>
 
-## 4.2 Planejamento das Fases e/ou Iterações do Projeto
+## 2 Planejamento das Fases e/ou Iterações do Projeto
 <br>
 
 | Sprint | Produto(Entrega) | Inicio | Fim | 
@@ -30,7 +30,7 @@
 
 <br>
 
-## 4.3 Matriz de Comunicação
+## 3 Matriz de Comunicação
 
 <br>
 
@@ -44,7 +44,7 @@ Encontros da disciplina | Todos os envolvidos no projeto e o Prof. George | Quin
 
 <br>
 
-## 4.4 Gerenciamento de riscos
+## 4 Gerenciamento de riscos
 
 <br>
 
@@ -61,7 +61,7 @@ Encontros da disciplina | Todos os envolvidos no projeto e o Prof. George | Quin
 
 <br>
 
-## 4.5 Critérios de replanejamento
+## 5 Critérios de replanejamento
 
 A seguir é apresentado os critérios que levariam o projeto a ser replanejado:
 * **Mudança de requisitos da disciplina**: Alinhamento com professor e reanálise do MVP.

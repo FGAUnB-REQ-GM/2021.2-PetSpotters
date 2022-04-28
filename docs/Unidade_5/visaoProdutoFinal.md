@@ -218,7 +218,7 @@ Quanto à abordagem de Engenharia de Requisitos a ser utilizada, teremos a Abord
 
 <br>
 
-# Requisitos com padrão SAFe
+# SAFe
 <!--
 ### Comentários do professor: 
 <span style="color:red">Essa estrutura precisa ser revista. Existem vários relacionamentos 1..1 entre features e histórias. Por favor, corrijam</span>
@@ -230,9 +230,9 @@ OBS: As mudanças foram os valores de negócios e coluna US foi trocada de lugar
 
 <a href="https://docs.google.com/spreadsheets/d/1-uMMVV517KptQm8iZ8H7HGmlVPqYcNHyairslKIF8ZA/edit#gid=0">Link para o SAFe</a>
 
-# Mínimo Produto Viável (MVP)
+# Canvas MVP
 
-## Canvas MVP
+### Mínimo Produto Viável (MVP)
 
 O Canvas MVP da plataforma PetStoppers foi realizado e obtivemos a seguinte configuração incial:
 <!--
