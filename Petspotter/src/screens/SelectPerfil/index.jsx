@@ -1,43 +1,41 @@
+import AsyncStorage from "@react-native-async-storage/async-storage";
+import { useNavigation } from "@react-navigation/native";
+import { getDownloadURL, listAll, ref } from "firebase/storage";
 import React, { useEffect, useState } from "react";
-import { View, Image, Text, TouchableOpacity, LogBox } from "react-native";
+import { Image, LogBox, Text, TouchableOpacity, View } from "react-native";
+import { storage } from "../../../firebase";
 import {
-  SttsBar,
   ContainerView,
   ProfileBtn,
   ProfileLogo,
+  SttsBar,
 } from "../../components";
-import AsyncStorage from "@react-native-async-storage/async-storage";
-import { useNavigation, useRoute } from "@react-navigation/native";
-import styles from "./styles";
-import { useUserContext } from "../../context/ContextUser";
 import { useScreenContext } from "../../context/ContextScreen";
-import { getDownloadURL, listAll, ref } from "firebase/storage";
-import { storage } from "../../../firebase";
+import { useUserContext } from "../../context/ContextUser";
+import styles from "./styles";
 
 export function SelectPerfil() {
   const navigation = useNavigation();
-  LogBox.ignoreAllLogs()
+  LogBox.ignoreAllLogs();
   const { userLogged, setUserLogged } = useScreenContext();
 
   const { user, setUser } = useUserContext();
-  // console.log(user);
-
+  console.log({ user });
   const [imageList, setImageList] = useState([]);
   const [imag, setImag] = useState(false);
-  const imageListRef = ref(storage, `${user.email}/`);
+  const imageListRef = ref(storage, `${user?.email}/`);
 
   LogBox.ignoreLogs(["Setting a timer"]);
-
   useEffect(() => {
     listAll(imageListRef).then((list) => {
       list.items.forEach((item) => {
         getDownloadURL(item).then((url) => {
           setImageList((prev) => [...prev, url]);
         });
-      }); 
+      });
     });
     setTimeout(() => {
-      setImag(true)
+      setImag(true);
     }, 1000);
   }, [imag]);
 
@@ -55,9 +53,7 @@ export function SelectPerfil() {
         activeOpacity={0.8}
         style={styles.userEditBtn}
       >
-        <Text style={styles.userEditText}>
-          Editar meu perfil
-        </Text>
+        <Text style={styles.userEditText}>Editar meu perfil</Text>
       </TouchableOpacity>
       <TouchableOpacity
         onPress={() => {
@@ -67,7 +63,7 @@ export function SelectPerfil() {
       >
         <ProfileBtn textoExibido="Editar perfil do pet">
           {imag ? (
-            <Image source={{ uri: imageList[0] }} style={styles.img} />
+            <Image source={{ uri: user?.data.pic }} style={styles.img} />
           ) : (
             <Text>Carregando...</Text>
           )}
@@ -78,13 +74,13 @@ export function SelectPerfil() {
         activeOpacity={0.8}
         onPress={async () => {
           setImageList([]);
-          setUser({});
           setUserLogged(false);
-          await AsyncStorage.removeItem("@user")
-          navigation.replace("Login")
+          setUser({});
+          await AsyncStorage.removeItem("@user");
+          navigation.replace("Login");
         }}
       >
-        <Text style={{ fontWeight: "bold", color: '#f9f9f9' }}>SAIR</Text>
+        <Text style={{ fontWeight: "bold", color: "#f9f9f9" }}>SAIR</Text>
       </TouchableOpacity>
     </ContainerView>
   );

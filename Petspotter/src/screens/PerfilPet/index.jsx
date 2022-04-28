@@ -1,34 +1,28 @@
-import React, { useState, useEffect } from "react";
-import {
-  Text,
-  View,
-  TouchableOpacity,
-  Dimensions,
-  Image,
-} from "react-native";
 import { useNavigation } from "@react-navigation/native";
+import { getDownloadURL, listAll, ref } from "firebase/storage";
+import React, { useEffect, useState } from "react";
+import { Dimensions, Image, Text, TouchableOpacity, View } from "react-native";
+import { Pagination } from "react-native-snap-carousel";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
-import Carousel, { Pagination } from "react-native-snap-carousel";
+import { storage } from "../../../firebase";
 import { ContainerView, ProfileLogo, SttsBar } from "../../components";
 import { useUserContext } from "../../context/ContextUser";
-import { getDownloadURL, listAll, ref } from "firebase/storage";
-import { storage } from "../../../firebase";
 import styles from "./styles";
 
 export function PerfilPet() {
   const navigation = useNavigation();
-  const user = useUserContext()
-  const [images, setImages] = useState([])
-  const imageListRef = ref(storage, `${user.user.email}/`);
+  const { user, setUser } = useUserContext();
+  const [images, setImages] = useState([]);
+  const imageListRef = ref(storage, `${user?.data.email}/`);
 
   useEffect(() => {
-    setImages([])
+    setImages([]);
     listAll(imageListRef).then((list) => {
       list.items.forEach((item) => {
         getDownloadURL(item).then((url) => {
           setImages([...images, url]);
         });
-      }); 
+      });
     });
   }, []);
 
@@ -36,7 +30,12 @@ export function PerfilPet() {
 
   const renderItem = (item, index) => {
     return (
-      <TouchableOpacity activeOpacity={1} onPress={() => {navigation.navigate("PerfisPetEdit")}}>
+      <TouchableOpacity
+        activeOpacity={1}
+        onPress={() => {
+          navigation.navigate("PerfisPetEdit");
+        }}
+      >
         <Image
           key={index}
           style={{ width: "100%", height: "100%" }}
@@ -95,24 +94,18 @@ export function PerfilPet() {
           <ProfileLogo style={{ marginTop: 5, marginBottom: 5 }} />
         </View>
       </View>
+      <Image
+        style={{ flex: 1, width: "80%", height: "80%" }}
+        resizeMode="contain"
+        source={{ uri: user?.data.pic }}
+      />
       <View style={styles.profileImageView}>
-        <Carousel
-          layout="stack"
-          data={images}
-          sliderWidth={width}
-          style={{ position: "relative" }}
-          itemWidth={width}
-          renderItem={renderItem}
-          onSnapToItem={(index) => setActiveSlide(index)}
-          enableSnap
-        />
-        <View style={{ position: "absolute" }}>{paginacao()}</View>
         <View style={styles.petDescriptionView}>
           <Text style={[styles.petDescription, { fontSize: 30 }]}>
-            {user.user?.Petnome}
+            {user?.data.Petnome}
           </Text>
-          <Text style={[styles.petDescription]}>{user.user?.Petidade === "1" ? user.user?.Petidade + " ano" : user.user?.Petidade+  " anos"}</Text>
-          <Text style={styles.petDescription}>{user.user?.Petraca}</Text>
+          <Text style={[styles.petDescription]}>{user?.data.PetdataN}</Text>
+          <Text style={styles.petDescription}>{user?.data.Petraca}</Text>
         </View>
       </View>
     </ContainerView>

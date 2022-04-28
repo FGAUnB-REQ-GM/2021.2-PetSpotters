@@ -1,27 +1,24 @@
-import React, { useState } from "react";
-import { useNavigation, useRoute } from "@react-navigation/native";
-import {
-  View,
-  Text,
-  TextInput,
-  TouchableOpacity,
-  ToastAndroid,
-  ImageBackground,
-  ScrollView,
-} from "react-native";
-import { ContainerView, ProfileLogo, SttsBar } from "../../components";
-import Icon from "react-native-vector-icons/MaterialCommunityIcons";
-import styles from "./styles";
+import { useNavigation } from "@react-navigation/native";
 import {
   collection,
+  doc as docs,
   getDocs,
   query,
   updateDoc,
   where,
-  doc as docs,
 } from "firebase/firestore";
-import { useUserContext } from "../../context/ContextUser";
+import React, { useState } from "react";
+import {
+  ScrollView,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  View,
+} from "react-native";
 import { db } from "../../../firebase";
+import { ContainerView, ProfileLogo, SttsBar } from "../../components";
+import { useUserContext } from "../../context/ContextUser";
+import styles from "./styles";
 
 export function PerfilPetEdit() {
   const navigation = useNavigation();
@@ -34,7 +31,10 @@ export function PerfilPetEdit() {
   const { user, setUser } = useUserContext();
 
   const onSubmit = () => {
-    const q = query(collection(db, "users"), where("email", "==", user.email));
+    const q = query(
+      collection(db, "users"),
+      where("email", "==", user?.user?.user.data.email)
+    );
     const querySnapshot = async () => {
       await getDocs(q).then((res) =>
         res.forEach(async (doc) => {
@@ -78,7 +78,7 @@ export function PerfilPetEdit() {
               style={[styles.inputBox, { width: "100%" }]}
               onChangeText={setNome}
               value={nome}
-              placeholder={user?.Petnome}
+              placeholder={user?.user.data.Petnome}
             />
           </View>
           <View style={styles.inputBoxView}>
@@ -87,7 +87,7 @@ export function PerfilPetEdit() {
               style={[styles.inputBox, { width: "100%" }]}
               onChangeText={setRaca}
               value={raca}
-              placeholder={user?.Petraca}
+              placeholder={user?.user.data.Petraca}
             />
           </View>
           <View style={styles.inputBoxView}>
@@ -98,7 +98,7 @@ export function PerfilPetEdit() {
               value={bio}
               multiline={true}
               maxLength={300}
-              placeholder={user?.Petbio}
+              placeholder={user?.user.data.Petbio}
             />
           </View>
           <View style={styles.inputBoxView}>
@@ -109,7 +109,7 @@ export function PerfilPetEdit() {
               value={endereco}
               multiline={true}
               maxLength={300}
-              placeholder={user?.Petendereco}
+              placeholder={user?.user.data.Petendereco}
             />
           </View>
           <View style={styles.inputBoxView}>
@@ -119,7 +119,7 @@ export function PerfilPetEdit() {
               onChangeText={setIdade}
               value={idade}
               multiline
-              placeholder={user?.Petidade}
+              placeholder={user?.user.data.Petidade}
             />
           </View>
         </View>

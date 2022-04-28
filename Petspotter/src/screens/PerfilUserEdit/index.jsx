@@ -1,23 +1,15 @@
 import { useNavigation } from "@react-navigation/native";
 import {
   collection,
+  doc as docs,
   getDocs,
   query,
-  setDoc,
-  where,
-  doc as docs,
   updateDoc,
+  where,
 } from "firebase/firestore";
 import { getDownloadURL, listAll, ref } from "firebase/storage";
 import React, { useEffect, useState } from "react";
-import { useForm } from "react-hook-form";
-import {
-  View,
-  Text,
-  TextInput,
-  TouchableOpacity,
-  ToastAndroid,
-} from "react-native";
+import { Text, TextInput, TouchableOpacity, View } from "react-native";
 import { db, storage } from "../../../firebase";
 import { ContainerView, ProfileLogo, SttsBar } from "../../components";
 import { useUserContext } from "../../context/ContextUser";
@@ -29,10 +21,10 @@ export function PerfilUserEdit() {
   const [tel, setTel] = useState("");
   const navigation = useNavigation();
   const { user, setUser } = useUserContext();
-  // console.log(user);
+  console.log("-#####-", user);
 
   const [imageList, setImageList] = useState([]);
-  const imageListRef = ref(storage, `${user.email}/`);
+  const imageListRef = ref(storage, `${user?.user?.data.email}/`);
   useEffect(() => {
     listAll(imageListRef).then((list) => {
       list.items.forEach((item) => {
@@ -44,18 +36,21 @@ export function PerfilUserEdit() {
   }, []);
 
   const onSubmit = () => {
-    const q = query(collection(db, "users"), where("email", "==", user.email));
+    const q = query(
+      collection(db, "users"),
+      where("email", "==", user?.data.email)
+    );
     const querySnapshot = async () => {
       await getDocs(q).then((res) =>
         res.forEach(async (doc) => {
           // console.log(doc.id, "=>", doc.data());
           nome &&
             (await updateDoc(docs(db, "users", doc.id), { nome: nome }).then(
-              (res) => (user["nome"] = nome)
+              (res) => (user.data["nome"] = nome)
             ));
           tel &&
-            (await updateDoc(docs(db, "users", doc.id), { tel: tel }).then(
-              (res) => (user["tel"] = tel)
+            (await updateDoc(docs(db, "users", doc.id), { telefone: tel }).then(
+              (res) => (user.data["tel"] = tel)
             ));
         })
       );
@@ -77,8 +72,8 @@ export function PerfilUserEdit() {
             style={styles.inputBox}
             onChangeText={setNome}
             value={nome}
-            placeholder={user.nome}
-            defaultValue={user.nome}
+            placeholder={user.data.nome}
+            defaultValue={user.data.nome}
           />
         </View>
         <View style={styles.inputBoxView}>
@@ -87,8 +82,8 @@ export function PerfilUserEdit() {
             style={styles.inputBox}
             onChangeText={setTel}
             value={tel}
-            placeholder={user.telefone}
-            defaultValue={user.telefone}
+            placeholder={user.data.telefone}
+            defaultValue={user.data.telefone}
           />
         </View>
       </View>
