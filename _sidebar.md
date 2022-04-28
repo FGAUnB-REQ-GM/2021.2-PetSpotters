@@ -45,7 +45,7 @@
 - [Visão de Projeto](docs/Unidade_5/visaoProjetoFinal.md)
 - [PBB](docs/Unidade_5/pbbFinal.md)
 - [User Story Map](docs/Unidade_5/usmFinal.md)
-- [Casos de Uso](docs/Unidade_5/DiagramaCasosDeUso.md)
+- [Casos de Uso](docs/Unidade_5/casosDeUso.md)
 
 **Releases**
 
