@@ -40,22 +40,6 @@ export function Match() {
                 petBio: user.user.Petbio,
                 petRace: user.user.Petraca
               },
-              {
-                petAge: 2,
-                petName: "dog1"
-              },
-              {
-                petAge: 3,
-                petName: "dog2"
-              },
-              {
-                petAge: 4,
-                petName: "dog3"
-              },
-              {
-                petAge: 5,
-                petName: "dog4"
-              },
             ]
           )
         });
@@ -64,25 +48,6 @@ export function Match() {
   }, []);
   
   current ? console.log(current) : null
-
-  const DAMMY_DATA = [
-    {
-      petAge: 2,
-      petName: "dog1"
-    },
-    {
-      petAge: 3,
-      petName: "dog2"
-    },
-    {
-      petAge: 4,
-      petName: "dog3"
-    },
-    {
-      petAge: 5,
-      petName: "dog4"
-    },
-  ]
   
   const { width } = Dimensions.get("window");
 
@@ -180,19 +145,24 @@ export function Match() {
           </TouchableOpacity>
         </View>
       </View> */}
-      {current ? 
-      <View style={{width: '90%', height: '100%'}}>
+      <View style={{width: "100%", height: "100%"}}>
         <Swiper
           containerStyle={{backgroundColor: "transparent"}}
           cards={current}
+          stackSize={3}
+          cardIndex={0}
+          animateCardOpacity
+          verticalSwipe={false}
           renderCard={(pet) => (
-            <View style={{flex: 1}}>
-              <Text>{pet?.petName}</Text>
-              {console.log(pet)}
+            <View style={{position: "relative", height: "70%", backgroundColor: "white", borderRadius: 10}}>
+              <Image 
+                source={{uri: pet?.pic}}
+                style={{position: "absolute", top: 0, width: "100%", height: "100%", borderRadius: 10}}
+              />
             </View>
           )}
         />
-      </View> : null}
+      </View>
       
     </ContainerView>
   );
