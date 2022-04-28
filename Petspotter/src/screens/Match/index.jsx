@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import {
   Text,
   View,
@@ -15,21 +15,20 @@ import { getDownloadURL, listAll, ref } from "firebase/storage";
 import { storage } from "../../../firebase";
 import styles from "./styles";
 import Swiper from "react-native-deck-swiper";
-import tw from 'tailwind-react-native-classnames'
+import { Entypo } from "@expo/vector-icons";
 
 export function Match() {
   const navigation = useNavigation();
   const user = useUserContext()
-  const [images, setImages] = useState([])
   const imageListRef = ref(storage, `${user.user.email}/`);
   const [current, setCurrent] = useState({})
+  const swipeRef = useRef(null)
+
 
   useEffect(() => {
-    setImages([])
     listAll(imageListRef).then((list) => {
       list.items.forEach((item) => {
         getDownloadURL(item).then((url) => {
-          // setImages(url);
           setCurrent(
             [
               {
@@ -49,56 +48,6 @@ export function Match() {
   
   current ? console.log(current) : null
   
-  const { width } = Dimensions.get("window");
-
-
-
-  const renderItem = (item, index) => {
-    return (
-      <TouchableOpacity activeOpacity={1}>
-        <Image
-          key={index}
-          style={{ width: "100%", height: "100%" }}
-          resizeMode="cover"
-          source={{ uri: item.item }}
-        />
-      </TouchableOpacity>
-    );
-  };
-
-  const [activeSlide, setActiveSlide] = useState(0);
-
-  // const paginacao = () => {
-  //   return (
-  //     <Pagination
-  //       dotsLength={images.length}
-  //       activeDotIndex={activeSlide}
-  //       containerStyle={{ backgroundColor: "#00000000" }}
-  //       dotStyle={{
-  //         width: 15,
-  //         height: 10,
-  //         borderRadius: 5,
-  //         marginHorizontal: 8,
-  //         backgroundColor: "#B66C6Cee",
-  //         shadowColor: "rgba(0, 0, 0, 0.75)",
-  //         shadowOffset: { width: -1, height: 1 },
-  //         shadowRadius: 20,
-  //       }}
-  //       inactiveDotStyle={{
-  //         width: 15,
-  //         height: 10,
-  //         borderRadius: 5,
-  //         marginHorizontal: 8,
-  //         backgroundColor: "rgba(255, 255, 255, 0.40)",
-  //         shadowColor: "rgba(0, 0, 0, 0.75)",
-  //         shadowOffset: { width: -1, height: 1 },
-  //         shadowRadius: 15,
-  //       }}
-  //       inactiveDotScale={0.6}
-  //     />
-  //   );
-  // };
-
   return (
     <ContainerView>
       <SttsBar />
@@ -114,56 +63,68 @@ export function Match() {
           <ProfileLogo style={{ marginTop: 5, marginBottom: 5 }} />
         </View>
       </View>
-      {/* <View style={styles.profileImageView}>
-        <Carousel
-          layout="stack"
-          data={images}
-          sliderWidth={width}
-          style={{ position: "relative" }}
-          itemWidth={width}
-          renderItem={renderItem}
-          onSnapToItem={(index) => setActiveSlide(index)}
-          enableSnap
-        />
-        <View style={{ position: "absolute" }}>{paginacao()}</View>
-        <View style={styles.petDescriptionView}>
-          <Text style={[styles.petDescription, { fontSize: 30 }]}>
-            {user.user?.Petnome}
-          </Text>
-          <Text style={[styles.petDescription]}>{user.user?.Petidade === "1" ? user.user?.Petidade + " ano" : user.user?.Petidade+  " anos"}</Text>
-          <Text style={styles.petDescription}>{user.user?.Petraca}</Text>
-          <TouchableOpacity style={styles.button}>
-            <Icon name="information" size={20} color={"#ffffffdd"} />
-          </TouchableOpacity>
-        </View>
-        <View style={styles.likedislike}>
-          <TouchableOpacity style={[styles.avaliatebtn, {borderColor: "#ee3333aa"}]} activeOpacity={0.4}>
-            <Icon name="heart-off" size={50} color={"#ee3333ee"} />
-          </TouchableOpacity>
-          <TouchableOpacity style={[styles.avaliatebtn, {borderColor: "#33ff33aa"}]} activeOpacity={0.4}>
-            <Icon name="heart" size={50} color={"#33ff33ee"} />
-          </TouchableOpacity>
-        </View>
-      </View> */}
+      
       <View style={{width: "100%", height: "100%"}}>
         <Swiper
+          ref={swipeRef}
           containerStyle={{backgroundColor: "transparent"}}
           cards={current}
           stackSize={3}
           cardIndex={0}
           animateCardOpacity
           verticalSwipe={false}
-          renderCard={(pet) => (
-            <View style={{position: "relative", height: "70%", backgroundColor: "white", borderRadius: 10}}>
+          onSwipedLeft={() => console.log("left")}
+          onSwipedRight={() => console.log("right")}
+          overlayLabels={{
+            left: {
+              title: "NOPE",
+              style: {
+                label: {
+                  textAlign: "right",
+                  color: "red"
+                }
+              }
+            },
+            right: {
+              title: "MATCH",
+              style: {
+                label: {
+                  color: "#4DED30"
+                }
+              }
+            }
+          }}
+          renderCard={(card) => (
+            <View style={{position: "relative", height: "75%", backgroundColor: "white", borderRadius: 10}}>
               <Image 
-                source={{uri: pet?.pic}}
+                source={{uri: card?.pic}}
                 style={{position: "absolute", top: 0, width: "100%", height: "100%", borderRadius: 10}}
               />
+
+              <View style={[styles.infoMotherView, styles.cardShadow]}>
+                <View>
+                  <Text style={{fontSize: 23, fontWeight: "bold"}}>{card?.petName}</Text>
+                  <Text>{card?.petRace}</Text>
+                </View>
+                <Text style={{fontSize: 23, fontWeight: "bold"}}>{card?.petAge}</Text>
+              </View>
+
             </View>
           )}
         />
       </View>
-      
+      <View style={styles.likedislike}>
+        <TouchableOpacity style={[styles.avaliatebtn, {backgroundColor: "#ee333344"}]} activeOpacity={0.4}
+          onPress={() => swipeRef.current.swipeLeft()}
+        >
+          <Entypo name="cross" size={28} color="red" />
+        </TouchableOpacity>
+        <TouchableOpacity style={[styles.avaliatebtn, {backgroundColor: '#00ff0033'}]} activeOpacity={0.4}
+          onPress={() => swipeRef.current.swipeRight()}
+        >
+          <Entypo name="heart" size={28} color="green"/>
+        </TouchableOpacity>
+      </View>
     </ContainerView>
   );
 }

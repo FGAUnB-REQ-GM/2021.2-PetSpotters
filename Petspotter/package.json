@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@babel/preset-env": "^7.1.6",
+    "@expo/vector-icons": "^13.0.0",
     "@hookform/resolvers": "^2.8.8",
     "@react-native-async-storage/async-storage": "~1.15.0",
     "@react-native-picker/picker": "2.2.1",
@@ -43,7 +44,6 @@
     "react-native-snap-carousel": "^3.9.1",
     "react-native-vector-icons": "^9.1.0",
     "reanimated-bottom-sheet": "^1.0.0-alpha.22",
-    "tailwind-react-native-classnames": "^1.5.1",
     "yup": "^0.32.11"
   },
   "devDependencies": {

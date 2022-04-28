@@ -48,12 +48,35 @@ const styles = StyleSheet.create({
     position: "absolute",
     bottom: "3%",
     flexDirection: 'row',
-    width: "50%",
-    justifyContent: "space-around"
+    width: "100%",
+    justifyContent: "space-evenly"
   },
   avaliatebtn: {
-    borderWidth: 2,
     borderRadius: 150,
+    width: 50,
+    height: 50,
+    alignItems: "center",
+    justifyContent: "center"
+  },
+  infoMotherView: {
+    position: "absolute",
+    bottom: 0,
+    backgroundColor: "white",
+    width: "100%",
+    height: "15%",
+    flexDirection: "row",
+    justifyContent: "space-between",
+    padding: 15
+  },
+  cardShadow: {
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 1
+    },
+    shadowOpacity: 0.2,
+    shadowRadius: 1.41,
+    elevation: 2
   }
 })
 
