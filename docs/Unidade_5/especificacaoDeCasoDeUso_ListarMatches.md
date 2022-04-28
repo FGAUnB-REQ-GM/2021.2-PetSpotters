@@ -79,7 +79,8 @@ No passo 4.2 do fluxo básico, se faz necessário que pelo menos um like tenha s
 ## 8 Pós-condições
 <div style="text-align: justify">
 Para FB: atualizações periódicas da lista de matches encontrados.
-Para FA01: atualizações periódicas da busca de matches específicos encontrados.
+
+Para FA: atualizações periódicas da busca de matches específicos encontrados.
 </div>
   
 ## 9 Ponto de Extensão
