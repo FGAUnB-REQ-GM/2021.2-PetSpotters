@@ -28,7 +28,7 @@ Usuário fez login e cadastrou seu pet.
 
 <div style="text-align: justify">
 
-1. Este caso de uso se inicia quando o usuário deseja visualizar a lista de matches.
+1. Este caso de uso se inicia quando o usuário deseja visualizar a lista de matches(FA01).
 2. O sistema verifica a lista de likes do usuário (RN01)(FE01).
 3. O sistema verifica se o usuário está presente na lista de likes dos usuários os quais ele deu like (FE02).
 4. Em caso afirmativo, o sistema cria uma lista só com as correspondências de likes deste usuário. 
