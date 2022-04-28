@@ -206,7 +206,7 @@ Para FB: atualizações periódicas de notificações encontradas.
 ### 9 Ponto de Extensão
 Notificar matches é um ponto de extensão do caso de uso "Avaliar outro Perfil".
 
-## Notificar Matchs
+## Trocar mensagens
 
 ### Histórico de revisão
 | Data       | Autor                                        | Modificações                      | Versão |
