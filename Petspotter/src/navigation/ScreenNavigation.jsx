@@ -1,23 +1,22 @@
-import React, { useState } from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import React from "react";
+import { useScreenContext } from "../context/ContextScreen";
 import {
-  PerfilUserEdit,
-  PerfilPetEdit,
-  SelectPerfil,
-  Teste,
-  PerfilPet,
-  PerfilUser,
   Initial,
+  PerfilPet,
+  PerfilPetEdit,
+  PerfilUser,
+  PerfilUserEdit,
+  PetData,
+  SelectPerfil,
   SignIn,
   SignUp,
   SignUpPet,
-  PetData,
 } from "../screens";
 import { Match } from "../screens/Match";
-import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
+import MatchScreen from "../screens/MatchScreen";
 import MyTabs from "./TabsNavigation";
-import { useScreenContext } from "../context/ContextScreen";
 
 const Stack = createNativeStackNavigator();
 
@@ -39,21 +38,15 @@ export const ScreenNavigation = () => {
             <Stack.Screen name="PerfilUser" component={PerfilUser} />
             <Stack.Screen name="Inicial" component={Initial} />
             <Stack.Screen name="PetData" component={PetData} />
+            <Stack.Group screenOptions={{ presentation: "transparentModal" }}>
+              <Stack.Screen name="MatchScreen" component={MatchScreen} />
+            </Stack.Group>
           </>
         ) : (
           <>
             <Stack.Screen name="Login" component={SignIn} />
             <Stack.Screen name="Cadastro" component={SignUp} />
             <Stack.Screen name="CadastroPet" component={SignUpPet} />
-            {/* <Stack.Screen name="Match" component={Match} /> */}
-            {/* <Stack.Screen name="Tabs" component={MyTabs} />
-            <Stack.Screen name="Perfis" component={SelectPerfil} /> */}
-            {/* <Stack.Screen name="PerfilPet" component={PerfilPet} />
-            <Stack.Screen name="PerfisUsuarioEdit" component={PerfilUserEdit} />
-            <Stack.Screen name="PerfisPetEdit" component={PerfilPetEdit} />
-            <Stack.Screen name="PerfilUser" component={PerfilUser} />
-            <Stack.Screen name="Inicial" component={Initial} />
-            <Stack.Screen name="PetData" component={PetData} /> */}
           </>
         )}
       </Stack.Navigator>
