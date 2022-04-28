@@ -1,20 +1,18 @@
-import React, { useEffect, useState } from "react";
-import {
-  SafeAreaView,
-  View,
-  Image,
-  Text,
-  LogBox,
-  FlatList,
-  TouchableOpacity,
-} from "react-native";
-import { useForm } from "react-hook-form";
 import { createUserWithEmailAndPassword } from "firebase/auth";
-import { auth, db } from "../../../firebase";
-import { collection, getDocs, query, where } from "firebase/firestore";
+import React, { useState } from "react";
+import { useForm } from "react-hook-form";
+import {
+  FlatList,
+  Image,
+  LogBox,
+  SafeAreaView,
+  Text,
+  TouchableOpacity,
+  View,
+} from "react-native";
+import { auth } from "../../../firebase";
 import InputCadastro from "../../components/InputCadastro";
 import styles from "./styles";
-import { Match } from "../Match";
 
 export function SignUp({ navigation }) {
   const {

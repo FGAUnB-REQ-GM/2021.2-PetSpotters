@@ -1,19 +1,12 @@
-import React from "react";
-import {
-  View,
-  Text,
-  LogBox,
-  TouchableOpacity,
-  ScrollView,
-} from "react-native";
-import { useForm } from "react-hook-form";
-import { db, storage } from "../../../firebase";
 import { addDoc, collection } from "firebase/firestore";
-import InputCadastro from "../../components/InputCadastro";
+import React from "react";
+import { useForm } from "react-hook-form";
+import { LogBox, ScrollView, Text, TouchableOpacity, View } from "react-native";
+import { db } from "../../../firebase";
 import { ContainerView, ProfileBtn, ProfileLogo } from "../../components";
-import { useScreenContext } from "../../context/ContextScreen";
-import { getDownloadURL, listAll, ref } from "firebase/storage";
+import InputCadastro from "../../components/InputCadastro";
 import { SelectPhoto } from "../../components/SelectPhoto";
+import { useScreenContext } from "../../context/ContextScreen";
 import { useUserContext } from "../../context/ContextUser";
 import styles from "./styles";
 
@@ -40,23 +33,23 @@ export function SignUpPet({ navigation, route }) {
         email: route.params.data.EMAIL,
         telefone: route.params.data.TELEFONE,
         Petnome: data.NOME,
-        Petidade: data.IDADE,
+        PetdataN: data.IDADE,
         Petendereco: data.ENDEREÇO,
         Petbio: data.BIO,
         Petraca: data.RAÇA,
       })
         .then(() => {
-          setUserLogged(true);
           setUser({
             nome: route.params.data.NOME,
             email: route.params.data.EMAIL,
             telefone: route.params.data.TELEFONE,
             Petnome: data.NOME,
-            Petidade: data.IDADE,
+            PetdataN: data.IDADE,
             Petendereco: data.ENDEREÇO,
             Petbio: data.BIO,
             Petraca: data.RAÇA,
           });
+          user && navigation.navigate("Login");
         })
         .catch((error) => {
           alert(error.message);
@@ -89,8 +82,8 @@ export function SignUpPet({ navigation, route }) {
           <InputCadastro title="BIO" control={control} errors={errors} />
           <InputCadastro title="IDADE" control={control} errors={errors} />
           <InputCadastro title="ENDEREÇO" control={control} errors={errors} />
-          
-          <View style={{width: '100%', alignItems: 'center'}}>
+
+          <View style={{ width: "100%", alignItems: "center" }}>
             <TouchableOpacity
               style={[styles.button, { marginBottom: 150 }]}
               onPress={handleSubmit(OnSubmit)}

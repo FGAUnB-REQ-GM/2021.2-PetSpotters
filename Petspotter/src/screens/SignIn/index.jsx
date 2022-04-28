@@ -1,26 +1,23 @@
-import React, { useEffect, useState } from "react";
 import AsyncStorage from "@react-native-async-storage/async-storage";
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { collection, getDocs, query, where } from "firebase/firestore";
+import React, { useEffect, useState } from "react";
+import { useForm } from "react-hook-form";
 import {
-  View,
-  Text,
+  ActivityIndicator,
   FlatList,
   LogBox,
+  Text,
   TouchableOpacity,
-  ActivityIndicator
+  View,
 } from "react-native";
-import { useForm, Controller } from "react-hook-form";
-import {
-  signInWithEmailAndPassword,
-} from "firebase/auth";
 import { auth, db } from "../../../firebase";
-import { collection, getDocs, query, where } from "firebase/firestore";
-import InputCadastro from "../../components/InputCadastro";
 import { ContainerView, ProfileLogo, SttsBar } from "../../components";
+import InputCadastro from "../../components/InputCadastro";
 import ModalRecover from "../../components/Modal";
 import { useScreenContext } from "../../context/ContextScreen";
-import styles from "./styles";
 import { useUserContext } from "../../context/ContextUser";
-import { SafeAreaProvider } from "react-native-safe-area-context";
+import styles from "./styles";
 
 export function SignIn({ navigation }) {
   const {
@@ -33,31 +30,32 @@ export function SignIn({ navigation }) {
 
   LogBox.ignoreLogs(["Setting a timer"]);
 
-  const [isLoaded, setIsLoaded] = useState(false)
-  
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [email, setEmail] = useState("");
   const { userLogged, setUserLogged } = useScreenContext();
   const { user, setUser } = useUserContext();
-  // console.log({ user });
+  console.log(user);
 
-  LogBox.ignoreAllLogs()
+  LogBox.ignoreAllLogs();
   const checkLogin = async () => {
-    const usuario = await AsyncStorage.getItem("@user") 
-    if(usuario) {
-      const userObj = JSON.parse(usuario)
+    const usuario = await AsyncStorage.getItem("@user");
+    if (usuario) {
+      const userObj = JSON.parse(usuario);
+      console.log(userObj);
       setUser(userObj);
 
       setTimeout(() => {
-        navigation.replace("Perfis", {userObj});
-        setUserLogged(true) 
-        setIsLoaded(true)
+        navigation.replace("Perfis", { userObj });
+        setUserLogged(true);
+        setIsLoaded(true);
       }, 1000);
     } else {
       setTimeout(() => {
-        setIsLoaded(true)
+        setIsLoaded(true);
       }, 1000);
     }
-  }
-  
+  };
+
   const OnSubmit = (data) => {
     try {
       signInWithEmailAndPassword(auth, data.EMAIL, data.SENHA)
@@ -72,8 +70,11 @@ export function SignIn({ navigation }) {
             await getDocs(q).then((res) =>
               res.forEach(async (doc) => {
                 // console.log(doc.id, "=>", doc.data());
-                setUser(doc.data());
-                await AsyncStorage.setItem("@user", JSON.stringify(doc.data()))
+                setUser({ id: doc.id, data: doc.data() });
+                await AsyncStorage.setItem(
+                  "@user",
+                  JSON.stringify(doc.data(), doc.id)
+                );
               })
             );
           };
@@ -88,14 +89,14 @@ export function SignIn({ navigation }) {
   };
 
   useEffect(() => {
-    checkLogin()
-  }, [])
+    checkLogin();
+  }, []);
 
   const [modalVisible, setModalVisible] = useState(false);
 
   const renderItem = () => (
     <>
-      <ProfileLogo style={{alignSelf: 'center'}} />
+      <ProfileLogo style={{ alignSelf: "center" }} />
       <View style={styles.container1}>
         <InputCadastro title="EMAIL" control={control} errors={errors} />
         <InputCadastro title="SENHA" control={control} errors={errors} />
@@ -136,19 +137,20 @@ export function SignIn({ navigation }) {
   return (
     <ContainerView>
       <SttsBar />
-      {isLoaded ? (<FlatList
-        data={DATA}
-        renderItem={renderItem}
-        keyExtractor={(item) => item.id}
-        style={{
-          top: "15%",
-        }}
-      />) : (
-      <View style={{flex: 1, justifyContent: "center"}}>
-        <ActivityIndicator size="large" color="#B66C6C" />
-      </View>)}
-      
-
+      {isLoaded ? (
+        <FlatList
+          data={DATA}
+          renderItem={renderItem}
+          keyExtractor={(item) => item.id}
+          style={{
+            top: "15%",
+          }}
+        />
+      ) : (
+        <View style={{ flex: 1, justifyContent: "center" }}>
+          <ActivityIndicator size="large" color="#B66C6C" />
+        </View>
+      )}
     </ContainerView>
   );
 }
